@@ -7,6 +7,16 @@ import {
 import { ImMail } from "react-icons/im";
 
 export default function Navbar() {
+  const iconStyle = {
+    borderRadius: "35%",
+  };
+
+  const emailAddress = "koziel.adrian98@gmail.com";
+
+  const handleMailClick = () => {
+    window.location.href = `mailto:${emailAddress}`;
+  };
+
   return (
     <nav className="flex flex-col items-center pt-10 pb-10 w-80 gap-10 fixed bg-black min-h-screen justify-between">
       <div className="flex flex-col items-center justify-center">
@@ -30,22 +40,36 @@ export default function Navbar() {
       <div className="flex flex-row gap-3 items-center">
         <a href="https://www.facebook.com/adikoxi/?locale=pl_PL">
           <FaFacebookSquare
+            style={iconStyle}
             className="cursor-pointer"
             size={50}
             color="gray"
           ></FaFacebookSquare>
         </a>
-        <FaInstagramSquare
-          className="cursor-pointer"
-          size={50}
-          color="gray"
-        ></FaInstagramSquare>
-        <FaLinkedin
-          className="cursor-pointer"
-          size={50}
-          color="gray"
-        ></FaLinkedin>
-        <ImMail className="cursor-pointer" size={46} color="gray"></ImMail>
+        <a href="https://www.facebook.com/adikoxi/?locale=pl_PL">
+          <FaInstagramSquare
+            style={iconStyle}
+            className="cursor-pointer"
+            size={50}
+            color="gray"
+          ></FaInstagramSquare>
+        </a>
+        <a href="https://www.facebook.com/adikoxi/?locale=pl_PL">
+          <FaLinkedin
+            style={iconStyle}
+            className="cursor-pointer"
+            size={50}
+            color="gray"
+          ></FaLinkedin>
+        </a>
+        <a
+          href="mailto:koziel.adrian98@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleMailClick}
+        >
+          <ImMail className="cursor-pointer" size={46} color="gray"></ImMail>
+        </a>
       </div>
       <button
         id="navbar__button"
