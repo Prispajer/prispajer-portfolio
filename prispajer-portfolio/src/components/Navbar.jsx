@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
 
-export default function Navbar() {
+export default function Navbar({ showMenu }) {
   const iconStyle = {
     borderRadius: "35%",
   };
@@ -18,7 +18,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex flex-col items-center pt-10 pb-10 w-80 gap-10 fixed bg-black min-h-screen justify-between">
+    <nav
+      className={
+        showMenu
+          ? "flex flex-col items-center pt-10 pb-10 w-80 gap-10 fixed bg-black min-h-screen justify-between"
+          : "hidden"
+      }
+    >
       <div className="flex flex-col items-center justify-center">
         <img
           id="navbar__logo"

@@ -2,10 +2,10 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="flex items-center lg:ml-80 ml-0 w-full mx-10">
+    <section className={"flex items-center lg:ml-80 ml-0 w-full mx-10"}>
       <div className="w-1/2">
         <img
-          className=""
+          className="max-h-64"
           src="../../public/images/avatar.png"
           alt="It's meee"
         />
