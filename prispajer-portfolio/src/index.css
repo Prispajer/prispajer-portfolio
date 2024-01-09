@@ -32,7 +32,7 @@ body {
   );
 }
 
-#navbar__logo {
+.logo {
   border: 8px solid #d85e2a;
 }
 

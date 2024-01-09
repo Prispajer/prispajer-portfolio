@@ -6,13 +6,14 @@ import Hamburger from "./components/Hamburger";
 function App() {
   const [showMenu, setShowMenu] = React.useState(true);
   const toggleView = () => {
-    setShowMenu((prevView) => !prevView);
+    setShowMenu((prevShowMenu) => !prevShowMenu);
   };
+
   return (
-    <div className="flex">
+    <div className="flex bg-black border">
       <Hamburger toggleView={toggleView} />
       <Navbar showMenu={showMenu} />
-      <About />
+      <About showMenu={showMenu} />
     </div>
   );
 }

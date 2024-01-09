@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -21,14 +20,13 @@ export default function Navbar({ showMenu }) {
     <nav
       className={
         showMenu
-          ? "flex flex-col items-center pt-10 pb-10 w-80 gap-10 fixed bg-black min-h-screen justify-between"
+          ? "flex flex-col items-center pt-10 pb-10 w-80 gap-10 fixed bg-black min-h-screen justify-between border"
           : "hidden"
       }
     >
       <div className="flex flex-col items-center justify-center">
         <img
-          id="navbar__logo"
-          className="min-w-14 max-w-36 rounded-full "
+          className="__logo min-w-14 max-w-36 rounded-full "
           src="../../public/images/avatar.png"
           alt="It's meee"
         ></img>
