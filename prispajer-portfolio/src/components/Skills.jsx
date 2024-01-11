@@ -1,14 +1,6 @@
-import React from "react";
-
-export default function Skills({ showMenu }) {
+export default function Skills() {
   return (
-    <section
-      className={
-        showMenu
-          ? "flex items-center w-full ml-80"
-          : "flex items-center w-full ml-0"
-      }
-    >
+    <section className="flex items-center w-full ">
       <div className="w-3/5 p-10 flex items-center justify-center flex-col">
         <div>
           <h1 className="text-white text-9xl font-bold">My skills</h1>

@@ -1,12 +1,6 @@
-export default function About({ showMenu }) {
+export default function About() {
   return (
-    <section
-      className={
-        showMenu
-          ? "flex items-center w-full ml-80 max-w-full"
-          : "flex items-center w-full ml-0 max-w-full"
-      }
-    >
+    <section className="flex items-center w-full  max-w-full">
       <div className="w-2/5 p-10 flex items-center justify-center">
         <img
           className=" logo h-[390px] rounded-full"

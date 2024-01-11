@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "NovaCut";
-  src: url("./public/fonts/novaCut-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PasseroOne";
-  src: url("./public/fonts/PasseroOne-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,7 +9,6 @@
 }
 
 body {
-  position: relative;
   background: radial-gradient(
       circle at left bottom,
       rgba(210, 70, 0, 1) 7%,
@@ -37,31 +22,8 @@ body {
       rgba(210, 70, 0, 1) 85.1%
     );
   height: 100vh;
-  animation: bg-animation 20s infinite alternate;
   background-repeat: no-repeat;
 }
-
-/* body::before {
-  content: "";
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url("/public/images/xD.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  mix-blend-mode: screen;
-} */
-
-/* @keyframes bg-animation {
-  0% {
-    background-position: top;
-  }
-  100% {
-    background-position: right;
-  }
-} */
 
 button {
   background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
@@ -72,15 +34,33 @@ button {
   transition: background-position 2s;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background-image: linear-gradient(to left, #f94c10, #f8de22, #c70039);
   background-size: 150%;
   background-position: right;
 }
 
+li {
+  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
+  background-size: 0% 2.5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 350ms ease;
+  text-decoration: none;
+}
+
+li:hover {
+  background-size: 100% 3px;
+}
+
 .logo {
   border: 8px solid #d85e2a;
+}
+
+.nickname:hover {
+  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
+  background-clip: text;
+  color: transparent;
 }
 
 #navbar__button {
