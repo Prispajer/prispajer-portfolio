@@ -23,13 +23,60 @@
 }
 
 body {
-  background: #d85e2a;
+  position: relative;
   background: radial-gradient(
-    circle,
-    rgba(216, 94, 42, 1) 0%,
-    rgba(216, 94, 42, 1) 35%,
-    rgba(0, 0, 0, 1) 100%
-  );
+      circle at left bottom,
+      rgba(210, 70, 0, 1) 7%,
+      rgba(183, 10, 10, 1) 46.9%,
+      rgba(210, 70, 0, 1) 70.1%
+    ),
+    radial-gradient(
+      circle at right bottom,
+      rgba(210, 70, 0, 1) 15.9%,
+      rgba(183, 10, 10, 1) 46.9%,
+      rgba(210, 70, 0, 1) 85.1%
+    );
+  height: 100vh;
+  animation: bg-animation 20s infinite alternate;
+  background-repeat: no-repeat;
+}
+
+/* body::before {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("/public/images/xD.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: screen;
+} */
+
+/* @keyframes bg-animation {
+  0% {
+    background-position: top;
+  }
+  100% {
+    background-position: right;
+  }
+} */
+
+button {
+  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
+  border-radius: 15px;
+  height: 45px;
+  width: 150px;
+  background-position: left;
+  transition: background-position 2s;
+}
+
+button:hover,
+button:focus {
+  background-image: linear-gradient(to left, #f94c10, #f8de22, #c70039);
+  background-size: 150%;
+  background-position: right;
 }
 
 .logo {

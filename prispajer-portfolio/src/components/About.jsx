@@ -3,8 +3,8 @@ export default function About({ showMenu }) {
     <section
       className={
         showMenu
-          ? "flex items-center w-full ml-80"
-          : "flex items-center w-full ml-0"
+          ? "flex items-center w-full ml-80 max-w-full"
+          : "flex items-center w-full ml-0 max-w-full"
       }
     >
       <div className="w-2/5 p-10 flex items-center justify-center">
