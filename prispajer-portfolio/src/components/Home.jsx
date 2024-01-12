@@ -1,23 +1,32 @@
+import { Link } from "react-scroll";
+
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center text-white text-center gap-10">
-      <div className="flex flex-col items-center justify-center text-left mt-40 gap-10 w-1/2">
-        <div className="flex flex-col text-9xl font-bold text-left mx-auto">
-          <div className="text-left">WELCOME</div>
-          <div className="flex items-center">PERSONAL</div>
-          <div className="flex items-center">PORTFOLIO.</div>
+    <section className="flex flex-col items-center justify-center text-white text-center gap-10 min-h-[100vh]">
+      <div className="flex flex-col items-center justify-center text-left gap-10">
+        <div className="flex flex-col items-center justify-center text-9xl font-bold">
+          <div className="text-center">WELCOME</div>
+          <div className="text-center">TO MY</div>
+          <div className="text-center">CODING</div>
+          <div className="text-center">WORLD.</div>
         </div>
-        <p className="text-4xl">Frontend Developer</p>
-        <p>
-          Welcome to my portfolio! I'm a self-taught enthusiast in the realm of
-          web development. My journey into the world of programming started out
-          of pure passion, and today, I strive to expand my skill set and
-          deliver innovative solutions. Join me in exploring my realm of
-          creativity and dedication reflected in each website I craft.
-        </p>
+        <div className="">
+          <p className="text-4xl">Frontend Developer</p>
+        </div>
+        <div className="w-[600px] text-justify">
+          <p className="text-sm">
+            Welcome to my portfolio! I'm a self-taught enthusiast in the realm
+            of web development. My journey into the world of programming started
+            out of pure passion, and today, I strive to expand my skill set and
+            deliver innovative solutions. Join me in exploring my realm of
+            creativity and dedication reflected in each website I craft.
+          </p>
+        </div>
       </div>
       <div>
-        <button>View more</button>
+        <Link to="about" spy={true} smooth={true} offset={20} duration={2000}>
+          <button>View more</button>
+        </Link>
       </div>
     </section>
   );

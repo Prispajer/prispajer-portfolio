@@ -2,14 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: radial-gradient(
+:root {
+  --background: radial-gradient(
       circle at left bottom,
       rgba(210, 70, 0, 1) 7%,
       rgba(183, 10, 10, 1) 46.9%,
@@ -21,8 +15,20 @@ body {
       rgba(183, 10, 10, 1) 46.9%,
       rgba(210, 70, 0, 1) 85.1%
     );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
   height: 100vh;
-  background-repeat: no-repeat;
+}
+
+#about {
 }
 
 button {
@@ -61,8 +67,4 @@ li:hover {
   background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
   background-clip: text;
   color: transparent;
-}
-
-#navbar__button {
-  background-color: #d85e2a;
 }

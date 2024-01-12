@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="flex items-center w-full  max-w-full">
+    <section id="about" className="flex items-center w-full  max-w-full">
       <div className="w-2/5 p-10 flex items-center justify-center">
         <img
           className=" logo h-[390px] rounded-full"
