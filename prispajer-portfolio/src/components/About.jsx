@@ -1,18 +1,24 @@
+import { Link } from "react-scroll";
+
 export default function About() {
   return (
-    <section id="about" className="flex items-center w-full  max-w-full">
-      <div className="w-2/5 p-10 flex items-center justify-center">
+    <section
+      id="about"
+      className="flex items-center justify-center min-h-[100vh] gap-x-32"
+    >
+      <div className="max-w-[400px]">
         <img
-          className=" logo h-[390px] rounded-full"
+          className=" logo h-[400px] rounded-full"
           src="../../public/images/avatar.png"
           alt="It's meee"
         />
       </div>
-      <div className="w-3/5 h-full flex items-center flex-col p-10 ">
-        <div>
-          <h1 className="text-white text-9xl font-bold">Adrian Kozieł</h1>
+      <div className="flex flex-col max-w-[600px] gap-y-12">
+        <div className="flex flex-col">
+          <h2 className="text-white text-8xl font-bold">Adrian</h2>
+          <h2 className="text-white text-8xl font-bold">Kozieł</h2>
         </div>
-        <div className="text-white text-4xl  text-center max-w-[800px] flex flex-col">
+        <div className="text-white text-xl">
           Hi, I'm Adrian, and my programming journey commenced when I undertook
           the development of a website for our family business. The process
           ignited a passion for the creative aspects of web design and
@@ -21,11 +27,17 @@ export default function About() {
           seasoned developer. Join me on this exploration of turning ideas into
           innovative web experiences!
         </div>
-        <div>
-          <button className="text-white">Contact me</button>
-          <a className="text-white" href="">
+        <div className="">
+          <button className="text-white mr-10">Contact me</button>
+          <Link
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={2000}
+          >
             My projects
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -24,7 +24,7 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <Link to="about" spy={true} smooth={true} offset={20} duration={2000}>
+        <Link to="about" spy={true} smooth={true} offset={-70} duration={2000}>
           <button>View more</button>
         </Link>
       </div>
