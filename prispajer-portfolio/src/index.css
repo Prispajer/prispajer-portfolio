@@ -27,6 +27,29 @@ body {
   background: var(--background);
 }
 
+.link {
+  background: linear-gradient(90deg, #d91e36, #da344d, #ec5766, #ef7674);
+  background-clip: text;
+  color: transparent;
+}
+
+.rotation-text {
+  background: linear-gradient(90deg, #d91e36, #da344d, #ec5766, #ef7674);
+  background-clip: text;
+  color: transparent;
+}
+.rotation-text:hover {
+  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
+  background-clip: text;
+  color: transparent;
+}
+
+.link:hover {
+  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
+  background-clip: text;
+  color: transparent;
+}
+
 button {
   background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
   border-radius: 15px;
