@@ -6,7 +6,7 @@ import Portfolio from "./components/Portfolio";
 
 function App() {
   return (
-    <div className="mx-auto w-4/5 overflow-hidden">
+    <div className="px-10 mx-auto overflow-hidden">
       <Navbar />
       <Home />
       <About />

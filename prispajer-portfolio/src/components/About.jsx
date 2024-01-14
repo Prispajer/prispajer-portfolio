@@ -9,7 +9,7 @@ export default function About() {
       <div className="absolute left-[40%] top-[36%]  rotate-[270deg] rotation-text">
         <p className="text-gray text-4xl">∕ ABOUT ME ∕</p>
       </div>
-      <div className="max-w-[400px]">
+      <div className="min-h-[400px] min-w-[500px]">
         <img
           className=" logo h-[400px] rounded-full"
           src="../../public/images/avatar.png"
@@ -21,7 +21,7 @@ export default function About() {
           <h2 className="text-white text-8xl font-bold">Adrian</h2>
           <h2 className="text-white text-8xl font-bold">Kozieł</h2>
         </div>
-        <div className="text-white text-xl ">
+        <div className="text-white text-xl text-justify ">
           Hi, I'm Adrian, and my programming journey commenced when I undertook
           the development of a website for our family business. The process
           ignited a passion for the creative aspects of web design and

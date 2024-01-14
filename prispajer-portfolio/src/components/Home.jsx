@@ -2,7 +2,10 @@ import { Link } from "react-scroll";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center text-white text-center gap-10 min-h-[100vh]">
+    <section
+      id="home"
+      className="flex flex-col items-center justify-center text-white text-center gap-10 min-h-[100vh]"
+    >
       <div className="flex flex-col items-center justify-center text-left gap-10">
         <div className="flex flex-col items-center justify-center text-9xl font-bold">
           <div className="text-center">WELCOME</div>
