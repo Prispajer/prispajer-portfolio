@@ -7,7 +7,7 @@ export default function Home() {
       className="flex flex-col items-center justify-center text-white text-center gap-10 min-h-[100vh]"
     >
       <div className="flex flex-col items-center justify-center text-left gap-10">
-        <div className="flex flex-col items-center justify-center text-9xl font-bold">
+        <div className="text-7xl xs:text-8xl sm:text-9xl font-bold">
           <div className="text-center">WELCOME</div>
           <div className="text-center">TO MY</div>
           <div className="text-center">CODING</div>
@@ -16,7 +16,7 @@ export default function Home() {
         <div className="">
           <p className="text-4xl">Frontend Developer</p>
         </div>
-        <div className="w-[600px] text-justify">
+        <div className="w-[300px] xs:w-[400px] sm:w-[500px] text-justify">
           <p className="text-sm">
             Welcome to my portfolio! I'm a self-taught enthusiast in the realm
             of web development. My journey into the world of programming started

@@ -4,14 +4,14 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex items-center justify-center min-h-[100vh] gap-x-32 relative"
+      className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-x-24 relative"
     >
       <div className="absolute left-[40%] top-[36%]  rotate-[270deg] rotation-text">
         <p className="text-gray text-4xl">∕ ABOUT ME ∕</p>
       </div>
-      <div className="min-h-[400px] min-w-[500px]">
+      <div className="min-w-[300px]">
         <img
-          className=" logo h-[400px] rounded-full"
+          className=" logo h-[300px] rounded-full"
           src="../../public/images/avatar.png"
           alt="It's meee"
         />

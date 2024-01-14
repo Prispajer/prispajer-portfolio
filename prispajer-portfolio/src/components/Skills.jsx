@@ -4,11 +4,13 @@ export default function About() {
   return (
     <section
       id="skills"
-      className="flex items-center justify-center min-h-[100vh] gap-x-32 relative"
+      className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-x-32 relative"
     >
-      <div className="flex flex-col min-h-[500px] max-w-[500px] gap-y-12 ">
+      <div className="flex flex-col max-w-[600px] gap-y-12 ">
         <div className="flex flex-col">
-          <h2 className="min-w-[500px] text-white text-8xl font-bold">My</h2>
+          <h2 className="sm:min-w-[500px]  text-white text-8xl font-bold">
+            My
+          </h2>
           <h2 className="text-white text-8xl font-bold">skills</h2>
         </div>
         <div className="text-white text-xl text-justify">
@@ -36,34 +38,34 @@ export default function About() {
       <div className="absolute left-[40%] top-[36%]  rotate-[270deg] rotation-text">
         <p className="text-gray text-4xl">∕ MY SKILLS ∕</p>
       </div>
-      <div className="min-w-[500px] grid grid-cols-3 gap-4 lg:w-[400px]">
+      <div className="sm:min-w-[500px] grid grid-cols-3 gap-4 ">
         <img
-          className="col-span-1 flex justify-center items-center min-h-[160px] min-w-[160px]"
+          className="col-span-1 flex justify-center items-center sm:min-h-[160px] sm:min-w-[160px]"
           src="../../public/images/icons8-html.svg"
           alt=""
         />
         <img
-          className="min-h-[160px] min-w-[160px]"
+          className=" sm:min-h-[160px] sm:min-w-[160px]"
           src="../../public/images/icons8-css.svg"
           alt=""
         />
         <img
-          className="min-h-[160px] min-w-[160px]"
+          className=" sm:min-h-[160px] sm:min-w-[160px]"
           src="../../public/images/icons8-javascript.svg"
           alt=""
         />
         <img
-          className="min-h-[160px] min-w-[160px]"
+          className=" sm:min-h-[160px] sm:min-w-[160px]"
           src="../../public/images/icons8-react.svg"
           alt=""
         />
         <img
-          className="min-h-[160px] min-w-[160px]"
+          className=" sm:min-h-[160px] sm:min-w-[160px]"
           src="../../public/images/icons8-sass.svg"
           alt=""
         />
         <img
-          className="min-h-[160px] min-w-[160px]"
+          className=" sm:min-h-[160px] sm:min-w-[160px]"
           src="../../public/images/icons8-tailwind-css.svg"
           alt=""
         />
