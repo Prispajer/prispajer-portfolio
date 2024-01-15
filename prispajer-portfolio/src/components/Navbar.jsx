@@ -77,8 +77,8 @@ export default function Navbar({
   }, [scroll]);
 
   return (
-    <header className="fixed py-5 w-full">
-      <nav className="flex items-center justify-between text-white">
+    <header className="fixed py-5 w-full z-50	">
+      <nav className="flex items-center justify-between text-white ">
         <div className="sm:hidden">
           <RxHamburgerMenu
             size="30px"
