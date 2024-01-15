@@ -50,6 +50,9 @@ body {
   color: transparent;
 }
 
+.active {
+}
+
 button {
   background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
   border-radius: 15px;
