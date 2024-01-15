@@ -1,8 +1,9 @@
 import { Link } from "react-scroll";
 
-export default function Home() {
+export default function Home({ homeRef }) {
   return (
     <section
+      ref={homeRef}
       id="home"
       className="flex flex-col items-center justify-center text-white text-center gap-10 min-h-[100vh]"
     >

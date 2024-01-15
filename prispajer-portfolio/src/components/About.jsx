@@ -1,8 +1,9 @@
 import { Link } from "react-scroll";
 
-export default function About() {
+export default function About({ aboutRef }) {
   return (
     <section
+      ref={aboutRef}
       id="about"
       className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-x-24 relative"
     >
@@ -31,7 +32,16 @@ export default function About() {
           innovative web experiences!
         </div>
         <div className="">
-          <button className="text-white mr-10">Contact me</button>
+          <Link
+            className="link cursor-pointer text-white"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={2000}
+          >
+            <button className="text-white mr-10">Contact me</button>
+          </Link>
           <Link
             className="link cursor-pointer text-white"
             to="portfolio"

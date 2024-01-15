@@ -1,8 +1,9 @@
 import { Link } from "react-scroll";
 
-export default function About() {
+export default function Skills({ skillsRef }) {
   return (
     <section
+      ref={skillsRef}
       id="skills"
       className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-x-32 relative"
     >

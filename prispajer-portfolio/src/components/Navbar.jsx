@@ -1,8 +1,16 @@
 import React from "react";
-import { Link } from "react-scroll";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-export default function Navbar() {
+export default function Navbar({
+  homeRef,
+  aboutRef,
+  skillsRef,
+  portfolioRef,
+  contactRef,
+  toggleScrollToSection,
+}) {
+  const [scroll, setScroll] = React.useState(window.scrollY);
+  const [activeSubPage, setActiveSubPage] = React.useState("home");
   const [isHamburger, setIsHamburger] = React.useState(true);
 
   const showMenu = () => {
@@ -10,18 +18,63 @@ export default function Navbar() {
   };
 
   React.useEffect(() => {
+    const scrollHandle = () => {
+      const currentScrollRange = window.scrollY;
+      setScroll(currentScrollRange);
+    };
+
     const handleResize = () => {
       if (window.innerWidth >= 640 && !isHamburger) {
         setIsHamburger(true);
       }
     };
 
+    window.addEventListener("scroll", scrollHandle);
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", scrollHandle);
     };
   }, [isHamburger]);
+
+  React.useEffect(() => {
+    console.log("Scroll:", scroll);
+    console.log("Active SubPage:", activeSubPage);
+    const homeSubPagePosition = homeRef.current;
+    homeRef.current.offsetTop;
+    const aboutSubPagePosition = aboutRef.current;
+    aboutRef.current.offsetTop;
+    const skillsSubPagePosition = skillsRef.current;
+    skillsRef.current.offsetTop;
+    const portfolioSubPagePosition = portfolioRef.current
+      ? portfolioRef.current.offsetTop - 700
+      : 0;
+    const contactSubPagePosition = contactRef.current
+      ? contactRef.current.offsetTop - 700
+      : 0;
+
+    const homeSection = scroll >= 0 && scroll < aboutSubPagePosition;
+    const aboutSection =
+      scroll >= homeSubPagePosition && scroll < aboutSubPagePosition;
+    const skillsSection =
+      scroll >= aboutSubPagePosition && scroll < portfolioSubPagePosition;
+    const portfolioSection =
+      scroll >= portfolioSubPagePosition && scroll < contactSubPagePosition;
+    const contactSection = scroll >= contactSubPagePosition;
+
+    if (homeSection) {
+      setActiveSubPage("home");
+    } else if (aboutSection) {
+      setActiveSubPage("about");
+    } else if (skillsSection) {
+      setActiveSubPage("skills");
+    } else if (portfolioSection) {
+      setActiveSubPage("portfolio");
+    } else if (contactSection) {
+      setActiveSubPage("contact");
+    }
+  }, [scroll]);
 
   return (
     <header className="fixed py-5 w-full">
@@ -40,46 +93,36 @@ export default function Navbar() {
               : "fixed sm:gap-10 top-20 flex gap-10"
           }
         >
-          <Link
-            className="cursor-pointer"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
+          <li
+            onClick={() => toggleScrollToSection(homeRef)}
+            className={activeSubPage === "home" ? "active" : ""}
           >
-            <li className="cursor-pointer">Home</li>
-          </Link>
-          <Link
-            className="cursor-pointer"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
+            Home
+          </li>
+          <li
+            onClick={() => toggleScrollToSection(aboutRef)}
+            className={activeSubPage === "about" ? "active" : ""}
           >
-            <li className="cursor-pointer">About</li>
-          </Link>
-          <Link
-            className="cursor-pointer"
-            to="portfolio"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
+            About
+          </li>
+          <li
+            onClick={() => toggleScrollToSection(skillsRef)}
+            className={activeSubPage === "skills" ? "active" : ""}
           >
-            <li className="cursor-pointer">Portfolio</li>
-          </Link>
-          <Link
-            className="cursor-pointer"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
+            Skills
+          </li>
+          <li
+            onClick={() => toggleScrollToSection(portfolioRef)}
+            className={activeSubPage === "portfolio" ? "active" : ""}
           >
-            <li className="cursor-pointer">Contact </li>
-          </Link>
+            Portfolio
+          </li>
+          <li
+            onClick={() => toggleScrollToSection(contactRef)}
+            className={activeSubPage === "contact" ? "active" : ""}
+          >
+            Contact
+          </li>
         </ul>
         <div className="flex flex-1 justify-end">
           <button className="bg-transparent mr-20">Work with me</button>

@@ -66,6 +66,7 @@ button:hover {
 }
 
 li {
+  cursor: pointer;
   background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
   background-size: 0% 2.5px;
   background-repeat: no-repeat;
