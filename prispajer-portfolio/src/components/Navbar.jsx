@@ -39,8 +39,6 @@ export default function Navbar({
   }, [isHamburger]);
 
   React.useEffect(() => {
-    console.log("Scroll:", scroll);
-    console.log("Active SubPage:", activeSubPage);
     const homeSubPagePosition = homeRef.current;
     homeRef.current.offsetTop;
     const aboutSubPagePosition = aboutRef.current;
@@ -77,7 +75,7 @@ export default function Navbar({
   }, [scroll]);
 
   return (
-    <header className="fixed py-5 w-full z-50	">
+    <header className="fixed py-5 w-full z-50">
       <nav className="flex items-center justify-between text-white ">
         <div className="sm:hidden">
           <RxHamburgerMenu
@@ -90,7 +88,7 @@ export default function Navbar({
           className={
             isHamburger
               ? "hidden gap-10 sm:flex sm:flex-1 "
-              : "fixed sm:gap-10 top-20 flex gap-10"
+              : "fixed flex-col items-center justify-center w-full bg-white text-black h-full sm:gap-10 top-0 left-0 flex gap-10"
           }
         >
           <li
