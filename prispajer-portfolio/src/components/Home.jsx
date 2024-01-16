@@ -5,19 +5,19 @@ export default function Home({ homeRef }) {
     <section
       ref={homeRef}
       id="home"
-      className="flex flex-col items-center justify-center text-white text-center gap-10 min-h-[100vh]"
+      className="flex flex-col items-center justify-center text-white text-center gap-10 pt-28 pb-24 xs:pt-36"
     >
-      <div className="flex flex-col items-center justify-center text-left gap-10">
+      <div className="flex flex-col items-center justify-center gap-10">
         <div className="text-7xl xs:text-8xl sm:text-9xl font-bold">
-          <div className="text-center">WELCOME</div>
-          <div className="text-center">TO MY</div>
-          <div className="text-center">CODING</div>
-          <div className="text-center">WORLD.</div>
+          <p>WELCOME</p>
+          <p>TO MY</p>
+          <p>CODING</p>
+          <p>WORLD.</p>
         </div>
-        <div className="">
+        <>
           <p className="text-4xl">Frontend Developer</p>
-        </div>
-        <div className="w-[300px] xs:w-[400px] sm:w-[500px] text-justify">
+        </>
+        <div className="xs:w-[400px] sm:w-[500px] text-justify">
           <p className="text-sm">
             Welcome to my portfolio! I'm a self-taught enthusiast in the realm
             of web development. My journey into the world of programming started

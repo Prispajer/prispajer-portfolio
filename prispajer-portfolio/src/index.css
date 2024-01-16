@@ -33,12 +33,12 @@ body {
   color: transparent;
 }
 
-.rotation-text {
+.gradient-text {
   background: linear-gradient(90deg, #d91e36, #da344d, #ec5766, #ef7674);
   background-clip: text;
   color: transparent;
 }
-.rotation-text:hover {
+.gradient-text:hover {
   background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
   background-clip: text;
   color: transparent;
@@ -48,9 +48,6 @@ body {
   background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
   background-clip: text;
   color: transparent;
-}
-
-.active {
 }
 
 button {

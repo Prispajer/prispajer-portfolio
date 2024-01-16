@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Sidebar from "./components/Sidebar";
+import Contact from "./components/Contact";
 
 function App() {
   const homeRef = React.useRef(null);
@@ -38,6 +39,7 @@ function App() {
       <Skills skillsRef={skillsRef} />
       <Portfolio portfolioRef={portfolioRef} />
       <Sidebar />
+      <Contact />
     </div>
   );
 }
