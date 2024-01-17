@@ -24,7 +24,7 @@ export default function Navbar({
     };
 
     const handleResize = () => {
-      if (window.innerWidth >= 640 && !isHamburger) {
+      if (window.innerWidth >= 768 && !isHamburger) {
         setIsHamburger(true);
       }
     };
@@ -75,9 +75,9 @@ export default function Navbar({
   }, [scroll]);
 
   return (
-    <header className="fixed py-5 w-full z-50">
+    <header className="fixed py-5 w-full z-50  ">
       <nav className="flex items-center justify-between text-white ">
-        <div className="sm:hidden">
+        <div className="md:hidden">
           <RxHamburgerMenu
             size="30px"
             className="cursor-pointer"
@@ -87,8 +87,8 @@ export default function Navbar({
         <ul
           className={
             isHamburger
-              ? "hidden gap-10 sm:flex sm:flex-1 "
-              : "fixed flex-col items-center justify-center w-full bg-white text-black h-full sm:gap-10 top-0 left-0 flex gap-10"
+              ? "hidden gap-10 md:flex md:flex-1 "
+              : "fixed flex-col items-center justify-center w-full bg-white text-black h-full md:gap-10 top-0 left-0 flex gap-10"
           }
         >
           <li

@@ -4,15 +4,15 @@ import { FaFacebookF } from "react-icons/fa";
 import useClipboard from "react-use-clipboard";
 
 export default function Contact() {
-  const [email, setEmail] = useState("example@example.com"); // Dodaj swój rzeczywisty adres e-mail
-  const [isCopied, setCopied] = useClipboard(email, { successDuration: 1000 });
+  const [email, setEmail] = useState("koziel.adrian98@gmail.com");
+  const [isCopied, setCopied] = useClipboard(email, { successDuration: 2000 });
 
   const handleCopyEmail = () => {
     setCopied();
   };
 
   return (
-    <section className="flex flex-col items-center justify-center mt-10">
+    <section className="flex flex-col items-center justify-center mt-10 sm:max-w-[540px]">
       <div>
         <h2 className="text-3xl text-white font-bold">Contact</h2>
       </div>

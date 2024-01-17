@@ -3,11 +3,11 @@ export default {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     screens: {
-      xs: "480px",
-      sm: "640px",
+      sm: "576px",
       md: "768px",
-      lg: "960px",
+      lg: "992px",
       xl: "1200px",
+      xxl: "1400px",
     },
     fontFamily: {
       novaCut: ["NovaCut", "sans-serif"],

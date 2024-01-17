@@ -5,7 +5,7 @@ export default function About({ aboutRef }) {
     <section
       ref={aboutRef}
       id="about"
-      className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-x-32 relative"
+      className="flex flex-col lg:flex-row items-center  min-h-[100vh] gap-x-32 relative sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px]"
     >
       <div className="min-w-[300px] xl:min-w-[600px]">
         <img
