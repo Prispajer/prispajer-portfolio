@@ -44,13 +44,8 @@ export default function Navbar({
     const aboutSubPagePosition = aboutRef.current;
     aboutRef.current.offsetTop;
     const skillsSubPagePosition = skillsRef.current;
-    skillsRef.current.offsetTop;
-    const portfolioSubPagePosition = portfolioRef.current
-      ? portfolioRef.current.offsetTop - 700
-      : 0;
-    const contactSubPagePosition = contactRef.current
-      ? contactRef.current.offsetTop - 700
-      : 0;
+    const portfolioSubPagePosition = portfolioRef.current;
+    const contactSubPagePosition = contactRef.current;
 
     const homeSection = scroll >= 0 && scroll < aboutSubPagePosition;
     const aboutSection =
@@ -76,7 +71,7 @@ export default function Navbar({
 
   return (
     <header className="fixed py-5 w-full z-50  ">
-      <nav className="flex items-center justify-between text-white ">
+      <nav className="flex items-center justify-between text-[#efe0ca] font-bold">
         <div className="md:hidden">
           <RxHamburgerMenu
             size="30px"
@@ -95,35 +90,35 @@ export default function Navbar({
             onClick={() => toggleScrollToSection(homeRef)}
             className={activeSubPage === "home" ? "active" : ""}
           >
-            Home
+            HOME
           </li>
           <li
             onClick={() => toggleScrollToSection(aboutRef)}
             className={activeSubPage === "about" ? "active" : ""}
           >
-            About
+            ABOUT
           </li>
           <li
             onClick={() => toggleScrollToSection(skillsRef)}
             className={activeSubPage === "skills" ? "active" : ""}
           >
-            Skills
+            SKILLS
           </li>
           <li
             onClick={() => toggleScrollToSection(portfolioRef)}
             className={activeSubPage === "portfolio" ? "active" : ""}
           >
-            Portfolio
+            PORTFOLIO
           </li>
           <li
             onClick={() => toggleScrollToSection(contactRef)}
             className={activeSubPage === "contact" ? "active" : ""}
           >
-            Contact
+            CONTACT
           </li>
         </ul>
         <div className="flex flex-1 justify-end">
-          <button className="bg-transparent mr-20">Work with me</button>
+          <button className="bg-[#fe5000] mr-20">Work with me</button>
         </div>
       </nav>
     </header>

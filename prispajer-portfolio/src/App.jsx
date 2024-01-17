@@ -39,7 +39,7 @@ function App() {
       <Skills skillsRef={skillsRef} />
       <Portfolio portfolioRef={portfolioRef} />
       <Sidebar />
-      <Contact />
+      <Contact contactRef={contactRef} />
     </div>
   );
 }

@@ -5,9 +5,9 @@ export default function Skills({ skillsRef }) {
     <section
       ref={skillsRef}
       id="skills"
-      className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-x-32 mt-10 relative sm:max-w-[540px]"
+      className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] gap-x-32 mt-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] mx-auto"
     >
-      <div className="flex flex-col gap-y-12 ">
+      <div className="">
         <div className="flex sm:flex-col justify-center gap-4 sm:gap-0">
           <h2 className=" text-white text-[36px] font-bold">My</h2>
           <h2 className="text-white text-[36px] font-bold">skills</h2>

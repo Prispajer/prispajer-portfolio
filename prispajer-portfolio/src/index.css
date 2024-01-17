@@ -24,7 +24,7 @@
 }
 
 body {
-  background: var(--background);
+  background: #001233;
 }
 
 .link {
@@ -51,8 +51,9 @@ body {
 }
 
 button {
-  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
-  border-radius: 15px;
+  /* background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36); */
+  background: #fe5000;
+
   height: 45px;
   width: 150px;
   background-position: left;
