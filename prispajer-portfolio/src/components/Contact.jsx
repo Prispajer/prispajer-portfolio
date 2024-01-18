@@ -16,8 +16,8 @@ export default function Contact({ contactRef }) {
       ref={contactRef}
       className="flex flex-col items-center justify-center mt-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] mx-auto h-[90vh]"
     >
-      <div>
-        <h2 className="text-3xl text-white font-bold">Contact</h2>
+      <div className="mb-10">
+        <h2 className="text-[50px] text-secondary font-bold">Contact</h2>
       </div>
       <div className="flex items-center space-x-4 mt-4">
         <button

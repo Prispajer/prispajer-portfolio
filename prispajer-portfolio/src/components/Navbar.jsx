@@ -39,7 +39,7 @@ export default function Navbar({
 
   return (
     <header className="fixed py-5 w-full z-50">
-      <nav className="flex items-center justify-between text-[#efe0ca] font-bold">
+      <nav className="flex items-center justify-between text-primary font-bold">
         <div className="md:hidden">
           <RxHamburgerMenu
             size="30px"
@@ -51,7 +51,7 @@ export default function Navbar({
           className={
             isHamburger
               ? "hidden gap-10 md:flex md:flex-1"
-              : "fixed flex-col items-center justify-center w-full bg-white text-black h-full md:gap-10 top-0 left-0 flex gap-10"
+              : "fixed flex-col items-center justify-center w-full bg-secondary text-primary h-full md:gap-10 top-0 left-0 flex gap-10"
           }
         >
           <li
