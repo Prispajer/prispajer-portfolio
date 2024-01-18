@@ -1,7 +1,7 @@
 const portfolioData = [
   {
     name: "API Countries",
-    image: "../../public/images/API Countries.jpg",
+    image: "../../public/images/API Countries.jpeg",
     technologies: "API Sass React React Router",
     link: "https://prispajer-rest-api.netlify.app/",
     description:

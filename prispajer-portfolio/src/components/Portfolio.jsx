@@ -1,5 +1,6 @@
 import data from "../data/data";
 import { v4 as uuidv4 } from "uuid";
+import { motion } from "framer-motion";
 
 export default function Portfolio({ portfolioRef }) {
   return (
@@ -16,9 +17,21 @@ export default function Portfolio({ portfolioRef }) {
           Below here are a few projects I've worked recently.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] md:grid-cols-3">
+      <motion.div
+        initial={{ x: -1000 }}
+        animate={{ x: [0, 900, 0] }}
+        transition={{
+          duration: "1",
+        }}
+        whileInView={"show"}
+        whileHover={{ scale: 1.1, opacity: 0.2 }}
+        className="grid grid-cols-1 gap-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] md:grid-cols-3"
+      >
         {data.map((data) => (
-          <div key={uuidv4()} className="border border-red-500 shadow-md p-2 ">
+          <div
+            key={uuidv4()}
+            className="border border-red-500 shadow-md p-2 portfolio-container relative curso"
+          >
             <div className="w-full">
               <a href={data.link}>
                 <img
@@ -36,7 +49,7 @@ export default function Portfolio({ portfolioRef }) {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

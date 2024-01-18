@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar({
@@ -9,116 +9,99 @@ export default function Navbar({
   contactRef,
   toggleScrollToSection,
 }) {
-  const [scroll, setScroll] = React.useState(window.scrollY);
-  const [activeSubPage, setActiveSubPage] = React.useState("home");
-  const [isHamburger, setIsHamburger] = React.useState(true);
+  const [scroll, setScroll] = useState(window.scrollY);
+  const [activeSubPage, setActiveSubPage] = useState("home");
+  const [isHamburger, setIsHamburger] = useState(true);
+  const [isHamburgerClosed, setIsHamburgerClosed] = React.useState(isHamburger);
 
-  const showMenu = () => {
-    setIsHamburger((prevShow) => !prevShow);
+  const handleScroll = () => {
+    setScroll(window.scrollY);
   };
 
-  React.useEffect(() => {
-    const scrollHandle = () => {
-      const currentScrollRange = window.scrollY;
-      setScroll(currentScrollRange);
-    };
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      setIsHamburger(true);
+    }
+  };
 
-    const handleResize = () => {
-      if (window.innerWidth >= 768 && !isHamburger) {
-        setIsHamburger(true);
-      }
-    };
+  const closeMenu = () => {
+    setIsHamburger(isHamburgerClosed);
+  };
 
-    window.addEventListener("scroll", scrollHandle);
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", scrollHandle);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [isHamburger]);
-
-  React.useEffect(() => {
-    const homeSubPagePosition = homeRef.current;
-    homeRef.current.offsetTop;
-    const aboutSubPagePosition = aboutRef.current;
-    aboutRef.current.offsetTop;
-    const skillsSubPagePosition = skillsRef.current;
-    const portfolioSubPagePosition = portfolioRef.current;
-    const contactSubPagePosition = contactRef.current;
-
-    const homeSection = scroll >= 0 && scroll < aboutSubPagePosition;
-    const aboutSection =
-      scroll >= homeSubPagePosition && scroll < aboutSubPagePosition;
-    const skillsSection =
-      scroll >= aboutSubPagePosition && scroll < portfolioSubPagePosition;
-    const portfolioSection =
-      scroll >= portfolioSubPagePosition && scroll < contactSubPagePosition;
-    const contactSection = scroll >= contactSubPagePosition;
-
-    if (homeSection) {
-      setActiveSubPage("home");
-    } else if (aboutSection) {
-      setActiveSubPage("about");
-    } else if (skillsSection) {
-      setActiveSubPage("skills");
-    } else if (portfolioSection) {
-      setActiveSubPage("portfolio");
-    } else if (contactSection) {
-      setActiveSubPage("contact");
-    }
-  }, [scroll]);
+  }, []);
 
   return (
-    <header className="fixed py-5 w-full z-50  ">
+    <header className="fixed py-5 w-full z-50">
       <nav className="flex items-center justify-between text-[#efe0ca] font-bold">
         <div className="md:hidden">
           <RxHamburgerMenu
             size="30px"
             className="cursor-pointer"
-            onClick={showMenu}
+            onClick={() => setIsHamburger((prevShow) => !prevShow)}
           />
         </div>
         <ul
           className={
             isHamburger
-              ? "hidden gap-10 md:flex md:flex-1 "
+              ? "hidden gap-10 md:flex md:flex-1"
               : "fixed flex-col items-center justify-center w-full bg-white text-black h-full md:gap-10 top-0 left-0 flex gap-10"
           }
         >
           <li
-            onClick={() => toggleScrollToSection(homeRef)}
+            onClick={() => {
+              toggleScrollToSection(homeRef);
+              closeMenu();
+            }}
             className={activeSubPage === "home" ? "active" : ""}
           >
             HOME
           </li>
           <li
-            onClick={() => toggleScrollToSection(aboutRef)}
+            onClick={() => {
+              toggleScrollToSection(aboutRef);
+              closeMenu();
+            }}
             className={activeSubPage === "about" ? "active" : ""}
           >
             ABOUT
           </li>
           <li
-            onClick={() => toggleScrollToSection(skillsRef)}
-            className={activeSubPage === "skills" ? "active" : ""}
+            onClick={() => {
+              toggleScrollToSection(skillsRef);
+              closeMenu();
+            }}
           >
             SKILLS
           </li>
           <li
-            onClick={() => toggleScrollToSection(portfolioRef)}
-            className={activeSubPage === "portfolio" ? "active" : ""}
+            onClick={() => {
+              toggleScrollToSection(portfolioRef);
+              closeMenu();
+            }}
           >
             PORTFOLIO
           </li>
           <li
-            onClick={() => toggleScrollToSection(contactRef)}
-            className={activeSubPage === "contact" ? "active" : ""}
+            onClick={() => {
+              toggleScrollToSection(contactRef);
+              closeMenu();
+            }}
           >
             CONTACT
           </li>
         </ul>
         <div className="flex flex-1 justify-end">
-          <button className="bg-[#fe5000] mr-20">Work with me</button>
+          <button onClick={closeMenu} className="bg-[#fe5000] mr-20">
+            Work with me
+          </button>
         </div>
       </nav>
     </header>
