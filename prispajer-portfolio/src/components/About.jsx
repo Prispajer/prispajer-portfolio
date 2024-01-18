@@ -9,28 +9,36 @@ export default function About({ aboutRef }) {
     >
       <div className="flex flex-col  gap-y-12">
         <div className="flex items-center sm:items-left flex-col">
-          <h2 className="text-white text-[36px] font-bold">Adrian</h2>
-          <h2 className="text-white text-[36px] font-bold">Kozieł</h2>
+          <h2 className="text-secondary text-[50px] font-bold">
+            LET ME INTRODUCE <span className="text-thirdy">MYSELF!</span>
+          </h2>
         </div>
-        <div className="text-white text-xl text-justify ">
-          Hi, I'm Adrian, and my programming journey commenced when I undertook
-          the development of a website for our family business. The process
-          ignited a passion for the creative aspects of web design and
-          functionality, marking the beginning of my coding adventure. Now, I'm
-          continually honing my frontend skills, striving to evolve into a
-          seasoned developer. Join me on this exploration of turning ideas into
-          innovative web experiences!
+        <div className="text-primary text-[22px] text-justify ">
+          My name is Adrian, and my coding journey began when I crafted a
+          portfolio website for a company. As I explored the nuances of HTML,
+          CSS, and JS, a hunger for knowledge took root. Gradually, I embraced
+          React and Tailwind, expanding my toolkit to include TypeScript,
+          Next.js, and Express. Beyond the screen, I find joy in the melody of
+          music, the excitement of gaming on my computer, and the enchanting
+          worlds found within the pages of a good book. With every line of code
+          and every webpage, my goal is to tell a story that resonates,
+          captivates, and pushes the boundaries of innovation.
         </div>
-        <div className="flex justify-between items-center"></div>
-        <div className="sm:min-w-[500px] grid grid-cols-7 gap-4 mt-10 md:mt-0">
+        <div className="grid grid-cols-4 gap-4 mt-10">
           {technologyData.map((technology, index) => (
-            <img
-              key={index}
-              className={technology.styles}
-              src={technology.image}
-              alt={technology.alt}
-            />
+            <div className="flex justify-center">
+              <img
+                key={index}
+                className={technology.styles}
+                src={technology.image}
+                alt={technology.alt}
+              />
+            </div>
           ))}
+        </div>
+        <div className="flex justify-around mt-10">
+          <button className="text-primary bg-transparent">My Portfolio</button>
+          <button className="text-primary">Contact Me</button>
         </div>
       </div>
     </section>

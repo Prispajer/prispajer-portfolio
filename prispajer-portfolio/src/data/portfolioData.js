@@ -1,7 +1,7 @@
 const portfolioData = [
   {
     name: "API Countries",
-    image: "../../public/images/API Countries.jpeg",
+    image: "../../public/images/API Countries.jpg",
     technologies: "API Sass React React Router",
     link: "https://prispajer-rest-api.netlify.app/",
     description:
@@ -22,6 +22,14 @@ const portfolioData = [
     link: "https://prispajer-rest-api.netlify.app/",
     description:
       "Created a modern business website, Edge Ledger, for my portfolio. The site boasts a clean design, utilizing HTML, CSS, and responsive web design principles. Implemented a lightbox feature for enhanced user experience without additional functionality.",
+  },
+  {
+    name: "To Do List",
+    image: "../../public/images/To Do List.jpg",
+    technologies: "HTML CSS JavaScript",
+    link: "https://prispajer-rest-api.netlify.app/",
+    description:
+      "The To-Do List app is a simple project that allows users to add, remove, and mark tasks as completed. The interface is intuitive, and the app is responsive, ensuring easy and comfortable usability across various devices.",
   },
 ];
 

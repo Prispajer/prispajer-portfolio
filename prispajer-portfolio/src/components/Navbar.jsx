@@ -72,7 +72,6 @@ export default function Navbar({
           >
             ABOUT
           </li>
-
           <li
             onClick={() => {
               toggleScrollToSection(portfolioRef);

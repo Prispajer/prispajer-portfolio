@@ -11,15 +11,14 @@ export default function Home({ homeRef, aboutRef, toggleScrollToSection }) {
         <div className="text-[50px] xs:text-[50px] sm:text-[50px] font-bold text-secondary">
           <p className="text-[50px]">Hi!</p>
           <p className="text-[50px]">I'M ADRIAN KOZIEŁ</p>
-          <p className="text-[30px]">Front-End Developer</p>
+          <p className="text-[30px] text-thirdy">Front-End Developer</p>
         </div>
         <div className="xs:w-[400px] sm:w-[500px] text-justify">
           <p className="text-[22px]">
-            Welcome to my portfolio! I'm a self-taught enthusiast in the realm
-            of web development. My journey into the world of programming started
-            out of pure passion, and today, I strive to expand my skill set and
-            deliver innovative solutions. Join me in exploring my realm of
-            creativity and dedication reflected in each website I craft.
+            Hello from the digital side! Thank you for stopping by my portfolio.
+            I'm elated to share my projects with you. Whether you're here for
+            inspiration or exploration, I hope you find something that
+            resonates. Let's embark on this digital adventure together!
           </p>
           <div>
             <button

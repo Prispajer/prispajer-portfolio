@@ -16,6 +16,7 @@ export default {
     colors: {
       primary: "#efe0ca",
       secondary: "#fe5000",
+      thirdy: "#fcb045",
     },
   },
   plugins: [],
