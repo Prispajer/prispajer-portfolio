@@ -2,7 +2,6 @@ import React from "react";
 import Home from "./components/Home";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Sidebar from "./components/Sidebar";
 import Contact from "./components/Contact";
@@ -10,7 +9,6 @@ import Contact from "./components/Contact";
 function App() {
   const homeRef = React.useRef(null);
   const aboutRef = React.useRef(null);
-  const skillsRef = React.useRef(null);
   const portfolioRef = React.useRef(null);
   const contactRef = React.useRef(null);
 
@@ -29,14 +27,16 @@ function App() {
       <Navbar
         homeRef={homeRef}
         aboutRef={aboutRef}
-        skillsRef={skillsRef}
         portfolioRef={portfolioRef}
         contactRef={contactRef}
         toggleScrollToSection={toggleScrollToSection}
       />
-      <Home homeRef={homeRef} />
+      <Home
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        toggleScrollToSection={toggleScrollToSection}
+      />
       <About aboutRef={aboutRef} />
-      <Skills skillsRef={skillsRef} />
       <Portfolio portfolioRef={portfolioRef} />
       <Sidebar />
       <Contact contactRef={contactRef} />

@@ -4,7 +4,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 export default function Navbar({
   homeRef,
   aboutRef,
-  skillsRef,
   portfolioRef,
   contactRef,
   toggleScrollToSection,
@@ -73,14 +72,7 @@ export default function Navbar({
           >
             ABOUT
           </li>
-          <li
-            onClick={() => {
-              toggleScrollToSection(skillsRef);
-              closeMenu();
-            }}
-          >
-            SKILLS
-          </li>
+
           <li
             onClick={() => {
               toggleScrollToSection(portfolioRef);

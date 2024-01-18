@@ -22,7 +22,7 @@ export default function Sidebar() {
       className={
         isHidden
           ? "hidden"
-          : "fixed min-w-[80px] min-h-[300px] top-[15%] left-0 bg-white rounded-tr-[20px] rounded-br-[20px]"
+          : "bg-primary fixed min-w-[80px] min-h-[300px] top-[40%] left-0 bg-white rounded-tr-[20px] rounded-br-[20px]"
       }
     >
       <div className="flex justify-between items-center flex-col my-10 gap-10">

@@ -1,5 +1,4 @@
-import data from "../data/data";
-import { v4 as uuidv4 } from "uuid";
+import portfolioData from "../data/portfolioData";
 import { motion } from "framer-motion";
 
 export default function Portfolio({ portfolioRef }) {
@@ -27,9 +26,9 @@ export default function Portfolio({ portfolioRef }) {
         whileHover={{ scale: 1.1, opacity: 0.2 }}
         className="grid grid-cols-1 gap-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] md:grid-cols-3"
       >
-        {data.map((data) => (
+        {portfolioData.map((data, index) => (
           <div
-            key={uuidv4()}
+            key={index}
             className="border border-red-500 shadow-md p-2 portfolio-container relative curso"
           >
             <div className="w-full">

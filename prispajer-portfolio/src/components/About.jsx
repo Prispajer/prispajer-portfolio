@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import technologyData from "../data/technologyData";
 
 export default function About({ aboutRef }) {
   return (
@@ -7,14 +7,7 @@ export default function About({ aboutRef }) {
       id="about"
       className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] mx-auto"
     >
-      <div className="min-w-[300px] xl:min-w-[600px]">
-        <img
-          className=" logo h-[300px] xl:h-[500px] rounded-full mb-6"
-          src="../../public/images/Prispajer.png"
-          alt="It's meee"
-        />
-      </div>
-      <div className="flex flex-col max-w-[600px] xl:min-w-[600px] gap-y-12 relative">
+      <div className="flex flex-col  gap-y-12">
         <div className="flex items-center sm:items-left flex-col">
           <h2 className="text-white text-[36px] font-bold">Adrian</h2>
           <h2 className="text-white text-[36px] font-bold">Kozieł</h2>
@@ -28,27 +21,16 @@ export default function About({ aboutRef }) {
           seasoned developer. Join me on this exploration of turning ideas into
           innovative web experiences!
         </div>
-        <div className="flex justify-between items-center">
-          <Link
-            className="link cursor-pointer text-white"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
-          >
-            <button className="text-white mr-10">Contact me</button>
-          </Link>
-          <Link
-            className="link cursor-pointer text-white"
-            to="portfolio"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
-          >
-            My projects
-          </Link>
+        <div className="flex justify-between items-center"></div>
+        <div className="sm:min-w-[500px] grid grid-cols-7 gap-4 mt-10 md:mt-0">
+          {technologyData.map((technology, index) => (
+            <img
+              key={index}
+              className={technology.styles}
+              src={technology.image}
+              alt={technology.alt}
+            />
+          ))}
         </div>
       </div>
     </section>

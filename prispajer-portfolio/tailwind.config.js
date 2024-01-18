@@ -13,6 +13,10 @@ export default {
       novaCut: ["NovaCut", "sans-serif"],
       passeroOne: ["PasseroOne", "sans-serif"],
     },
+    colors: {
+      primary: "#efe0ca",
+      secondary: "#fe5000",
+    },
   },
   plugins: [],
 };
