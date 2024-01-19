@@ -6,7 +6,7 @@ export default function Portfolio({ portfolioRef }) {
     <section
       id="portfolio"
       ref={portfolioRef}
-      className="overflow-hidden flex justify-center items-center flex-col min-h-[100vh]"
+      className="screens overflow-hidden flex justify-center items-center flex-col min-h-[100vh] mx-auto"
     >
       <div className="text-center text-[50px] py-[50px] px-[25px] text-white ">
         <p className="text-secondary font-bold">
@@ -24,23 +24,23 @@ export default function Portfolio({ portfolioRef }) {
         // }}
         // whileInView={"show"}
         // whileHover={{ scale: 1.1, opacity: 0.2 }}
-        className="grid grid-cols-1 gap-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] md:grid-cols-3"
+        className="grid grid-cols-1 gap-10 md:grid-cols-3"
       >
         {portfolioData.map((data, index) => (
           <div
             key={index}
-            className="border border-red-500 shadow-md portfolio-container relative curso"
+            className="shadow-lg bg-white border border-gray-300 cursor-pointer"
           >
             <div className="w-full">
               <a href={data.link}>
                 <img
-                  className="h-[300px] md:h-[120px] lg:h-[180px] xxl:h-[250px] xl:h-[220px] w-full "
+                  className="h-[300px] md:h-[120px] lg:h-[180px] xxl:h-[250px] xl:h-[220px] w-full"
                   src={data.image}
                   alt={data.name}
                 />
               </a>
             </div>
-            <div className="mt-4 mb-2 text-white text-justify px-2">
+            <div className=" p-4 text-justify">
               <h2 className="text-thirdy text-[20px] font-bold text-center">
                 {data.name}
               </h2>

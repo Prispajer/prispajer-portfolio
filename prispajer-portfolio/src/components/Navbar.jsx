@@ -90,7 +90,10 @@ export default function Navbar({
           </li>
         </ul>
         <div className="flex flex-1 justify-end">
-          <button onClick={closeMenu} className="bg-[#fe5000] mr-20">
+          <button
+            onClick={() => toggleScrollToSection(contactRef)}
+            className="buttons mr-20"
+          >
             Work with me
           </button>
         </div>

@@ -1,11 +1,16 @@
 import { Link } from "react-scroll";
 
-export default function Home({ homeRef, aboutRef, toggleScrollToSection }) {
+export default function Home({
+  homeRef,
+  aboutRef,
+  portfolioRef,
+  toggleScrollToSection,
+}) {
   return (
     <section
       ref={homeRef}
       id="home"
-      className="flex flex-col items-center justify-between text-primary pt-28 pb-24 sm:max-w-[540px] lg:flex-row  md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] mx-auto h-[100vh]"
+      className="screens flex flex-col items-center justify-between pt-28 pb-24  lg:flex-row mx-auto h-[100vh]"
     >
       <div className="flex items-left flex-col gap-10 ">
         <div className="text-[50px] xs:text-[50px] sm:text-[50px] font-bold text-secondary">
@@ -14,25 +19,31 @@ export default function Home({ homeRef, aboutRef, toggleScrollToSection }) {
           <p className="text-[30px] text-thirdy">Front-End Developer</p>
         </div>
         <div className="xs:w-[400px] sm:w-[500px] text-justify">
-          <p className="text-[22px]">
+          <p className="text-[22px] text-primary">
             Hello from the digital side! Thank you for stopping by my portfolio.
             I'm elated to share my projects with you. Whether you're here for
             inspiration or exploration, I hope you find something that
             resonates. Let's embark on this digital adventure together!
           </p>
-          <div>
+          <div className="flex items-center mt-10 gap-x-10 cursor-pointer">
             <button
+              className="buttons"
               onClick={() => toggleScrollToSection(aboutRef)}
-              className="mt-10"
             >
               View more
             </button>
+            <p
+              className="secondary-buttons"
+              onClick={() => toggleScrollToSection(portfolioRef)}
+            >
+              My Portfolio
+            </p>
           </div>
         </div>
       </div>
       <div className="min-w-[300px] mt-20 xl:min-w-[500px] flex items-center justify-center">
         <img
-          className="hidden sm:flex logo h-[350px] xl:h-[400px] xxl:h-[500px] rounded-full mb-6"
+          className=" logo h-[350px] xl:h-[400px] xxl:h-[500px] border-8 rounded-full border-[#d85e2a]"
           src="../../public/images/Prispajer.png"
           alt="It's meee"
         />

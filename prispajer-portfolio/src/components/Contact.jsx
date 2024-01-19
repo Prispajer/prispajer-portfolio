@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { FiGithub, FiInstagram } from "react-icons/fi";
-import { FaFacebookF } from "react-icons/fa";
 import useClipboard from "react-use-clipboard";
 
 export default function Contact({ contactRef }) {
@@ -14,18 +12,17 @@ export default function Contact({ contactRef }) {
   return (
     <section
       ref={contactRef}
-      className="flex flex-col items-center justify-center mt-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] mx-auto h-[90vh]"
+      className="screens flex flex-col items-center justify-center mt-10 mx-auto min-h-[90vh]"
     >
       <div className="mb-10">
-        <h2 className="text-[50px] text-secondary font-bold">Contact</h2>
+        <h2 className="text-[50px] text-secondary font-bold">Contact me</h2>
       </div>
       <div className="flex items-center space-x-4 mt-4">
-        <button
-          onClick={handleCopyEmail}
-          className="bg-blue-500 text-white px-4 py-2 "
-        >
-          {isCopied ? "Email Copied!" : "Copy Email"}
+        <button onClick={handleCopyEmail} className="buttons ">
+          {isCopied ? "Copied!" : "E-mail"}
         </button>
+        <button className="buttons ">Discord</button>
+        <button className="buttons ">LinkedIn</button>
       </div>
     </section>
   );

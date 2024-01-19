@@ -5,7 +5,7 @@ export default function About({ aboutRef }) {
     <section
       ref={aboutRef}
       id="about"
-      className="flex flex-col lg:flex-row items-center justify-center min-h-[100vh] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xxl:max-w-[1320px] xl:max-w-[1140px] mx-auto"
+      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto"
     >
       <div className="flex flex-col  gap-y-12">
         <div className="flex items-center sm:items-left flex-col">
@@ -37,8 +37,8 @@ export default function About({ aboutRef }) {
           ))}
         </div>
         <div className="flex justify-around mt-10">
-          <button className="text-primary bg-transparent">My Portfolio</button>
-          <button className="text-primary">Contact Me</button>
+          <button className="secondary-buttons">My Portfolio</button>
+          <button className="text-primary buttons">Contact Me</button>
         </div>
       </div>
     </section>

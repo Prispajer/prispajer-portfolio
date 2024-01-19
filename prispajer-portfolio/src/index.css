@@ -32,41 +32,28 @@ body {
   );
 }
 
-.link {
-  background: linear-gradient(90deg, #d91e36, #da344d, #ec5766, #ef7674);
-  background-clip: text;
-  color: transparent;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #d91e36, #da344d, #ec5766, #ef7674);
-  background-clip: text;
-  color: transparent;
-}
-.gradient-text:hover {
-  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
-  background-clip: text;
-  color: transparent;
-}
-
-.link:hover {
-  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
-  background-clip: text;
-  color: transparent;
-}
-
-button {
-  background: #fe5000;
-  height: 45px;
-  width: 150px;
+.buttons {
+  background: linear-gradient(240deg, #fcb045 20%, #fe5000 50%);
   background-position: left;
   transition: background-position 2s;
 }
 
-button:hover {
-  background-image: linear-gradient(to left, #f94c10, #f8de22, #c70039);
+.buttons:hover {
+  background-image: linear-gradient(to left, #fe5000, #fcb045, #c70039);
   background-size: 150%;
   background-position: right;
+}
+
+.secondary-buttons {
+  background: linear-gradient(240deg, #fcb045 20%, #fe5000 50%);
+  background-clip: text;
+  transition: background 350ms ease;
+}
+
+.secondary-buttons:hover {
+  background-size: 100% 3px;
+  background: linear-gradient(240deg, #fcb045 20%, #fe5000 50%);
+  background-clip: text;
 }
 
 li {
@@ -83,12 +70,14 @@ li:hover {
   background-size: 100% 3px;
 }
 
-.logo {
-  border: 8px solid #d85e2a;
+.screens {
+  @apply xxl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px];
 }
 
-.nickname:hover {
-  background: linear-gradient(90deg, #ef7674, #ec5766, #da344d, #d91e36);
-  background-clip: text;
-  color: transparent;
+.buttons {
+  @apply h-[50px] w-[150px] text-[18px] font-bold rounded-[14px] text-primary;
+}
+
+.secondary-buttons {
+  @apply text-[18px];
 }

@@ -33,6 +33,7 @@ function App() {
       />
       <Home
         homeRef={homeRef}
+        portfolioRef={portfolioRef}
         aboutRef={aboutRef}
         toggleScrollToSection={toggleScrollToSection}
       />
