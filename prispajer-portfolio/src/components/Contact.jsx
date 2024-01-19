@@ -17,7 +17,7 @@ export default function Contact({ contactRef }) {
       <div className="mb-10">
         <h2 className="text-[50px] text-secondary font-bold">Contact me</h2>
       </div>
-      <div className="flex items-center space-x-4 mt-4">
+      <div className="flex flex-col justify-center sm:flex-row items-center gap-x-4 gap-y-6 sm:gap-y-0 mt-4">
         <button onClick={handleCopyEmail} className="buttons ">
           {isCopied ? "Copied!" : "E-mail"}
         </button>

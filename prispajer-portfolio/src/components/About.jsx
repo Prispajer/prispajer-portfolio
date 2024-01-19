@@ -1,6 +1,11 @@
 import technologyData from "../data/technologyData";
 
-export default function About({ aboutRef }) {
+export default function About({
+  aboutRef,
+  portfolioRef,
+  contactRef,
+  toggleScrollToSection,
+}) {
   return (
     <section
       ref={aboutRef}
@@ -37,8 +42,18 @@ export default function About({ aboutRef }) {
           ))}
         </div>
         <div className="flex justify-around mt-10">
-          <button className="secondary-buttons">My Portfolio</button>
-          <button className="text-primary buttons">Contact Me</button>
+          <button
+            onClick={() => toggleScrollToSection(portfolioRef)}
+            className="secondary-buttons"
+          >
+            My Portfolio
+          </button>
+          <button
+            onClick={() => toggleScrollToSection(contactRef)}
+            className="text-primary buttons"
+          >
+            Contact me
+          </button>
         </div>
       </div>
     </section>

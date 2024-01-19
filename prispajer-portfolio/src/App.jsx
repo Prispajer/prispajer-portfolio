@@ -37,7 +37,12 @@ function App() {
         aboutRef={aboutRef}
         toggleScrollToSection={toggleScrollToSection}
       />
-      <About aboutRef={aboutRef} />
+      <About
+        aboutRef={aboutRef}
+        contactRef={contactRef}
+        portfolioRef={portfolioRef}
+        toggleScrollToSection={toggleScrollToSection}
+      />
       <Portfolio portfolioRef={portfolioRef} />
       <Sidebar />
       <Contact contactRef={contactRef} />

@@ -21,19 +21,34 @@ export default function Sidebar() {
     <aside
       className={
         isHidden
-          ? "hidden"
-          : "bg-primary fixed min-w-[80px] min-h-[300px] top-[40%] left-0  rounded-tr-[20px] rounded-br-[20px]"
+          ? "sidebar bottom-0 left-0 w-[100vw] max-h-[100px] bg-transparent fixed border-0 mb-6"
+          : "sidebar top-[40%] left-0 rounded-tr-[20px] rounded-br-[20px] min-w-[80px] min-h-[280px] bg-primary fixed"
       }
     >
-      <div className="flex justify-between items-center flex-col my-10 gap-10">
+      <div
+        className={
+          isHidden
+            ? "flex flex-row justify-center gap-10"
+            : "flex justify-between items-center flex-col my-10 gap-10"
+        }
+      >
         <a href="https://github.com/Prispajer">
-          <FiGithub className="cursor-pointer" size="50px" />
+          <FiGithub
+            className={isHidden ? "text-thirdy" : "text-white"}
+            size="40px"
+          />
         </a>
         <a href="https://www.facebook.com/adikoxi/?locale=pl_PL">
-          <FaFacebookF className="cursor-pointer" size="50px" />
+          <FaFacebookF
+            className={isHidden ? "text-thirdy" : "text-black"}
+            size="40px"
+          />
         </a>
         <a href="https://www.instagram.com/adi.koziel.98/">
-          <FiInstagram className="cursor-pointer" size="50px" />
+          <FiInstagram
+            className={isHidden ? "text-thirdy" : "text-white"}
+            size="40px"
+          />
         </a>
       </div>
     </aside>

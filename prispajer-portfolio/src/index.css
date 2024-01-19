@@ -45,14 +45,14 @@ body {
 }
 
 .secondary-buttons {
-  background: linear-gradient(240deg, #fcb045 20%, #fe5000 50%);
+  background: linear-gradient(90deg, #fe5000 20%, #fcb045 50%);
+  color: transparent;
   background-clip: text;
-  transition: background 350ms ease;
+  transition: color 350ms ease;
 }
 
 .secondary-buttons:hover {
-  background-size: 100% 3px;
-  background: linear-gradient(240deg, #fcb045 20%, #fe5000 50%);
+  background: linear-gradient(90deg, #fcb045 20%, #fe5000 50%);
   background-clip: text;
 }
 
@@ -79,5 +79,9 @@ li:hover {
 }
 
 .secondary-buttons {
-  @apply text-[18px];
+  @apply text-[22px];
+}
+
+.icons {
+  @apply text-primary cursor-pointer;
 }
