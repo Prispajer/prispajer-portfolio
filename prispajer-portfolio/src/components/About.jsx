@@ -1,4 +1,6 @@
 import technologyData from "../data/technologyData";
+import { motion } from "framer-motion";
+import { fade, scale } from "../data/variants";
 
 export default function About({
   aboutRef,
@@ -10,15 +12,31 @@ export default function About({
     <section
       ref={aboutRef}
       id="about"
-      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto"
+      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto pt-32 lg:pt-0"
     >
-      <div className="flex flex-col  gap-y-12">
-        <div className="flex items-center sm:items-left flex-col">
+      <div className="flex flex-col gap-y-12">
+        <motion.div
+          variants={fade("down", 0)}
+          initial="hidden"
+          animate="show"
+          transition={{
+            duration: 1,
+          }}
+          className="flex items-center sm:items-left flex-col"
+        >
           <h2 className="text-secondary text-[50px] font-bold">
             LET ME INTRODUCE <span className="text-thirdy">MYSELF!</span>
           </h2>
-        </div>
-        <div className="text-primary text-[22px] text-justify ">
+        </motion.div>
+        <motion.div
+          variants={fade("left", 0)}
+          initial="hidden"
+          animate="show"
+          transition={{
+            duration: 1,
+          }}
+          className="text-primary text-[22px] text-justify "
+        >
           My name is Adrian, and my coding journey began when I crafted a
           portfolio website for a company. As I explored the nuances of HTML,
           CSS, and JS, a hunger for knowledge took root. Gradually, I embraced
@@ -28,20 +46,35 @@ export default function About({
           worlds found within the pages of a good book. With every line of code
           and every webpage, my goal is to tell a story that resonates,
           captivates, and pushes the boundaries of innovation.
-        </div>
+        </motion.div>
         <div className="grid grid-cols-4 gap-4 mt-10">
           {technologyData.map((technology, index) => (
-            <div className="flex justify-center">
-              <img
-                key={index}
-                className={technology.styles}
-                src={technology.image}
-                alt={technology.alt}
-              />
-            </div>
+            <motion.div
+              variants={scale(0, 1)}
+              initial="initial"
+              animate="final"
+              transition={{
+                duration: 1,
+              }}
+              whileHover={{ scale: 1.1, opacity: 0.8 }}
+            >
+              <div className="flex justify-center">
+                <img
+                  key={index}
+                  className={technology.styles}
+                  src={technology.image}
+                  alt={technology.alt}
+                />
+              </div>
+            </motion.div>
           ))}
         </div>
-        <div className="flex justify-around mt-10">
+        <motion.div
+          variants={fade("up", 0)}
+          initial="hidden"
+          animate="show"
+          className="flex justify-around mt-10"
+        >
           <button
             onClick={() => toggleScrollToSection(portfolioRef)}
             className="secondary-buttons"
@@ -54,7 +87,7 @@ export default function About({
           >
             Contact me
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
