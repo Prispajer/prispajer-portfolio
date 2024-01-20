@@ -11,7 +11,7 @@ export default function Portfolio({ portfolioRef }) {
     <section
       id="portfolio"
       ref={portfolioRef}
-      className="screens overflow-hidden flex justify-center items-center flex-col min-h-[100vh] mx-auto pt-28"
+      className="screens overflow-hidden flex justify-center items-center flex-col min-h-[100vh] mt-10 mx-auto "
     >
       <motion.div
         variants={fade("down", 0)}
