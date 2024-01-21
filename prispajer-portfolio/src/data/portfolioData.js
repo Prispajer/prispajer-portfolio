@@ -18,7 +18,7 @@ const portfolioData = [
   {
     name: "Edge Ledger",
     image: "../../public/images/Edge Ledger.jpg",
-    technologies: "HTML CSS JavaScript(jQuery)",
+    technologies: "HTML CSS JavaScript",
     link: "https://prispajer-rest-api.netlify.app/",
     description:
       "Created a modern business website, Edge Ledger, for my portfolio. The site boasts a clean design, utilizing HTML, CSS, and responsive web design principles. Implemented a lightbox feature for enhanced user experience without additional functionality.",
