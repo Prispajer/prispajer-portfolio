@@ -36,8 +36,12 @@ export default function Contact({ contactRef }) {
         <button onClick={handleCopyEmail} className="buttons ">
           {isCopied ? "Copied!" : "E-mail"}
         </button>
-        <button className="buttons ">Discord</button>
-        <button className="buttons ">LinkedIn</button>
+        <a href="https://discord.com/users/Prispajer">
+          <button className="buttons ">Discord</button>
+        </a>
+        <a href="https://discord.com/users/Prispajer">
+          <button className="buttons ">LinkedIn</button>
+        </a>
       </motion.div>
     </section>
   );

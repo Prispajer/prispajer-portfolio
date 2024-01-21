@@ -37,7 +37,7 @@ export default function Portfolio({ portfolioRef }) {
           Below here are a few projects I've worked recently.
         </p>
       </motion.div>
-      <div className="relative grid grid-cols-1 gap-10 md:grid-cols-3">
+      <div className="relative grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {portfolioData.map((data, index) => (
           <motion.div
             key={index}
@@ -52,7 +52,7 @@ export default function Portfolio({ portfolioRef }) {
             <motion.img
               whileHover={{ opacity: 0.2 }}
               transition={{ duration: 1 }}
-              className="h-[300px] md:h-[120px] lg:h-[180px] xxl:h-[700px] xl:h-[700px] w-full"
+              className="h-[500px] md:h-[300px] lg:h-[400px] xxl:h-[700px] xl:h-[700px] w-full"
               src={data.image}
               alt={data.name}
             />

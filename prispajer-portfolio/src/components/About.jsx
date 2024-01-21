@@ -12,7 +12,7 @@ export default function About({
     <section
       ref={aboutRef}
       id="about"
-      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto pt-24 lg:pt-0"
+      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto pt-24 mt-28 lg:pt-0"
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
