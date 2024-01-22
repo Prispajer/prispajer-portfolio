@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useClipboard from "react-use-clipboard";
-import { fade, scale } from "../data/variants";
+import { fadeWhileLoading, scaleOnHover } from "../data/variants";
 import { motion } from "framer-motion";
 
 export default function Contact({ contactRef }) {
@@ -17,7 +17,7 @@ export default function Contact({ contactRef }) {
       className="screens flex flex-col items-center justify-center mt-10 mx-auto min-h-[90vh]"
     >
       <motion.div
-        variants={fade("down", 0)}
+        variants={fadeWhileLoading("down", 0)}
         initial="hidden"
         animate="show"
         className="mb-10"
@@ -25,7 +25,7 @@ export default function Contact({ contactRef }) {
         <h2 className="text-[50px] text-secondary font-bold">Contact me</h2>
       </motion.div>
       <motion.div
-        variants={scale(0, 1)}
+        variants={scaleOnHover(0, 1)}
         initial="initial"
         animate="final"
         transition={{

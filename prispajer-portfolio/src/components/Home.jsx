@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fade, scale } from "../data/variants";
+import { fadeWhileLoading } from "../data/variants";
 
 export default function Home({
   homeRef,
@@ -14,7 +14,7 @@ export default function Home({
       className="screens flex flex-col items-center justify-between cd pt-28 pb-24  lg:flex-row mx-auto min-h-[100vh]"
     >
       <motion.div
-        variants={fade("right", 0)}
+        variants={fadeWhileLoading("right", 0)}
         initial="hidden"
         animate="show"
         className="flex items-left flex-col gap-10 "
@@ -48,7 +48,7 @@ export default function Home({
         </div>
       </motion.div>
       <motion.div
-        variants={fade("left", 0)}
+        variants={fadeWhileLoading("left", 0)}
         initial="hidden"
         animate="show"
         className="min-w-[300px] mt-20 xl:min-w-[500px] flex items-center justify-center"

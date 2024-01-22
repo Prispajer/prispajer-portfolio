@@ -1,6 +1,6 @@
 import React from "react";
 import portfolioData from "../data/portfolioData";
-import { fade } from "../data/variants";
+import { fadeWhileLoading } from "../data/variants";
 import { motion } from "framer-motion";
 
 export default function Portfolio({ portfolioRef }) {
@@ -25,7 +25,7 @@ export default function Portfolio({ portfolioRef }) {
       className="screens overflow-hidden flex justify-center items-center flex-col min-h-[100vh] mt-10 pt-8 mx-auto"
     >
       <motion.div
-        variants={fade("down", 0)}
+        variants={fadeWhileLoading("down", 0)}
         initial={"hidden"}
         animate={"show"}
         className="text-center text-[50px] py-[50px] px-[25px] text-white"
@@ -41,7 +41,7 @@ export default function Portfolio({ portfolioRef }) {
         {portfolioData.map((data, index) => (
           <motion.div
             key={index}
-            variants={fade("right", 0)}
+            variants={fadeWhileLoading("right", 0)}
             className="shadow-lg border border-gray-300 cursor-pointer overflow-hidden relative"
             initial={"hidden"}
             animate={"show"}

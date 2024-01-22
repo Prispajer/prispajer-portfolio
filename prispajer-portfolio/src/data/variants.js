@@ -1,24 +1,24 @@
-const fade = (direction, delay) => {
+const fadeWhileLoading = (direction, delay) => {
   return {
     hidden: {
-      y: direction === "up" ? 80 : direction === "down" ? -80 : 0,
+      y: direction === "up" ? 160 : direction === "down" ? -160 : 0,
       opacity: 0,
-      x: direction === "left" ? 80 : direction === "right" ? -80 : 0,
+      x: direction === "left" ? 160 : direction === "right" ? -160 : 0,
     },
     show: {
       y: 0,
       x: 0,
       opacity: 1,
       transition: {
-        type: "tween",
-        duration: 1.2,
+        type: "ease-in-out",
+        duration: 2,
         delay: delay,
       },
     },
   };
 };
 
-const scale = (initial, final) => {
+const scaleOnHover = (initial, final) => {
   return {
     initial: {
       scale: initial,
@@ -29,4 +29,4 @@ const scale = (initial, final) => {
   };
 };
 
-export { fade, scale };
+export { fadeWhileLoading, scaleOnHover };

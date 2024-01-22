@@ -1,6 +1,6 @@
 import technologyData from "../data/technologyData";
 import { motion } from "framer-motion";
-import { fade, scale } from "../data/variants";
+import { fadeWhileLoading, scaleOnHover } from "../data/variants";
 
 export default function About({
   aboutRef,
@@ -16,7 +16,7 @@ export default function About({
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
-          variants={fade("down", 0)}
+          variants={fadeWhileLoading("down", 0)}
           initial="hidden"
           animate="show"
           transition={{
@@ -29,7 +29,7 @@ export default function About({
           </h2>
         </motion.div>
         <motion.div
-          variants={fade("left", 0)}
+          variants={fadeWhileLoading("left", 0)}
           initial="hidden"
           animate="show"
           transition={{
@@ -50,7 +50,7 @@ export default function About({
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-10">
           {technologyData.map((technology, index) => (
             <motion.div
-              variants={scale(0, 1)}
+              variants={scaleOnHover(0, 1)}
               initial="initial"
               animate="final"
               transition={{
@@ -70,7 +70,7 @@ export default function About({
           ))}
         </div>
         <motion.div
-          variants={fade("up", 0)}
+          variants={fadeWhileLoading("up", 0)}
           initial="hidden"
           animate="show"
           className="flex justify-around mt-10"
