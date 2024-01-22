@@ -39,7 +39,7 @@ export default function Contact({ contactRef }) {
         <a href="https://discord.com/users/Prispajer">
           <button className="buttons ">Discord</button>
         </a>
-        <a href="https://discord.com/users/Prispajer">
+        <a href="https://linkedin.com/in/adrian-kozieł-9413142b0">
           <button className="buttons ">LinkedIn</button>
         </a>
       </motion.div>

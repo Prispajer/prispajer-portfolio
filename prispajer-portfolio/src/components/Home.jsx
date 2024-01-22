@@ -11,7 +11,7 @@ export default function Home({
     <section
       ref={homeRef}
       id="home"
-      className="screens flex flex-col items-center justify-between cd pt-28 pb-24  lg:flex-row mx-auto h-[100vh]"
+      className="screens flex flex-col items-center justify-between cd pt-28 pb-24  lg:flex-row mx-auto min-h-[100vh]"
     >
       <motion.div
         variants={fade("right", 0)}
@@ -54,7 +54,7 @@ export default function Home({
         className="min-w-[300px] mt-20 xl:min-w-[500px] flex items-center justify-center"
       >
         <img
-          className="logo hidden sm:flex h-[300px] sm:h-[350px] xl:h-[400px] xxl:h-[500px] border-8 rounded-full border-[#d85e2a]"
+          className="logo  sm:flex h-[300px] sm:h-[350px] xl:h-[400px] xxl:h-[500px] border-8 rounded-full border-[#d85e2a]"
           src="../../public/images/Prispajer.png"
           alt="It's meee"
         />

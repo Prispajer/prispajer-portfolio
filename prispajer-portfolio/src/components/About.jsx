@@ -12,7 +12,7 @@ export default function About({
     <section
       ref={aboutRef}
       id="about"
-      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto pt-24 mt-28 lg:pt-0"
+      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto pt-24 lg:pt-0"
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
@@ -47,7 +47,7 @@ export default function About({
           and every webpage, my goal is to tell a story that resonates,
           captivates, and pushes the boundaries of innovation.
         </motion.div>
-        <div className="grid grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-10">
           {technologyData.map((technology, index) => (
             <motion.div
               variants={scale(0, 1)}
