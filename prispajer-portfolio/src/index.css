@@ -38,6 +38,10 @@ body {
   transition: background-position 2s;
 }
 
+.active {
+  background-size: 100% 3px;
+}
+
 .buttons:hover {
   background-image: linear-gradient(to left, #fe5000, #fcb045, #c70039);
   background-size: 150%;

@@ -6,15 +6,20 @@ export default function Navbar({
   aboutRef,
   portfolioRef,
   contactRef,
+  activeRef,
   toggleScrollToSection,
 }) {
   const [scroll, setScroll] = useState(window.scrollY);
-  const [activeSubPage, setActiveSubPage] = useState("home");
+  const [isActiveElement, setIsActiveElement] = React.useState("HOME");
   const [isHamburger, setIsHamburger] = useState(true);
   const [isHamburgerClosed, setIsHamburgerClosed] = React.useState(isHamburger);
 
   const handleScroll = () => {
     setScroll(window.scrollY);
+  };
+
+  const handleActive = (element) => {
+    setIsActiveElement(element.target.innerHTML);
   };
 
   const handleResize = () => {
@@ -39,7 +44,10 @@ export default function Navbar({
 
   return (
     <header className="fixed py-5 w-full z-50">
-      <nav className="flex items-center justify-between text-primary font-bold">
+      <nav
+        ref={activeRef}
+        className="flex items-center justify-between text-primary font-bold"
+      >
         <div className="md:hidden">
           <RxHamburgerMenu
             size="30px"
@@ -55,36 +63,42 @@ export default function Navbar({
           }
         >
           <li
-            onClick={() => {
+            onClick={(event) => {
+              handleActive(event);
               toggleScrollToSection(homeRef);
               closeMenu();
             }}
-            className={activeSubPage === "home" ? "active" : ""}
+            className={isActiveElement === "HOME" ? "active" : ""}
           >
             HOME
           </li>
           <li
-            onClick={() => {
+            onClick={(event) => {
+              handleActive(event);
               toggleScrollToSection(aboutRef);
               closeMenu();
             }}
-            className={activeSubPage === "about" ? "active" : ""}
+            className={isActiveElement === "ABOUT" ? "active" : ""}
           >
             ABOUT
           </li>
           <li
-            onClick={() => {
+            onClick={(event) => {
+              handleActive(event);
               toggleScrollToSection(portfolioRef);
               closeMenu();
             }}
+            className={isActiveElement === "PORTFOLIO" ? "active" : ""}
           >
             PORTFOLIO
           </li>
           <li
-            onClick={() => {
+            onClick={(event) => {
+              handleActive(event);
               toggleScrollToSection(contactRef);
               closeMenu();
             }}
+            className={isActiveElement === "CONTACT" ? "active" : ""}
           >
             CONTACT
           </li>

@@ -11,6 +11,7 @@ function App() {
   const aboutRef = React.useRef(null);
   const portfolioRef = React.useRef(null);
   const contactRef = React.useRef(null);
+  const activeRef = React.useRef(null);
 
   const toggleScrollToSection = (sectionRef) => {
     window.scrollTo({
@@ -29,6 +30,7 @@ function App() {
         aboutRef={aboutRef}
         portfolioRef={portfolioRef}
         contactRef={contactRef}
+        activeRef={activeRef}
         toggleScrollToSection={toggleScrollToSection}
       />
       <Home
