@@ -17,7 +17,7 @@ export default function Contact({ contactRef }) {
   return (
     <section
       ref={contactRef}
-      className="screens flex flex-col items-center justify-center mt-10 mx-auto min-h-[90vh]"
+      className="screens flex flex-col items-center justify-center mt-10 mx-auto min-h-[100vh]"
     >
       <motion.div
         variants={fadeWhileLoading("down", 0)}
@@ -25,7 +25,9 @@ export default function Contact({ contactRef }) {
         animate={animationControls}
         className="mb-10"
       >
-        <h2 className="text-[50px] text-secondary font-bold">Contact me</h2>
+        <h2 className="text-[30px] sm:text-[50px] text-secondary font-bold">
+          Contact me
+        </h2>
       </motion.div>
       <motion.div
         variants={scaleOnHover(0, 1)}

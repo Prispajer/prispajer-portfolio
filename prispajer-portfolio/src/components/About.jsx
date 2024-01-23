@@ -15,7 +15,7 @@ export default function About({
     <section
       ref={aboutRef}
       id="about"
-      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto pt-24 lg:pt-0"
+      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto mt-2"
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
@@ -27,7 +27,7 @@ export default function About({
           }}
           className="flex items-center sm:items-left flex-col"
         >
-          <h2 className="text-secondary text-[50px] font-bold">
+          <h2 className="text-secondary text-[30px] sm:text-[50px] font-bold">
             LET ME INTRODUCE <span className="text-thirdy">MYSELF!</span>
           </h2>
         </motion.div>
@@ -58,7 +58,7 @@ export default function About({
               initial="initial"
               animate={animationControls}
               transition={{
-                duration: 1,
+                duration: 2,
               }}
               whileHover={{ scale: 1.1, opacity: 0.8 }}
             >

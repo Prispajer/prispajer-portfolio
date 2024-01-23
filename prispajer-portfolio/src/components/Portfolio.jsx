@@ -33,7 +33,7 @@ export default function Portfolio({ portfolioRef }) {
         animate={animationControls}
         className="text-center text-[50px] py-[50px] px-[25px] text-white"
       >
-        <p className="text-secondary font-bold">
+        <p className="text-secondary text-[30px] sm:text-[50px] font-bold">
           MY RECENT <span className="text-[#fcb045]">WORKS</span>
         </p>
         <p className="text-[22px] text-primary">

@@ -2,7 +2,7 @@ import React from "react";
 import { useAnimation, useInView } from "framer-motion";
 
 const animationControls = (ref) => {
-  const animationProperties = useInView(ref, { once: true });
+  const animationProperties = useInView(ref);
   const animationControls = useAnimation();
 
   React.useEffect(() => {

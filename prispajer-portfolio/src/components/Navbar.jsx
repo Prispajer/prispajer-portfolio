@@ -43,7 +43,7 @@ export default function Navbar({
   }, []);
 
   return (
-    <header className="fixed py-5 w-full z-50">
+    <header className="fixed py-5 w-full z-50 ">
       <nav
         ref={activeRef}
         className="flex items-center justify-between text-primary font-bold"
