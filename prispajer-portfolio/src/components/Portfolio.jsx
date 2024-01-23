@@ -2,8 +2,11 @@ import React from "react";
 import portfolioData from "../data/portfolioData";
 import { fadeWhileLoading } from "../data/variants";
 import { motion } from "framer-motion";
+import animationProps from "../data/animationProps";
 
 export default function Portfolio({ portfolioRef }) {
+  const { animationControls } = animationProps(portfolioRef);
+
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   const handlePortfolioItemClick = (link) => {
@@ -27,7 +30,7 @@ export default function Portfolio({ portfolioRef }) {
       <motion.div
         variants={fadeWhileLoading("down", 0)}
         initial={"hidden"}
-        animate={"show"}
+        animate={animationControls}
         className="text-center text-[50px] py-[50px] px-[25px] text-white"
       >
         <p className="text-secondary font-bold">
@@ -44,7 +47,7 @@ export default function Portfolio({ portfolioRef }) {
             variants={fadeWhileLoading("right", 0)}
             className="shadow-lg border border-gray-300 cursor-pointer overflow-hidden relative"
             initial={"hidden"}
-            animate={"show"}
+            animate={animationControls}
             onClick={() => handlePortfolioItemClick(data.link)}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={cancelMouseEnter}

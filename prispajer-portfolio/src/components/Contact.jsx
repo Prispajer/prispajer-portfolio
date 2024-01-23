@@ -2,10 +2,13 @@ import { useState } from "react";
 import useClipboard from "react-use-clipboard";
 import { fadeWhileLoading, scaleOnHover } from "../data/variants";
 import { motion } from "framer-motion";
+import animationProps from "../data/animationProps";
 
 export default function Contact({ contactRef }) {
   const [email, setEmail] = useState("koziel.adrian98@gmail.com");
   const [isCopied, setCopied] = useClipboard(email, { successDuration: 2000 });
+
+  const { animationControls } = animationProps(contactRef);
 
   const handleCopyEmail = () => {
     setCopied();
@@ -19,7 +22,7 @@ export default function Contact({ contactRef }) {
       <motion.div
         variants={fadeWhileLoading("down", 0)}
         initial="hidden"
-        animate="show"
+        animate={animationControls}
         className="mb-10"
       >
         <h2 className="text-[50px] text-secondary font-bold">Contact me</h2>
@@ -27,7 +30,7 @@ export default function Contact({ contactRef }) {
       <motion.div
         variants={scaleOnHover(0, 1)}
         initial="initial"
-        animate="final"
+        animate={animationControls}
         transition={{
           duration: 1,
         }}

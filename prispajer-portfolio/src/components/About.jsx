@@ -1,6 +1,7 @@
 import technologyData from "../data/technologyData";
 import { motion } from "framer-motion";
 import { fadeWhileLoading, scaleOnHover } from "../data/variants";
+import animationProps from "../data/animationProps";
 
 export default function About({
   aboutRef,
@@ -8,6 +9,8 @@ export default function About({
   contactRef,
   toggleScrollToSection,
 }) {
+  const { animationControls } = animationProps(aboutRef);
+
   return (
     <section
       ref={aboutRef}
@@ -18,7 +21,7 @@ export default function About({
         <motion.div
           variants={fadeWhileLoading("down", 0)}
           initial="hidden"
-          animate="show"
+          animate={animationControls}
           transition={{
             duration: 1,
           }}
@@ -31,7 +34,7 @@ export default function About({
         <motion.div
           variants={fadeWhileLoading("left", 0)}
           initial="hidden"
-          animate="show"
+          animate={animationControls}
           transition={{
             duration: 1,
           }}
@@ -50,9 +53,10 @@ export default function About({
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-10">
           {technologyData.map((technology, index) => (
             <motion.div
+              key={index}
               variants={scaleOnHover(0, 1)}
               initial="initial"
-              animate="final"
+              animate={animationControls}
               transition={{
                 duration: 1,
               }}
@@ -60,7 +64,6 @@ export default function About({
             >
               <div className="flex justify-center">
                 <img
-                  key={index}
                   className={technology.styles}
                   src={technology.image}
                   alt={technology.alt}
@@ -72,7 +75,7 @@ export default function About({
         <motion.div
           variants={fadeWhileLoading("up", 0)}
           initial="hidden"
-          animate="show"
+          animate={animationControls}
           className="flex justify-around mt-10"
         >
           <button

@@ -1,5 +1,7 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { fadeWhileLoading } from "../data/variants";
+import animationProps from "../data/animationProps";
 
 export default function Home({
   homeRef,
@@ -7,6 +9,8 @@ export default function Home({
   portfolioRef,
   toggleScrollToSection,
 }) {
+  const { animationControls } = animationProps(homeRef);
+
   return (
     <section
       ref={homeRef}
@@ -16,7 +20,7 @@ export default function Home({
       <motion.div
         variants={fadeWhileLoading("right", 0)}
         initial="hidden"
-        animate="show"
+        animate={animationControls}
         className="flex items-left flex-col gap-10 "
       >
         <div className="text-[50px] xs:text-[50px] sm:text-[50px] font-bold text-secondary">
@@ -50,7 +54,7 @@ export default function Home({
       <motion.div
         variants={fadeWhileLoading("left", 0)}
         initial="hidden"
-        animate="show"
+        animate={animationControls}
         className="min-w-[300px] mt-20 xl:min-w-[500px] flex items-center justify-center"
       >
         <img
