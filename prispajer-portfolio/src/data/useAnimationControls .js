@@ -1,7 +1,7 @@
 import React from "react";
 import { useAnimation, useInView } from "framer-motion";
 
-const animationControls = (ref) => {
+const useAnimationControls = (ref) => {
   const animationProperties = useInView(ref);
   const animationControls = useAnimation();
 
@@ -15,4 +15,4 @@ const animationControls = (ref) => {
   return { animationControls, animationProperties };
 };
 
-export default animationControls;
+export default useAnimationControls;

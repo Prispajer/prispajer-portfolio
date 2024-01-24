@@ -13,6 +13,7 @@ export default {
       headers: ["Iceberg"],
       buttons: ["Orbitron"],
       description: ["Cantarell"],
+      navbar: [""]
     },
     colors: {
       primary: "#efe0ca",

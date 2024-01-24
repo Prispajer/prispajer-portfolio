@@ -2,10 +2,10 @@ import React from "react";
 import portfolioData from "../data/portfolioData";
 import { fadeWhileLoading } from "../data/variants";
 import { motion } from "framer-motion";
-import animationProps from "../data/animationProps";
+import useAnimationControls from "../data/useAnimationControls ";
 
 export default function Portfolio({ portfolioRef }) {
-  const { animationControls } = animationProps(portfolioRef);
+  const { animationControls } = useAnimationControls(portfolioRef);
 
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
@@ -55,7 +55,7 @@ export default function Portfolio({ portfolioRef }) {
             <motion.img
               whileHover={{ opacity: 0.2 }}
               transition={{ duration: 1 }}
-              className="h-[500px] md:h-[300px] lg:h-[400px] xxl:h-[500px] xl:h-[500px] w-full"
+              className="h-[400px] md:h-[300px] lg:h-[400px] xxl:h-[500px] xl:h-[500px] w-full"
               src={data.image}
               alt={data.name}
             />

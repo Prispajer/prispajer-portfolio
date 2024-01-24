@@ -1,7 +1,7 @@
 import technologyData from "../data/technologyData";
 import { motion } from "framer-motion";
 import { fadeWhileLoading, scaleOnHover } from "../data/variants";
-import animationProps from "../data/animationProps";
+import useAnimationControls from "../data/useAnimationControls ";
 
 export default function About({
   aboutRef,
@@ -9,32 +9,31 @@ export default function About({
   contactRef,
   toggleScrollToSection,
 }) {
-  const { animationControls } = animationProps(aboutRef);
+  const { animationControls, resetScale } = useAnimationControls(aboutRef);
 
   return (
     <section
       ref={aboutRef}
       id="about"
-      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto mt-2"
+      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto mt-8 sm:mt-2"
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
-          variants={fadeWhileLoading("down", 0)}
+          variants={fadeWhileLoading("left", 0.5)}
           initial="hidden"
-          animate={animationControls}
-          transition={{
-            duration: 1,
-          }}
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
           className="flex items-center sm:items-left flex-col"
         >
-          <h2 className="text-secondary text-[30px] sm:text-[50px] font-bold font-headers">
+          <h2 className="text-secondary text-[30px] sm:text-[40px] md:text-[50px] font-bold font-headers">
             LET ME INTRODUCE <span className="text-thirdy">MYSELF!</span>
           </h2>
         </motion.div>
         <motion.div
           variants={fadeWhileLoading("left", 0)}
           initial="hidden"
-          animate={animationControls}
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{
             duration: 1,
           }}
@@ -56,7 +55,8 @@ export default function About({
               key={index}
               variants={scaleOnHover(0, 1)}
               initial="initial"
-              animate={"final"}
+              whileInView="final"
+              viewport={{ once: true, amount: 0.3 }}
               transition={{
                 duration: 2,
               }}
@@ -75,8 +75,9 @@ export default function About({
         <motion.div
           variants={fadeWhileLoading("up", 0)}
           initial="hidden"
-          animate={animationControls}
-          className="flex justify-around mt-10 font-buttons"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex items-center mt-10 gap-x-10 cursor-pointer justify-between lg:justify-around font-buttons"
         >
           <button
             onClick={() => toggleScrollToSection(portfolioRef)}
@@ -86,7 +87,7 @@ export default function About({
           </button>
           <button
             onClick={() => toggleScrollToSection(contactRef)}
-            className="text-primary buttons"
+            className="text-primary buttons "
           >
             Contact me
           </button>
