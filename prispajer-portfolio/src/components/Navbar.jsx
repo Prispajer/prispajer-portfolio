@@ -43,10 +43,10 @@ export default function Navbar({
   }, []);
 
   return (
-    <header className="fixed py-5 w-full z-50 ">
+    <header className="fixed py-5 w-full z-50">
       <nav
         ref={activeRef}
-        className="flex items-center justify-between text-primary font-bold"
+        className="flex items-center justify-between text-primary font-headers font-bold"
       >
         <div className="md:hidden">
           <RxHamburgerMenu
@@ -103,7 +103,7 @@ export default function Navbar({
             CONTACT
           </li>
         </ul>
-        <div className="flex flex-1 justify-end">
+        <div className="flex flex-1 justify-end font-buttons">
           <button
             onClick={() => toggleScrollToSection(contactRef)}
             className="buttons mr-20"

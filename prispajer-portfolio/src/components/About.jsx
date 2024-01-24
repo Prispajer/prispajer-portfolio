@@ -27,7 +27,7 @@ export default function About({
           }}
           className="flex items-center sm:items-left flex-col"
         >
-          <h2 className="text-secondary text-[30px] sm:text-[50px] font-bold">
+          <h2 className="text-secondary text-[30px] sm:text-[50px] font-bold font-headers">
             LET ME INTRODUCE <span className="text-thirdy">MYSELF!</span>
           </h2>
         </motion.div>
@@ -38,7 +38,7 @@ export default function About({
           transition={{
             duration: 1,
           }}
-          className="text-primary text-[22px] text-justify "
+          className="text-primary text-[22px] text-justify font-description"
         >
           My name is Adrian, and my coding journey began when I crafted a
           portfolio website for a company. As I explored the nuances of HTML,
@@ -56,7 +56,7 @@ export default function About({
               key={index}
               variants={scaleOnHover(0, 1)}
               initial="initial"
-              animate={animationControls}
+              animate={"final"}
               transition={{
                 duration: 2,
               }}
@@ -76,7 +76,7 @@ export default function About({
           variants={fadeWhileLoading("up", 0)}
           initial="hidden"
           animate={animationControls}
-          className="flex justify-around mt-10"
+          className="flex justify-around mt-10 font-buttons"
         >
           <button
             onClick={() => toggleScrollToSection(portfolioRef)}

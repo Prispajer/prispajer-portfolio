@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Iceberg&family=Orbitron:wght@400..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,14 +34,14 @@ body {
   );
 }
 
+.active {
+  background-size: 100% 3px;
+}
+
 .buttons {
   background: linear-gradient(240deg, #fcb045 20%, #fe5000 50%);
   background-position: left;
   transition: background-position 2s;
-}
-
-.active {
-  background-size: 100% 3px;
 }
 
 .buttons:hover {

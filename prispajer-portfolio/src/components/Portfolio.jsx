@@ -33,10 +33,10 @@ export default function Portfolio({ portfolioRef }) {
         animate={animationControls}
         className="text-center text-[50px] py-[50px] px-[25px] text-white"
       >
-        <p className="text-secondary text-[30px] sm:text-[50px] font-bold">
+        <p className="text-secondary text-[30px] sm:text-[50px] font-bold font-headers">
           MY RECENT <span className="text-[#fcb045]">WORKS</span>
         </p>
-        <p className="text-[22px] text-primary">
+        <p className="text-[22px] text-primary font-description">
           Below here are a few projects I've worked recently.
         </p>
       </motion.div>
@@ -45,7 +45,7 @@ export default function Portfolio({ portfolioRef }) {
           <motion.div
             key={index}
             variants={fadeWhileLoading("right", 0)}
-            className="shadow-lg border border-gray-300 cursor-pointer overflow-hidden relative"
+            className="cards shadow-md shadow-secondary border border-gray-300 cursor-pointer overflow-hidden relative"
             initial={"hidden"}
             animate={animationControls}
             onClick={() => handlePortfolioItemClick(data.link)}
@@ -55,7 +55,7 @@ export default function Portfolio({ portfolioRef }) {
             <motion.img
               whileHover={{ opacity: 0.2 }}
               transition={{ duration: 1 }}
-              className="h-[500px] md:h-[300px] lg:h-[400px] xxl:h-[700px] xl:h-[700px] w-full"
+              className="h-[500px] md:h-[300px] lg:h-[400px] xxl:h-[500px] xl:h-[500px] w-full"
               src={data.image}
               alt={data.name}
             />

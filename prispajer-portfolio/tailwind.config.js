@@ -10,8 +10,9 @@ export default {
       xxl: "1400px",
     },
     fontFamily: {
-      novaCut: ["NovaCut", "sans-serif"],
-      passeroOne: ["PasseroOne", "sans-serif"],
+      headers: ["Iceberg"],
+      buttons: ["Orbitron"],
+      description: ["Cantarell"],
     },
     colors: {
       primary: "#efe0ca",

@@ -21,8 +21,8 @@ export default function Sidebar() {
     <aside
       className={
         isHidden
-          ? "sidebar bottom-0 left-0 w-[100vw] max-h-[100px] bg-transparent fixed border-0 mb-6"
-          : "sidebar top-[40%] left-0 rounded-tr-[20px] rounded-br-[20px] min-w-[80px] min-h-[280px] bg-primary fixed"
+          ? "sidebar bottom-0 left-0 w-[100vw] max-h-[100px] bg-transparent fixed border-0 mb-6 "
+          : "sidebar top-[40%] left-0 rounded-tr-[20px] rounded-br-[20px] min-w-[80px] min-h-[280px] bg-primary fixed "
       }
     >
       <div

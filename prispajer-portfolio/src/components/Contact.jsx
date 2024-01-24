@@ -25,7 +25,7 @@ export default function Contact({ contactRef }) {
         animate={animationControls}
         className="mb-10"
       >
-        <h2 className="text-[30px] sm:text-[50px] text-secondary font-bold">
+        <h2 className="text-[30px] sm:text-[50px] text-secondary font-bold font-headers">
           Contact me
         </h2>
       </motion.div>
@@ -45,7 +45,7 @@ export default function Contact({ contactRef }) {
           <button className="buttons ">Discord</button>
         </a>
         <a href="https://linkedin.com/in/adrian-kozieł-9413142b0">
-          <button className="buttons ">LinkedIn</button>
+          <button className="buttons font-buttons ">LinkedIn</button>
         </a>
       </motion.div>
     </section>
