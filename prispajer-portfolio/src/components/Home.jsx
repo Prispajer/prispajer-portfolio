@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { fadeWhileLoading } from "../data/variants";
 import useAnimationControls from "../data/useAnimationControls ";

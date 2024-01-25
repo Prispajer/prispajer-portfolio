@@ -13,12 +13,17 @@ export default {
       headers: ["Iceberg"],
       buttons: ["Orbitron"],
       description: ["Cantarell"],
-      navbar: [""]
+      navbar: [""],
     },
     colors: {
       primary: "#efe0ca",
       secondary: "#fe5000",
       thirdy: "#fcb045",
+    },
+    extend: {
+      minHeight: {
+        700: "700px",
+      },
     },
   },
   plugins: [],

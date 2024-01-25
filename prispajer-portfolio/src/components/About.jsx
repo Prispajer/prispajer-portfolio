@@ -1,7 +1,6 @@
 import technologyData from "../data/technologyData";
 import { motion } from "framer-motion";
 import { fadeWhileLoading, scaleOnHover } from "../data/variants";
-import useAnimationControls from "../data/useAnimationControls ";
 
 export default function About({
   aboutRef,
@@ -9,20 +8,22 @@ export default function About({
   contactRef,
   toggleScrollToSection,
 }) {
-  const { animationControls, resetScale } = useAnimationControls(aboutRef);
+  const isSmallScreen = window.innerHeight <= 1100;
 
   return (
     <section
       ref={aboutRef}
       id="about"
-      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto mt-8 sm:mt-2"
+      className={`screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto mt-8 sm:mt-2 ${
+        isSmallScreen ? "pt-20" : "pt-0"
+      }`}
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
           variants={fadeWhileLoading("left", 0.5)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           className="flex items-center sm:items-left flex-col"
         >
           <h2 className="text-secondary text-[30px] sm:text-[40px] md:text-[50px] font-bold font-headers">
@@ -33,7 +34,7 @@ export default function About({
           variants={fadeWhileLoading("left", 0)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{
             duration: 1,
           }}
@@ -76,7 +77,7 @@ export default function About({
           variants={fadeWhileLoading("up", 0)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           className="flex items-center mt-10 gap-x-10 cursor-pointer justify-between lg:justify-around font-buttons"
         >
           <button
