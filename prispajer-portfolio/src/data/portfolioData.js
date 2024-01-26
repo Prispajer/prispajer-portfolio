@@ -11,7 +11,7 @@ const portfolioData = [
     name: "Rock Paper Scissors",
     image: "../../public/images/Rock Paper Scissors.jpg",
     technologies: "HTML CSS JavaScript",
-    link: "https://prispajer-rest-api.netlify.app/",
+    link: "https://prispajer-rock-paper-scissors.netlify.app",
     description:
       "Developed an interactive 'Rock, Paper, Scissors' game for my portfolio page using HTML, CSS, and JavaScript. Implemented responsive design and animations to enhance the user experience.",
   },
@@ -19,7 +19,7 @@ const portfolioData = [
     name: "Edge Ledger",
     image: "../../public/images/Edge Ledger.jpg",
     technologies: "HTML CSS JavaScript",
-    link: "https://prispajer-rest-api.netlify.app/",
+    link: "https://prispajer-edge-ledger.netlify.app",
     description:
       "Created a modern business website, Edge Ledger, for my portfolio. The site boasts a clean design, utilizing HTML, CSS, and responsive web design principles. Implemented a lightbox feature for enhanced user experience without additional functionality.",
   },
@@ -27,7 +27,7 @@ const portfolioData = [
     name: "To Do List",
     image: "../../public/images/To Do List.jpg",
     technologies: "HTML CSS JavaScript",
-    link: "https://prispajer-rest-api.netlify.app/",
+    link: "https://prispajer-to-do-list.netlify.app",
     description:
       "The To-Do List app is a simple project that allows users to add, remove, and mark tasks as completed. The interface is intuitive, and the app is responsive, ensuring easy and comfortable usability across various devices.",
   },

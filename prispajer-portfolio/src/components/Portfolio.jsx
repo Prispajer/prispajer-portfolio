@@ -28,7 +28,7 @@ export default function Portfolio({ portfolioRef }) {
       className="screens overflow-hidden flex justify-center items-center flex-col min-h-[100vh] mt-10 pt-8 mx-auto"
     >
       <motion.div
-        variants={fadeWhileLoading("down", 0)}
+        variants={fadeWhileLoading(0, 80, 0)}
         initial={"hidden"}
         animate={animationControls}
         className="text-center text-[50px] py-[50px] px-[25px] text-white"
