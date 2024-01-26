@@ -44,7 +44,7 @@ export default function Portfolio({ portfolioRef }) {
         {portfolioData.map((data, index) => (
           <motion.div
             key={index}
-            variants={fadeWhileLoading("right", 0)}
+            variants={fadeWhileLoading(0, 80, 0)}
             className="cards shadow-md shadow-secondary border border-gray-300 cursor-pointer overflow-hidden relative"
             initial={"hidden"}
             animate={animationControls}

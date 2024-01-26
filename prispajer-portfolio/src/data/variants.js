@@ -1,13 +1,15 @@
-const fadeWhileLoading = (direction, delay) => {
+const fadeWhileLoading = (vertical, horizontal, delay) => {
   return {
     hidden: {
-      y: direction === "up" ? 160 : direction === "down" ? -160 : 0,
-      opacity: 0,
-      x: direction === "left" ? 160 : direction === "right" ? -160 : 0,
+      y: vertical,
+      x: horizontal,
+      scale: 0.6,
+      opacity: 0.3,
     },
     show: {
       y: 0,
       x: 0,
+      scale: 1,
       opacity: 1,
       transition: {
         type: "ease-in-out",

@@ -20,7 +20,7 @@ export default function About({
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
-          variants={fadeWhileLoading("left", 0.5)}
+          variants={fadeWhileLoading(160, 0, 0)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}
@@ -31,7 +31,7 @@ export default function About({
           </h2>
         </motion.div>
         <motion.div
-          variants={fadeWhileLoading("left", 0)}
+          variants={fadeWhileLoading(160, 0, 0)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}
@@ -57,7 +57,7 @@ export default function About({
               variants={scaleOnHover(0, 1)}
               initial="initial"
               whileInView="final"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true }}
               transition={{
                 duration: 2,
               }}
@@ -74,7 +74,7 @@ export default function About({
           ))}
         </div>
         <motion.div
-          variants={fadeWhileLoading("up", 0)}
+          variants={fadeWhileLoading(160, 0, 0)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}

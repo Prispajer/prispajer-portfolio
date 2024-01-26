@@ -17,7 +17,7 @@ export default function Home({
       className="screens flex flex-col items-center justify-between pt-28 pb-28 lg:flex-row mx-auto min-h-[100vh]"
     >
       <motion.div
-        variants={fadeWhileLoading("right", 0)}
+        variants={fadeWhileLoading(0, 250, 0)}
         initial="hidden"
         animate={animationControls}
         className="flex flex-col gap-10 xs:w-[400px] sm:w-[500px]"
@@ -53,7 +53,7 @@ export default function Home({
         </div>
       </motion.div>
       <motion.div
-        variants={fadeWhileLoading("left", 0)}
+        variants={fadeWhileLoading(0, -250, 0)}
         initial="hidden"
         animate={animationControls}
         className="min-w-[300px] mt-20 xl:min-w-[500px] flex items-center justify-center"

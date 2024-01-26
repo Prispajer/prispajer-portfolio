@@ -20,7 +20,7 @@ export default function Contact({ contactRef }) {
       className="screens flex flex-col items-center justify-center mt-10 mx-auto min-h-[100vh]"
     >
       <motion.div
-        variants={fadeWhileLoading("down", 0)}
+        variants={fadeWhileLoading(-160, 0, 0)}
         initial="hidden"
         animate={animationControls}
         className="mb-10"
@@ -34,7 +34,7 @@ export default function Contact({ contactRef }) {
         initial="initial"
         animate={animationControls}
         transition={{
-          duration: 1,
+          duration: 2,
         }}
         className="flex flex-col justify-center sm:flex-row items-center gap-x-4 gap-y-6 sm:gap-y-0 mt-4"
       >
