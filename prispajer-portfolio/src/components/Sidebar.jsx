@@ -5,16 +5,20 @@ import { FiInstagram } from "react-icons/fi";
 
 export default function Sidebar() {
   const [isHidden, setIsHidden] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
 
   const handleView = () => {
     setIsHidden(window.innerWidth < 1130);
+    setIsMobile(window.innerWidth < 576);
   };
 
   React.useEffect(() => {
     window.addEventListener("resize", handleView);
     handleView();
 
-    return () => window.removeEventListener("resize", handleView);
+    return () => {
+      window.removeEventListener("resize", handleView);
+    };
   }, []);
 
   return (
@@ -33,13 +37,19 @@ export default function Sidebar() {
         }
       >
         <a href="https://github.com/Prispajer">
-          <FiGithub className="text-black" size="40px" />
+          <FiGithub className="text-black" size={isMobile ? "30px" : "40px"} />
         </a>
         <a href="https://www.facebook.com/adikoxi/?locale=pl_PL">
-          <FaFacebookF className="text-black" size="40px" />
+          <FaFacebookF
+            className="text-black"
+            size={isMobile ? "30px" : "40px"}
+          />
         </a>
         <a href="https://www.instagram.com/adi.koziel.98/">
-          <FiInstagram className="text-black" size="40px" />
+          <FiInstagram
+            className="text-black"
+            size={isMobile ? "30px" : "40px"}
+          />
         </a>
       </div>
     </aside>
