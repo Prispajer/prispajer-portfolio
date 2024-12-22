@@ -43,14 +43,14 @@ export default function Navbar({
   }, []);
 
   return (
-    <header className="fixed py-5 w-full z-50">
+    <header className="fixed min-w-full px-[30px] md:px-[40px] z-50">
       <nav
         ref={activeRef}
-        className="flex items-center justify-between text-primary font-headers font-bold"
+        className="flex items-center justify-between min-w-full min-h-[90px] text-primary font-headers font-bold"
       >
         <div className="md:hidden">
           <RxHamburgerMenu
-            size="30px"
+            size="25px"
             className="cursor-pointer"
             onClick={() => setIsHamburger((prevShow) => !prevShow)}
           />
@@ -58,8 +58,8 @@ export default function Navbar({
         <ul
           className={
             isHamburger
-              ? "hidden gap-10 md:flex md:flex-1"
-              : "fixed flex-col items-center justify-center w-full bg-secondary text-primary h-full md:gap-10 top-0 left-0 flex gap-10"
+              ? "hidden gap-10 md:flex"
+              : "fixed flex flex-col items-center justify-center w-full h-full gap-10 top-0 left-0 bg-secondary text-primary"
           }
         >
           <li
@@ -103,10 +103,10 @@ export default function Navbar({
             CONTACT
           </li>
         </ul>
-        <div className="flex flex-1 justify-end font-buttons">
+        <div className="flex font-buttons">
           <button
             onClick={() => toggleScrollToSection(contactRef)}
-            className="buttons mr-20"
+            className="buttons"
           >
             Work with me
           </button>

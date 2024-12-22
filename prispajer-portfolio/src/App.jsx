@@ -21,10 +21,7 @@ function App() {
   };
 
   return (
-    <div
-      className="px-10 mx-auto
-    "
-    >
+    <div className="grid grid-cols-1 mx-auto gap-[300px]">
       <Navbar
         homeRef={homeRef}
         aboutRef={aboutRef}

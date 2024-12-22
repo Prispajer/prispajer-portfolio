@@ -13,8 +13,7 @@ export default function Home({
   return (
     <section
       ref={homeRef}
-      id="home"
-      className="screens flex flex-col items-center justify-between pt-28 pb-28 lg:flex-row mx-auto min-h-[100vh]"
+      className="screens flex flex-col items-center justify-between pt-[105px] px-[30px] md:px-[40px] gap-[50px] lg:flex-row mx-auto"
     >
       <motion.div
         variants={fadeWhileLoading(0, 250, 0)}
@@ -23,18 +22,22 @@ export default function Home({
         className="flex flex-col gap-10 xs:w-[400px] sm:w-[500px]"
       >
         <div className="flex flex-col items-center sm:items-start font-bold font-headers text-secondary ">
-          <p className="text-[30px] sm:text-[40px] md:text-[50px]">Hi!</p>
-          <p className="text-[30px] sm:text-[40px] md:text-[50px]">
-            I'M ADRIAN KOZIEŁ
+          <p className="text-[20px] ti:text-[25px] sm:text-[35px] md:text-[45px]">
+            Hi!
           </p>
-          <p className="text-[30px] text-thirdy">Front-End Developer</p>
+          <p className="text-[20px] ti:text-[25px] sm:text-[35px] md:text-[45px]">
+            I&apos;M ADRIAN KOZIEŁ
+          </p>
+          <p className="text-[25px] sm:text-[30px] text-thirdy">
+            Front-End Developer
+          </p>
         </div>
-        <div className=" text-justify">
+        <div className="text-justify">
           <p className="text-[22px] font-description text-primary">
             Hello from the digital side! Thank you for stopping by my portfolio.
-            I'm elated to share my projects with you. Whether you're here for
-            inspiration or exploration, I hope you find something that
-            resonates. Let's embark on this digital adventure together!
+            I&apos;m elated to share my projects with you. Whether you&apos;re
+            here for inspiration or exploration, I hope you find something that
+            resonates. Let&apos;s embark on this digital adventure together!
           </p>
           <div className="flex items-center mt-10 gap-x-10 cursor-pointer justify-between lg:justify-start font-buttons">
             <button
@@ -59,7 +62,7 @@ export default function Home({
         className="min-w-[300px] mt-20 xl:min-w-[500px] flex items-center justify-center"
       >
         <img
-          className="logo  sm:flex h-[300px] sm:h-[350px] xl:h-[400px] xxl:h-[500px] border-8 rounded-full border-[#d85e2a]"
+          className="logo sm:flex h-[300px] sm:h-[350px] xl:h-[400px] xxl:h-[500px] border-8 rounded-full border-[#d85e2a]"
           src="../../public/images/Prispajer.png"
           alt="It's meee"
         />

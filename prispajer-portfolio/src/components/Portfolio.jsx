@@ -25,7 +25,7 @@ export default function Portfolio({ portfolioRef }) {
     <section
       id="portfolio"
       ref={portfolioRef}
-      className="screens overflow-hidden flex justify-center items-center flex-col min-h-[100vh] mt-10 pt-8 mx-auto"
+      className="screens overflow-hidden flex justify-center items-center px-[30px] md:px-[40px] flex-col min-h-[100vh] mt-10 pt-8 mx-auto"
     >
       <motion.div
         variants={fadeWhileLoading(0, 80, 0)}
@@ -37,7 +37,7 @@ export default function Portfolio({ portfolioRef }) {
           MY RECENT <span className="text-[#fcb045]">WORKS</span>
         </p>
         <p className="text-[22px] text-primary font-description">
-          Below here are a few projects I've worked recently.
+          Below here are a few projects I&apos;ve worked recently.
         </p>
       </motion.div>
       <div className="relative grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -45,7 +45,7 @@ export default function Portfolio({ portfolioRef }) {
           <motion.div
             key={index}
             variants={fadeWhileLoading(0, 80, 0)}
-            className="cards shadow-md shadow-secondary border border-gray-300 cursor-pointer overflow-hidden relative"
+            className="shadow-md shadow-secondary border border-gray-300 cursor-pointer overflow-hidden relative"
             initial={"hidden"}
             animate={animationControls}
             onClick={() => handlePortfolioItemClick(data.link)}

@@ -14,7 +14,7 @@ export default function About({
     <section
       ref={aboutRef}
       id="about"
-      className={`screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] mx-auto mt-8 sm:mt-2 ${
+      className={`screens flex flex-col lg:flex-row items-center justify-center  px-[30px] lg:py-[0px] md:px-[40px]  min-h-[100vh] mx-auto mt-8 sm:mt-2 ${
         isSmallScreen ? "pt-20" : "pt-0"
       }`}
     >
@@ -26,7 +26,7 @@ export default function About({
           viewport={{ once: true }}
           className="flex items-center sm:items-left flex-col"
         >
-          <h2 className="text-secondary text-[30px] sm:text-[40px] md:text-[50px] font-bold font-headers">
+          <h2 className="text-secondary text-[20px] ti:text-[25px] sm:text-[35px] md:text-[45px] font-bold font-headers">
             LET ME INTRODUCE <span className="text-thirdy">MYSELF!</span>
           </h2>
         </motion.div>
