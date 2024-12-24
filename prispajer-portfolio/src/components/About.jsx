@@ -3,20 +3,16 @@ import { motion } from "framer-motion";
 import { fadeWhileLoading, scaleOnHover } from "../data/variants";
 
 export default function About({
+  setActiveElement,
   aboutRef,
   portfolioRef,
   contactRef,
   toggleScrollToSection,
 }) {
-  const isSmallScreen = window.innerHeight <= 1100;
-
   return (
     <section
       ref={aboutRef}
-      id="about"
-      className={`screens flex flex-col lg:flex-row items-center justify-center  px-[30px] lg:py-[0px] md:px-[40px]  min-h-[100vh] mx-auto mt-8 sm:mt-2 ${
-        isSmallScreen ? "pt-20" : "pt-0"
-      }`}
+      className="screens flex flex-col lg:flex-row items-center justify-center min-h-[100vh] px-[15px] ti:px-[30px] md:px-[40px] py-[105px] mx-auto"
     >
       <div className="flex flex-col gap-y-12">
         <motion.div
@@ -26,7 +22,7 @@ export default function About({
           viewport={{ once: true }}
           className="flex items-center sm:items-left flex-col"
         >
-          <h2 className="text-secondary text-[20px] ti:text-[25px] sm:text-[35px] md:text-[45px] font-bold font-headers">
+          <h2 className="text-secondary text-[30px] sm:text-[35px] md:text-[45px] font-bold font-headers text-center">
             LET ME INTRODUCE <span className="text-thirdy">MYSELF!</span>
           </h2>
         </motion.div>
@@ -81,13 +77,19 @@ export default function About({
           className="flex items-center mt-10 gap-x-10 cursor-pointer justify-between lg:justify-around font-buttons"
         >
           <button
-            onClick={() => toggleScrollToSection(portfolioRef)}
+            onClick={() => {
+              toggleScrollToSection(portfolioRef);
+              setActiveElement("PORTFOLIO");
+            }}
             className="secondary-buttons"
           >
             My Portfolio
           </button>
           <button
-            onClick={() => toggleScrollToSection(contactRef)}
+            onClick={() => {
+              toggleScrollToSection(contactRef);
+              setActiveElement("CONTACT");
+            }}
             className="text-primary buttons "
           >
             Contact me

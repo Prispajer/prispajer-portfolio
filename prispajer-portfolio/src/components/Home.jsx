@@ -3,6 +3,7 @@ import { fadeWhileLoading } from "../data/variants";
 import useAnimationControls from "../data/useAnimationControls ";
 
 export default function Home({
+  setActiveElement,
   homeRef,
   aboutRef,
   portfolioRef,
@@ -13,7 +14,7 @@ export default function Home({
   return (
     <section
       ref={homeRef}
-      className="screens flex flex-col items-center justify-between pt-[105px] px-[30px] md:px-[40px] gap-[50px] lg:flex-row mx-auto"
+      className="screens flex flex-col items-center justify-between min-h-[100vh]  pt-[105px] px-[15px] ti:px-[30px] md:px-[40px] lg:pt-[0px] gap-[50px] lg:flex-row mx-auto"
     >
       <motion.div
         variants={fadeWhileLoading(0, 250, 0)}
@@ -22,10 +23,8 @@ export default function Home({
         className="flex flex-col gap-10 xs:w-[400px] sm:w-[500px]"
       >
         <div className="flex flex-col items-center sm:items-start font-bold font-headers text-secondary ">
-          <p className="text-[20px] ti:text-[25px] sm:text-[35px] md:text-[45px]">
-            Hi!
-          </p>
-          <p className="text-[20px] ti:text-[25px] sm:text-[35px] md:text-[45px]">
+          <p className="text-[30px] sm:text-[35px] md:text-[45px]">Hi!</p>
+          <p className="text-[30px] sm:text-[35px] md:text-[45px]">
             I&apos;M ADRIAN KOZIEŁ
           </p>
           <p className="text-[25px] sm:text-[30px] text-thirdy">
@@ -42,13 +41,19 @@ export default function Home({
           <div className="flex items-center mt-10 gap-x-10 cursor-pointer justify-between lg:justify-start font-buttons">
             <button
               className="buttons"
-              onClick={() => toggleScrollToSection(aboutRef)}
+              onClick={() => {
+                toggleScrollToSection(aboutRef);
+                setActiveElement("ABOUT");
+              }}
             >
               View more
             </button>
             <p
               className="secondary-buttons"
-              onClick={() => toggleScrollToSection(portfolioRef)}
+              onClick={() => {
+                toggleScrollToSection(portfolioRef);
+                setActiveElement("PORTFOLIO");
+              }}
             >
               My Portfolio
             </p>
@@ -59,7 +64,7 @@ export default function Home({
         variants={fadeWhileLoading(0, -250, 0)}
         initial="hidden"
         animate={animationControls}
-        className="min-w-[300px] mt-20 xl:min-w-[500px] flex items-center justify-center"
+        className="mt-[20px] xl:min-w-[500px] flex items-center justify-center"
       >
         <img
           className="logo sm:flex h-[300px] sm:h-[350px] xl:h-[400px] xxl:h-[500px] border-8 rounded-full border-[#d85e2a]"

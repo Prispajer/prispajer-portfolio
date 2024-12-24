@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar({
+  activeElement,
+  setActiveElement,
   homeRef,
   aboutRef,
   portfolioRef,
@@ -9,30 +11,21 @@ export default function Navbar({
   activeRef,
   toggleScrollToSection,
 }) {
-  const [scroll, setScroll] = useState(window.scrollY);
-  const [isActiveElement, setIsActiveElement] = React.useState("HOME");
-  const [isHamburger, setIsHamburger] = useState(true);
-  const [isHamburgerClosed, setIsHamburgerClosed] = React.useState(isHamburger);
+  const [isHamburger, setIsHamburger] = React.useState(false);
+
+  const scrollPosition = React.useRef(window.scrollY);
 
   const handleScroll = () => {
-    setScroll(window.scrollY);
-  };
-
-  const handleActive = (element) => {
-    setIsActiveElement(element.target.innerHTML);
+    scrollPosition.current = window.scrollY;
   };
 
   const handleResize = () => {
     if (window.innerWidth > 768) {
-      setIsHamburger(true);
+      setIsHamburger(false);
     }
   };
 
-  const closeMenu = () => {
-    setIsHamburger(isHamburgerClosed);
-  };
-
-  useEffect(() => {
+  React.useEffect(() => {
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
@@ -43,7 +36,7 @@ export default function Navbar({
   }, []);
 
   return (
-    <header className="fixed min-w-full px-[30px] md:px-[40px] z-50">
+    <header className="fixed min-w-[100vw] px-[15px] ti:px-[30px] md:px-[40px] z-50 overflow-x-hidden">
       <nav
         ref={activeRef}
         className="flex items-center justify-between min-w-full min-h-[90px] text-primary font-headers font-bold"
@@ -58,54 +51,57 @@ export default function Navbar({
         <ul
           className={
             isHamburger
-              ? "hidden gap-10 md:flex"
-              : "fixed flex flex-col items-center justify-center w-full h-full gap-10 top-0 left-0 bg-secondary text-primary"
+              ? "fixed flex flex-col items-center justify-center w-full h-full gap-10 top-0 left-0 bg-secondary text-primary"
+              : "hidden gap-10 md:flex"
           }
         >
           <li
             onClick={(event) => {
-              handleActive(event);
+              setActiveElement(event.target.innerHTML);
               toggleScrollToSection(homeRef);
-              closeMenu();
+              setIsHamburger(false);
             }}
-            className={isActiveElement === "HOME" ? "active" : ""}
+            className={activeElement === "HOME" ? "active" : ""}
           >
             HOME
           </li>
           <li
             onClick={(event) => {
-              handleActive(event);
+              setActiveElement(event.target.innerHTML);
               toggleScrollToSection(aboutRef);
-              closeMenu();
+              setIsHamburger(false);
             }}
-            className={isActiveElement === "ABOUT" ? "active" : ""}
+            className={activeElement === "ABOUT" ? "active" : ""}
           >
             ABOUT
           </li>
           <li
             onClick={(event) => {
-              handleActive(event);
+              setActiveElement(event.target.innerHTML);
               toggleScrollToSection(portfolioRef);
-              closeMenu();
+              setIsHamburger(false);
             }}
-            className={isActiveElement === "PORTFOLIO" ? "active" : ""}
+            className={activeElement === "PORTFOLIO" ? "active" : ""}
           >
             PORTFOLIO
           </li>
           <li
             onClick={(event) => {
-              handleActive(event);
+              setActiveElement(event.target.innerHTML);
               toggleScrollToSection(contactRef);
-              closeMenu();
+              setIsHamburger(false);
             }}
-            className={isActiveElement === "CONTACT" ? "active" : ""}
+            className={activeElement === "CONTACT" ? "active" : ""}
           >
             CONTACT
           </li>
         </ul>
         <div className="flex font-buttons">
           <button
-            onClick={() => toggleScrollToSection(contactRef)}
+            onClick={() => {
+              toggleScrollToSection(contactRef);
+              setActiveElement("CONTACT");
+            }}
             className="buttons"
           >
             Work with me

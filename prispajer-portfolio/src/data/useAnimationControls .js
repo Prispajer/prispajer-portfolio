@@ -10,7 +10,7 @@ const useAnimationControls = (ref) => {
       animationControls.start("show");
       animationControls.start("final");
     }
-  }, [animationProperties]);
+  }, [animationProperties, animationControls]);
 
   return { animationControls, animationProperties };
 };

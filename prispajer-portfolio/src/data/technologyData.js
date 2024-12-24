@@ -37,7 +37,7 @@ const technologyData = [
   {
     image: "../../public/images/TypeScript.svg",
     styles: "border-4  p-2 flex justify-center items-center border-[#1976D2]",
-    alt: "Git",
+    alt: "TypeScript",
   },
 ];
 

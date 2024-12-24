@@ -7,6 +7,8 @@ import Sidebar from "./components/Sidebar";
 import Contact from "./components/Contact";
 
 function App() {
+  const [activeElement, setActiveElement] = React.useState("HOME");
+
   const homeRef = React.useRef(null);
   const aboutRef = React.useRef(null);
   const portfolioRef = React.useRef(null);
@@ -21,8 +23,10 @@ function App() {
   };
 
   return (
-    <div className="grid grid-cols-1 mx-auto gap-[300px]">
+    <div className="flex flex-col items-center gap-[200px] mx-auto overflow-y-auto">
       <Navbar
+        activeElement={activeElement}
+        setActiveElement={setActiveElement}
         homeRef={homeRef}
         aboutRef={aboutRef}
         portfolioRef={portfolioRef}
@@ -31,12 +35,16 @@ function App() {
         toggleScrollToSection={toggleScrollToSection}
       />
       <Home
+        activeElement={activeElement}
+        setActiveElement={setActiveElement}
         homeRef={homeRef}
         portfolioRef={portfolioRef}
         aboutRef={aboutRef}
         toggleScrollToSection={toggleScrollToSection}
       />
       <About
+        activeElement={activeElement}
+        setActiveElement={setActiveElement}
         aboutRef={aboutRef}
         contactRef={contactRef}
         portfolioRef={portfolioRef}
