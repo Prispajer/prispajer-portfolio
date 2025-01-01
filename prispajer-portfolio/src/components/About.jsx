@@ -46,7 +46,7 @@ export default function About({
           and every webpage, my goal is to tell a story that resonates,
           captivates, and pushes the boundaries of innovation.
         </motion.div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xxl:grid-cols-8 gap-4 mt-10">
           {technologyData.map((technology, index) => (
             <motion.div
               key={index}
@@ -59,9 +59,12 @@ export default function About({
               }}
               whileHover={{ scale: 1.1, opacity: 0.8 }}
             >
-              <div className="flex justify-center">
+              <div className="flex justify-center items-center">
                 <img
-                  className={technology.styles}
+                  className="icon-border"
+                  style={{
+                    borderColor: technology.borderColor,
+                  }}
                   src={technology.image}
                   alt={technology.alt}
                 />
