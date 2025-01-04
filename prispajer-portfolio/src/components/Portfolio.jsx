@@ -1,4 +1,5 @@
 import React from "react";
+import ReactPlayer from "react-player";
 import portfolioData from "../data/portfolioData";
 import { fadeWhileLoading } from "../data/variants";
 import { motion } from "framer-motion";
@@ -16,7 +17,7 @@ export default function Portfolio({ portfolioRef }) {
   return (
     <section
       ref={portfolioRef}
-      className="screens overflow-hidden flex flex-col  justify-center items-center min-h-[100vh] px-[15px] ti:px-[30px] md:px-[40px] py-[105px] mx-auto "
+      className="screens overflow-hidden flex flex-col justify-center items-center min-h-[100vh] px-[15px] ti:px-[30px] md:px-[40px] py-[105px] mx-auto "
     >
       <motion.div
         variants={fadeWhileLoading(0, 80, 0)}
@@ -34,6 +35,15 @@ export default function Portfolio({ portfolioRef }) {
         </div>
       </motion.div>
       <div className="relative grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="video-player">
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            playing={false}
+            controls={true}
+            width="100%"
+            height="100%"
+          />
+        </div>
         {portfolioData.map((data, index) => (
           <motion.div
             key={index}

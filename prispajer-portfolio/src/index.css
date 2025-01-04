@@ -95,3 +95,19 @@ li:hover {
 .icon-border {
   @apply max-w-full min-w-[140px] max-h-[184px] min-h-[184px] border-4 p-2 flex justify-center items-center;
 }
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(3, 5, 37, 1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(240deg, #fcb045 20%, #fe5000 50%);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(240deg, #fcb045 40%, #fe5000 70%);
+}

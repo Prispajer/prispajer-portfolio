@@ -14,7 +14,7 @@ export default function Home({
   return (
     <section
       ref={homeRef}
-      className="screens flex flex-col items-center justify-between min-h-[100vh]  pt-[105px] px-[15px] ti:px-[30px] md:px-[40px] lg:pt-[0px] gap-[50px] lg:flex-row mx-auto"
+      className="screens flex flex-col items-center justify-between min-h-[100vh] pt-[105px] px-[15px] ti:px-[30px] md:px-[40px] lg:pt-[0px] gap-[50px] lg:flex-row mx-auto"
     >
       <motion.div
         variants={fadeWhileLoading(0, 250, 0)}
