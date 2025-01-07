@@ -8,6 +8,14 @@ const portfolioData = [
       "Developed a Countries REST API project for my portfolio using React, React Router, and Sass. The application features seamless toggling between light and dark modes, country filtering and searching capabilities, and provides detailed information about each country.",
   },
   {
+    name: "API Countries",
+    image: "../../public/images/API Countries.jpg",
+    technologies: "API Sass React React Router",
+    link: "https://prispajer-rest-api.netlify.app/",
+    description:
+      "Developed a Countries REST API project for my portfolio using React, React Router, and Sass. The application features seamless toggling between light and dark modes, country filtering and searching capabilities, and provides detailed information about each country.",
+  },
+  {
     name: "Rock Paper Scissors",
     image: "../../public/images/Rock Paper Scissors.jpg",
     technologies: "HTML CSS JavaScript",
