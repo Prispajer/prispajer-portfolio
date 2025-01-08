@@ -93,7 +93,7 @@ li:hover {
 }
 
 .icon-border {
-  @apply max-w-full min-w-[140px] max-h-[184px] min-h-[184px] border-4 p-2 flex justify-center items-center;
+  @apply w-full max-w-[184px] max-h-[184px] min-h-[184px] border-4 p-2 flex justify-center items-center;
 }
 
 body::-webkit-scrollbar {

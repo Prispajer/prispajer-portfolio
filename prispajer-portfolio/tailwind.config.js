@@ -10,6 +10,7 @@ export default {
       lg: "992px",
       xl: "1200px",
       xxl: "1400px",
+      xxxl: "1500px",
     },
     fontFamily: {
       headers: ["Iceberg"],
