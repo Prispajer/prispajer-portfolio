@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Prispajer from "../../public/images/Prispajer.png";
 import { fadeWhileLoading } from "../data/variants";
 import useAnimationControls from "../data/useAnimationControls ";
 
@@ -68,7 +69,7 @@ export default function Home({
       >
         <img
           className="logo sm:flex h-[300px] sm:h-[350px] xl:h-[400px] xxl:h-[500px] border-8 rounded-full border-[#d85e2a]"
-          src="../../public/images/Prispajer.png"
+          src={Prispajer}
           alt="It's meee"
         />
       </motion.div>
