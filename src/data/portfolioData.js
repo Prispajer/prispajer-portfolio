@@ -51,8 +51,8 @@ const portfolioData = [
   {
     name: "Suggor",
     image: `${Suggor}`,
-    technologies: ["C#", "ASP.NET MVC", "Blazor", "SQL Server", "REST API"],
-    link: "https://prispajer-edge-ledger.netlify.app",
+    technologies: ["C#", "Unity Engine", "Unity Packages"],
+    link: "https://www.youtube.com/watch?v=n5Nbwd-BqBI",
     github: "https://github.com/Prispajer/edge-ledger",
     description:
       "Suggor is a 2D platformer game created as part of an engineering team project during studies. The game features a checkpoint system, health bars, and health regeneration, allowing players to navigate levels and fight opponents. The project was developed by a team, utilizing logical thinking and problem-solving skills.",
