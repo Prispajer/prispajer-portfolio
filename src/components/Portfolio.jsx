@@ -1,17 +1,28 @@
 import React from "react";
 import { FiGithub } from "react-icons/fi";
+import { IoMdArrowUp } from "react-icons/io";
+import { IoMdArrowDown } from "react-icons/io";
 import { fadeWhileLoading } from "../data/variants";
 import { motion } from "framer-motion";
 import portfolioData from "../data/portfolioData";
 import useAnimationControls from "../data/useAnimationControls ";
 
 export default function Portfolio({ portfolioRef }) {
-  const [hoveredIndex, setHoveredIndex] = React.useState(null);
+  const [clickedIndex, setClickedIndex] = React.useState(null);
 
   const { animationControls } = useAnimationControls(portfolioRef);
 
   const handlePortfolioRepositoryClick = (link) => {
     window.location.href = link;
+  };
+
+  const handleShowTechnologyAndDescription = (event, index) => {
+    event.stopPropagation();
+    if (clickedIndex === index) {
+      setClickedIndex(null);
+    } else {
+      setClickedIndex(index);
+    }
   };
 
   return (
@@ -36,14 +47,13 @@ export default function Portfolio({ portfolioRef }) {
       </motion.div>
       <div className="relative grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {portfolioData.map((data, index) => {
-          console.log(data.link);
           return (
             <motion.div
               key={index}
               variants={fadeWhileLoading(0, 80, 0)}
               className={`relative shadow-[0_0_16px_2px_rgba(0,0,0,0.3)] shadow-secondary border-[1px] border-secondary overflow-hidden ${
                 data.link ? "cursor-pointer" : "cursor-default"
-              }`}
+              } ${clickedIndex === index ? "backdrop" : ""}`}
               initial="hidden"
               animate={animationControls}
               onClick={() =>
@@ -51,30 +61,40 @@ export default function Portfolio({ portfolioRef }) {
               }
             >
               <motion.img
-                whileHover={{ opacity: 0.2 }}
                 transition={{ duration: 1 }}
-                className="h-[600px] w-full"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                className="relative h-[600px] w-full"
                 src={data.image}
                 alt={data.name}
               />
+              <button
+                onClick={(event) =>
+                  handleShowTechnologyAndDescription(event, index)
+                }
+                className="absolute top-[10px] left-[10px] bg-primary hover:bg-[#f0e6d8] transition duration-300 p-2 rounded-full shadow-lg z-10 "
+              >
+                {clickedIndex === index ? (
+                  <motion.i transition={{ duration: 1 }} className="text-black">
+                    <IoMdArrowDown className="text-black" size="30px" />
+                  </motion.i>
+                ) : (
+                  <motion.i transition={{ duration: 1 }} className="text-black">
+                    <IoMdArrowUp className="text-black" size="30px" />
+                  </motion.i>
+                )}
+              </button>
               <a
                 href={data.github}
                 target="_blank"
                 rel="noreferrer"
                 onClick={(event) => event.stopPropagation()}
-                className="absolute top-[10px] right-[10px] bg-primary hover:bg-[#f0e6d8] transition duration-300 p-2 rounded-full shadow-lg"
+                className="absolute top-[10px] right-[10px] bg-primary hover:bg-[#f0e6d8] transition duration-300 p-2 rounded-full shadow-lg z-10"
               >
-                <motion.i
-                  transition={{ duration: 1 }}
-                  className="fab fa-github text-black"
-                >
+                <motion.i transition={{ duration: 1 }} className="text-black">
                   <FiGithub className="text-black" size="30px" />
                 </motion.i>
               </a>
-              {hoveredIndex === index && (
-                <div className="absolute bottom-[0] p-4 text-justify pointer-events-none">
+              {clickedIndex === index && (
+                <div className="absolute bottom-[0] p-4 text-justify pointer-events-none z-10 ">
                   <div className="flex flex-col justify-between">
                     <motion.div
                       initial={{ y: 50, opacity: 0 }}
