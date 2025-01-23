@@ -53,7 +53,7 @@ const portfolioData = [
     image: `${Suggor}`,
     technologies: ["C#", "Unity Engine", "Unity Packages"],
     link: "https://www.youtube.com/watch?v=n5Nbwd-BqBI",
-    github: "https://github.com/Prispajer/edge-ledger",
+    github: "https://github.com/Prispajer/suggor-game",
     description:
       "Suggor is a 2D platformer game created as part of an engineering team project during studies. The game features a checkpoint system, health bars, and health regeneration, allowing players to navigate levels and fight opponents. The project was developed by a team, utilizing logical thinking and problem-solving skills.",
   },
@@ -71,7 +71,7 @@ const portfolioData = [
     image: `${Countries}`,
     technologies: ["React", "Sass", "JavaScript", "REST API"],
     link: "https://prispajer-rest-api.netlify.app/",
-    github: "https://github.com/Prispajer/to-do-list",
+    github: "https://github.com/Prispajer/rest-api-countries",
     description:
       "The application features seamless toggling between light and dark modes, country filtering and searching capabilities, and provides detailed information about each country.",
   },
