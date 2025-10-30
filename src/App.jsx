@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-[200px] mx-auto overflow-y-auto">
+    <div className="flex flex-col items-center gap-[50px] sm:gap-[200px] mx-auto overflow-y-auto">
       <Navbar
         activeElement={activeElement}
         setActiveElement={setActiveElement}

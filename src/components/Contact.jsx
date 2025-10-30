@@ -12,7 +12,7 @@ export default function Contact({ contactRef }) {
   return (
     <section
       ref={contactRef}
-      className="screens flex flex-col items-center justify-center min-h-[100vh] py-[105px] px-[15px] ti:px-[30px] md:px-[40px] lg:px-[45px] xxxl:px-[0px] mx-auto"
+      className="screens flex flex-col items-center justify-center sm:min-h-[100vh] py-[105px] px-[15px] ti:px-[30px] md:px-[40px] lg:px-[45px] xxxl:px-[0px] mx-auto"
     >
       <motion.div
         variants={fadeWhileLoading(-160, 0, 0)}

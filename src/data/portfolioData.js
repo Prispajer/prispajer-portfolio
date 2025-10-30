@@ -2,8 +2,8 @@ import Rigba from "../../public/images/Rigba.jpg";
 import HuffmanAlgorithm from "../../public/images/HuffmanAlgorithm.jpg";
 import QuarryByte from "../../public/images/QuarryByte.jpg";
 import Suggor from "../../public/images/Suggor.jpg";
-import ToDoList from "../../public/images/To Do List.jpg";
 import Countries from "../../public/images/API Countries.jpg";
+import MemoryGame from "../../public/images/Memory Game.jpg";
 
 const portfolioData = [
   {
@@ -58,13 +58,13 @@ const portfolioData = [
       "Suggor is a 2D platformer game created as part of an engineering team project during studies. The game features a checkpoint system, health bars, and health regeneration, allowing players to navigate levels and fight opponents. The project was developed by a team, utilizing logical thinking and problem-solving skills.",
   },
   {
-    name: "To Do List App",
-    image: `${ToDoList}`,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    link: "https://prispajer-to-do-list.netlify.app",
-    github: "https://github.com/Prispajer/to-do-list",
+    name: "Memory Game",
+    image: `${MemoryGame}`,
+    technologies: ["TypeScript", "React", "Vite", "Zustand"],
+    link: "https://memory-game-go-online.vercel.app/",
+    github: "https://github.com/Prispajer/memory-game-go-online",
     description:
-      "A straightforward To Do List app built with HTML, CSS, and JavaScript, allowing users to add, edit, and manage tasks with an intuitive, responsive interface.",
+      "A classic memory game built with React and TypeScript. The game challenges players to find all matching card pairs on a dynamically generated board, with smooth UI and responsive gameplay.",
   },
   {
     name: "REST API Countries",

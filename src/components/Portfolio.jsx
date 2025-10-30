@@ -28,7 +28,7 @@ export default function Portfolio({ portfolioRef }) {
   return (
     <section
       ref={portfolioRef}
-      className="screens overflow-hidden flex flex-col justify-center items-center min-h-[100vh] py-[105px] px-[15px] ti:px-[30px] md:px-[40px] lg:px-[45px] xxxl:px-[0px] mx-auto "
+      className="screens overflow-hidden flex flex-col justify-center items-center sm:min-h-[100vh] py-[105px] px-[15px] ti:px-[30px] md:px-[40px] lg:px-[45px] xxxl:px-[0px] mx-auto"
     >
       <motion.div
         variants={fadeWhileLoading(0, 80, 0)}
