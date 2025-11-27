@@ -1,11 +1,19 @@
 ﻿import { Home, User, Briefcase, Mail } from "lucide-react";
+import {smoothScrollTo} from "@/utils/scroll.ts";
 
 const navigation = [
-    {name: "Home", icon: Home},
-    {name: "About", icon: User},
-    {name: "Projects", icon: Briefcase},
-    {name: "Contact", icon: Mail},
+    {id: "hero", name: "Hero", icon: Home},
+    {id: "about", name: "About", icon: User},
+    {id: "projects", name: "Projects", icon: Briefcase},
+    {id: "contact", name: "Contact", icon: Mail},
 ]
+
+const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    const distance = element && element.getBoundingClientRect().top + window.scrollY;
+    element && smoothScrollTo(distance!, 1000);
+}
+
 const NavbarContainer = () => {
     return (
         <div
@@ -14,7 +22,7 @@ const NavbarContainer = () => {
             <div className="relative w-full border-t-10 border-b-4 border-x-4 rounded-[50%] border-primary/20 z-10">
                 <div className="flex items-center justify-center gap-10 pt-6 pb-8 z-10">
                     {navigation.map((item, _) => (
-                            <div className="group relative w-12 h-12 flex items-center justify-center cursor-pointer z-10 hover:animate-[var(--animate-scale-in),var(--animate-glow)] animate-scale-out">
+                            <div onClick={() => handleScroll(item.id)} className="group relative w-12 h-12 flex items-center justify-center cursor-pointer z-10 hover:animate-[var(--animate-scale-in),var(--animate-glow)] animate-scale-out">
                                 <div className="absolute inset-0 rounded-full border-2 border-primary/30 group-hover:border-primary transition-colors duration-300" />
                                 <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
                                 <item.icon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors duration-300 relative z-10" />
