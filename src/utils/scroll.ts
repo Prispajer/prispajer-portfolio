@@ -2,6 +2,7 @@
 export const smoothScrollTo = (targetY: number, duration: number = 1000) => {
     const startY = window.scrollY;
     const diffY = targetY - startY;
+    if (diffY === 0) return;
     const scrollStep = createScrollStep(startY, diffY, duration);
     window.requestAnimationFrame(scrollStep);
 }
