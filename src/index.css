@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceberg&family=Orbitron:wght@400;700&family=Cantarell:wght@400;700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @theme {
+    --font-headers: "Iceberg", sans-serif;
+    --font-buttons: "Orbitron", sans-serif;
+    --font-description: "Cantarell", sans-serif;
+
     --color-background: hsl(0 0% 5%);
     --color-foreground: hsl(0 0% 98%);
     --color-card: hsl(0 0% 8%);
@@ -73,11 +78,19 @@
         }
     }
 
+    @keyframes ember {
+        0%   { opacity: 0; transform: translateY(0px) scale(1); }
+        50%  { opacity: 0.5; transform: translateY(-50px) scale(1.2); }
+        100% { opacity: 1; transform: translateY(-100px) scale(1.5); }
+    }
+
 
     --animate-scale-in: scale-in 1.2s forwards;
     --animate-scale-out: scale-out 1.2s forwards;
     --animate-glow: glow 1s forwards;
+    --animate-ember: ember 4s ease-out infinite;
 }
+
 
 @layer base {
     * {
