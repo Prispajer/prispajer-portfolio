@@ -1,4 +1,11 @@
 ﻿
+
+export const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    const distance = element && element.getBoundingClientRect().top + window.scrollY;
+    element && smoothScrollTo(distance!, 1000);
+}
+
 export const smoothScrollTo = (targetY: number, duration: number = 1000) => {
     const startY = window.scrollY;
     const diffY = targetY - startY;
