@@ -7,54 +7,41 @@
     --font-buttons: "Orbitron", sans-serif;
     --font-description: "Cantarell", sans-serif;
 
-    --color-background: hsl(0 0% 5%);
+    --color-background: hsl(0 0% 0%);
     --color-foreground: hsl(0 0% 98%);
     --color-card: hsl(0 0% 8%);
     --color-card-foreground: hsl(0 0% 98%);
     --color-popover: hsl(0 0% 8%);
-    --color-popover-foreground: hsl(0 0% 98%);
     --color-primary: hsl(0 84% 55%);
-    --color-primary-foreground: hsl(0 0% 98%);
     --color-secondary: hsl(0 60% 35%);
-    --color-secondary-foreground: hsl(0 0% 98%);
+    --color-third: hsl(18, 100%, 61%);
     --color-muted: hsl(0 5% 20%);
     --color-muted-foreground: hsl(0 0% 60%);
     --color-accent: hsl(15 100% 50%);
-    --color-accent-foreground: hsl(0 0% 98%);
     --color-hero: hsl(0 0% 4%);
-    --color-hero-foreground: hsl(0 0% 98%);
     --color-glass: hsl(0 0% 10% / 0.4);
     --color-glass-border: hsl(0 84% 55% / 0.3);
     --color-destructive: hsl(0 84.2% 60.2%);
-    --color-destructive-foreground: hsl(210 40% 98%);
-    --color-border: hsl(214.3 31.8% 91.4%);
-    --color-input: hsl(214.3 31.8% 91.4%);
     --color-ring: hsl(222.2 84% 4.9%);
+    --color-crimson: hsl(0 84% 55%);
+    --color-ember: hsl(15 100% 50%);
+    --color-silver: hsl(0 0% 85%);
+    --color-smoke: hsl(0 0% 25%);
+    --color-void: hsl(0 0% 4%);
 
-    --background-image-gradient-primary: linear-gradient(135deg, hsl(0 84% 55%), hsl(0 60% 35%));
-    --background-image-gradient-hero: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 5%) 50%, hsl(0 10% 8%) 100%);
-    --background-image-gradient-accent: linear-gradient(135deg, hsl(0 84% 55%) 0%, hsl(15 100% 50%) 100%);
+
+    --background-image-heading-1: linear-gradient(to right, var(--color-primary), var(--color-accent), var(--color-primary));
+    --background-image-heading-2: linear-gradient(to right, var(--color-third), var(--color-accent), var(--color-primary));
     --background-image-gradient-card: linear-gradient(135deg, hsl(0 0% 8% / 0.9) 0%, hsl(0 10% 10% / 0.7) 100%);
 
     --shadow-glow: 0 0 60px hsl(0 84% 55% / 0.4);
     --shadow-glow-accent: 0 0 100px hsl(15 100% 50% / 0.5);
     --shadow-elegant: 0 20px 50px -10px hsl(0 0% 0% / 0.9);
-    --shadow-ember: 0 0 40px hsl(15 100% 50% / 0.6);
+    --shadow-ember: 0 0 40px var(--color-ember / 0.6);
 
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     --animation-duration: 0.4s;
-
-    --radius: 0.5rem;
-
-    --color-sidebar-background: hsl(0 0% 8%);
-    --color-sidebar-foreground: hsl(0 0% 95%);
-    --color-sidebar-primary: hsl(0 84% 55%);
-    --color-sidebar-primary-foreground: hsl(0 0% 98%);
-    --color-sidebar-accent: hsl(15 100% 50%);
-    --color-sidebar-accent-foreground: hsl(0 0% 98%);
-    --color-sidebar-border: hsl(0 5% 20%);
-    --color-sidebar-ring: hsl(15 100% 50%);
 
 
     @keyframes scale-in {
@@ -65,6 +52,24 @@
     @keyframes scale-out {
         0%   { transform: scale(1.1)}
         100% { transform: scale(1)}
+    }
+
+    @keyframes float-diagonal-up-left {
+        0%   { transform: translate(0, 0)}
+        50%  { transform: translate(-10px, -10px)}
+        100% { transform: translate(0, 0)}
+    }
+
+    @keyframes float-diagonal-down-right {
+        0%   { transform: translate(0, 0)}
+        50%  { transform: translate(10px, 10px)}
+        100% { transform: translate(0, 0)}
+    }
+
+    @keyframes expand-resolution {
+        0%   { width: 75px; height: 75px}
+        50% { width: 100%; height: 75%; opacity: 0.8}
+        100% { width: 75px; height: 75px}
     }
 
     @keyframes glow {
@@ -78,6 +83,12 @@
         }
     }
 
+    @keyframes inferno-glow {
+        0%   { filter: brightness(1)}
+        50%  { filter: brightness(1.4)}
+        100% { filter: brightness(1)}
+    }
+
     @keyframes ember {
         0%   { opacity: 0; transform: translateY(0px) scale(1); }
         50%  { opacity: 0.5; transform: translateY(-50px) scale(1.2); }
@@ -85,6 +96,10 @@
     }
 
 
+    --animate-inferno-glow: inferno-glow 4s ease-in-out infinite;
+    --animate-expand-resolution: expand-resolution 10s ease-in-out infinite;
+    --animate-float-diagonal-up-left: float-diagonal-up-left 5s infinite;
+    --animate-float-diagonal-down-right: float-diagonal-down-right 5s infinite;
     --animate-scale-in: scale-in 1.2s forwards;
     --animate-scale-out: scale-out 1.2s forwards;
     --animate-glow: glow 1s forwards;
@@ -97,7 +112,6 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        border-color: var(--color-border);
     }
 
     body {
