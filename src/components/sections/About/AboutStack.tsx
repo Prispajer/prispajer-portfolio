@@ -1,0 +1,35 @@
+﻿import AboutOverlay from "@/components/sections/About/AboutOverlay.tsx";
+import AboutTechnology from "@/components/sections/About/AboutTechnology.tsx";
+import {technologyItems} from "@/data/data.ts";
+
+const AboutStack = () => {
+    return (
+        <div className="pt-0 sm:pt-20">
+            <h3 className="relative text-center text-5xl md:text-4xl font-black mb-10 tracking-wider">
+            <span className="bg-heading-2 bg-clip-text font-headers text-transparent
+                             drop-shadow-[0_0_30px_rgba(220,38,38,0.5)] cursor-default">
+              ARSENAL OF TECHNOLOGIES
+            </span>
+                <div className="w-32 h-1 mt-6 bg-gradient-to-r from-primary to-accent mx-auto shadow-glow"></div>
+            </h3>
+
+            <div className="backdrop-blur-sm bg-gradient-to-br from-card/90 to-muted/60
+                          p-8 shadow-[0_0_50px_rgba(220,38,38,0.3)] border-2 border-primary/30
+                          mb-16 group hover:shadow-glow-accent transition-all duration-500">
+
+                <AboutOverlay />
+
+                <div className="flex flex-wrap items-center justify-center gap-6 cursor-default">
+                    {technologyItems.map((technology, index) => (
+                        <AboutTechnology technology={technology} index={index} />
+                    ))}
+                </div>
+            </div>
+
+            <div className="relative z-10 w-full h-1 mt-6 bg-gradient-to-r
+                          from-transparent via-primary to-transparent mx-auto"></div>
+        </div>
+    )
+}
+
+export default AboutStack;
