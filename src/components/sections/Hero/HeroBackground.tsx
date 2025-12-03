@@ -2,30 +2,26 @@
 
 const HeroBackground = () => {
     return (
-        <div className="absolute inset-0 bg-gradient-to-br from-hero via-background to-card/50">
+        <div className="absolute inset-0 bg-background">
             <GradientDots
                 dots={[
                     {
-                        className: "absolute inset-0",
-                        position: "circle at 50% 50%",
+                        position: "circle at 50% 45%",
+                        color: "rgba(185,28,28,0.25)",
+                        stop: "40%",
+                    },
+                    {
+                        position: "ellipse at top right",
                         color: "rgba(220,38,38,0.15)",
-                        stop: "50%",
+                        stop: "30%",
                     },
                     {
-                        className: "absolute top-0 left-0 w-full h-full",
-                        position: "ellipse at top left",
-                        color: "rgba(239,68,68,0.1)",
-                        stop: "50%",
-                    },
-                    {
-                        className: "absolute bottom-0 right-0 w-full h-full",
-                        position: "ellipse at bottom right",
-                        color: "rgba(185,28,28,0.12)",
-                        stop: "50%",
+                        position: "ellipse at bottom left",
+                        color: "rgba(124,29,29,0.12)",
+                        stop: "60%",
                     },
                 ]}
             />
-
             {Array(40)
                 .fill(null)
                 .map((_, i) => (

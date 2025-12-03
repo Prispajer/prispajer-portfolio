@@ -1,5 +1,4 @@
-﻿import HeroDescription from "@/components/sections/Hero/HeroDescription.tsx";
-import HeroButtons from "@/components/sections/Hero/HeroButtons.tsx";
+﻿import HeroButtons from "@/components/sections/Hero/HeroButtons.tsx";
 import HeroHeading from "@/components/sections/Hero/HeroHeading.tsx";
 import HeroBackground from "@/components/sections/Hero/HeroBackground.tsx";
 import HeroSocials from "@/components/sections/Hero/HeroSocials.tsx";
@@ -16,7 +15,6 @@ const HeroContainer = () => {
                     <div className="grid place-items-center">
                         <div className="max-w-2xl space-y-8 animate-fade-in">
                             <HeroHeading/>
-                            <HeroDescription/>
                             <HeroButtons/>
                             <HeroSocials/>
                         </div>

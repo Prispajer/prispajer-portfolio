@@ -1,23 +1,20 @@
 ﻿import {Button} from "@/components/ui/button.tsx";
+import {handleScroll} from "@/utils/scroll.ts";
 import {ArrowRight, Download} from "lucide-react";
 
 const HeroButtons = () => {
     return (
         <div className="flex flex-col justify-center sm:flex-row gap-4 pt-4">
             <Button
+                onClick={() => handleScroll("portfolio")}
                 size="xl"
-                className="group bg-gradient-to-r px-10 from-primary to-accent
+                className="group bg-gradient-to-r from-primary to-accent
                              hover:shadow-glow-accent text-primary-foreground font-black
-                             tracking-widest transition-all duration-300 hover:scale-105
-                             border border-primary/50"
+                             tracking-widest transition-all duration-300 hover:scale-105 cursor-pointer"
             >
                 <span className="relative z-10 font-buttons">VIEW MISSIONS</span>
                 <ArrowRight
                     className="ml-2 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform"
-                />
-                <div
-                    className="absolute inset-0 bg-gradient-to-r from-accent to-primary
-                               opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
             </Button>
             <Button
