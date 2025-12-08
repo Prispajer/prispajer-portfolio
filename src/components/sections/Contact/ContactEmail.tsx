@@ -11,7 +11,7 @@ const ContactEmail= () => {
             </div>
             <a
                 href="mailto:contact@example.com"
-                className="text-2xl md:text-3xl font-bold text-foreground/90 hover:text-primary transition-colors block"
+                className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground/90 hover:text-primary transition-colors block"
             >
                 koziel.adrian98@gmail.com
             </a>

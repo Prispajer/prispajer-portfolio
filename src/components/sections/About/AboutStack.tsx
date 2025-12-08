@@ -5,9 +5,9 @@ import {technologyItems} from "@/data/data.ts";
 const AboutStack = () => {
     return (
         <div className="pt-0 sm:pt-20">
-            <h3 className="relative text-center text-5xl md:text-4xl font-black mb-10 tracking-wider">
-            <span className="bg-heading-2 bg-clip-text font-headers text-transparent
-                             drop-shadow-[0_0_30px_rgba(220,38,38,0.5)] cursor-default">
+            <h3 className="relative text-center text-3xl md:text-4xl font-black mb-10 tracking-wider">
+            <span className="bg-heading-2  bg-clip-text font-headers text-transparent
+                             drop-shadow-[0_0_30px_rgba(220,38,38,0.5)] cursor-default ">
               ARSENAL OF TECHNOLOGIES
             </span>
                 <div className="w-32 h-1 mt-6 bg-gradient-to-r from-primary to-accent mx-auto shadow-glow"></div>
@@ -27,7 +27,7 @@ const AboutStack = () => {
             </div>
 
             <div className="relative z-10 w-full h-1 mt-6 bg-gradient-to-r
-                          from-transparent via-primary to-transparent mx-auto"></div>
+                          from-transparent via-primary to-transparent mx-auto animate-pulse"></div>
         </div>
     )
 }

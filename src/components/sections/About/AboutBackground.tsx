@@ -16,9 +16,14 @@ const AboutBackground = () => {
                         stop: "50%",
                     },
                     {
-                        position: "ellipse at bottom right",
-                        color: "rgba(124,29,29,0.1)",
-                        stop: "60%",
+                        position: "ellipse at top right",
+                        color: "rgba(239,68,68,0.08)",
+                        stop: "50%",
+                    },
+                    {
+                        position: "ellipse at bottom",
+                        color: "rgba(239,68,68,0.08)",
+                        stop: "80%",
                     },
                     {
                         position: "circle at 80% 80%",

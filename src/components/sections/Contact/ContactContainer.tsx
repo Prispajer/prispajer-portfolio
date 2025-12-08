@@ -7,9 +7,9 @@ import ContactSocials from "@/components/sections/Contact/ContactSocials.tsx";
 
 const ContactSection = () => {
     return (
-        <section id="contact" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="contact" className="relative flex items-center justify-center pt-40 pb-105 overflow-hidden">
             <ContactBackground/>
-            <div className="container mx-auto px-4 max-w-4xl relative z-10">
+            <div className="container mx-auto px-4 max-w-4xl relative">
                 <ContactHeading/>
                 <div className="relative backdrop-blur-sm bg-card/80 p-8 md:p-12 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-all duration-500 shadow-[0_0_50px_rgba(220,38,38,0.2)] hover:shadow-[0_0_70px_rgba(220,38,38,0.4)] group">
                     <ContactOverlay/>

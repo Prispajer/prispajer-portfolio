@@ -23,7 +23,7 @@ const ContactSocials = () => {
                                 className="w-full h-auto py-4 px-6 border-2 border-primary/30
                            hover:border-primary/60 bg-background/50 backdrop-blur-sm
                            hover:bg-primary/10 transition-all duration-300
-                           group-hover/link:scale-105"
+                           group-hover/link:scale-105 cursor-pointer"
                             >
                                 <div className="flex items-center gap-4 w-full">
                                     <Icon className="w-6 h-6 text-primary group-hover/link:text-accent transition-colors" />

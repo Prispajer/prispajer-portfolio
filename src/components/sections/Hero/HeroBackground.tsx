@@ -8,7 +8,7 @@ const HeroBackground = () => {
                     {
                         position: "circle at 50% 45%",
                         color: "rgba(185,28,28,0.25)",
-                        stop: "40%",
+                        stop: "60%",
                     },
                     {
                         position: "ellipse at top right",

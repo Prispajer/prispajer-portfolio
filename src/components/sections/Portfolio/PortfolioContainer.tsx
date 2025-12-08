@@ -8,7 +8,7 @@ const PortfolioContainer = () => {
     return (
         <section
             id="portfolio"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40"
+            className="relative flex items-center justify-center pt-40 overflow-hidden"
         >
             <PortfolioBackground/>
             <div className="container mx-auto px-4 max-w-10/12 relative">

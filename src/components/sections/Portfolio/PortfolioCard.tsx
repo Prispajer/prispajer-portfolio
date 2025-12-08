@@ -27,7 +27,7 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
                     <CardTitle className="text-2xl font-black tracking-wider text-third group-hover:text-accent transition-colors">
                         {portfolio.name}
                     </CardTitle>
-                    <p className="text-foreground/80 leading-relaxed mt-2">
+                    <p className="mt-2 text-foreground/80 leading-relaxed cursor-default">
                         {portfolio.description}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
