@@ -9,7 +9,7 @@ const AboutTechnology = ({technology, index} : {technology: {
     return (
         <Card
             key={index}
-            className="min-w-45 min-h-22 border-0 py-2 z-10"
+            className="w-50 min-w-50 sm:min-w-45 sm:min-h-22 border-0 py-2 z-10"
             style={{
                 boxShadow: `
                   4px 4px 10px ${technology.borderColor},
@@ -20,8 +20,8 @@ const AboutTechnology = ({technology, index} : {technology: {
                 opacity: 1,
             }}
         >
-            <CardContent className="flex flex-col items-center justify-center">
-                <img className="max-w-15" alt={technology.alt} src={technology.image} />
+            <CardContent className="flex flex-row sm:flex-col items-center justify-center gap-2 sm:gap-0">
+                <img className="max-w-12 sm:max-w-15" alt={technology.alt} src={technology.image} />
                 <CardTitle className="font-buttons">{technology.name}</CardTitle>
             </CardContent>
         </Card>

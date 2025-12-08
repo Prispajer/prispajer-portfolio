@@ -7,7 +7,7 @@
             </span>
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto shadow-[0_0_20px_rgba(220,38,38,0.6)]" />
-            <p className="max-w-2xl mx-auto text-xl text-foreground/80 cursor-default">
+            <p className="max-w-2xl mx-auto text-xl text-foreground/80 text-center cursor-default">
                 Here you can browse my latest projects. These are result of my hard
                 work and everything I'll learn is translated into new project to
                 practice new skills.

@@ -11,7 +11,7 @@ const PortfolioContainer = () => {
             className="relative flex items-center justify-center pt-40 overflow-hidden"
         >
             <PortfolioBackground/>
-            <div className="container mx-auto px-4 max-w-10/12 relative">
+            <div className="container relative mx-auto max-w-11/12 sm:max-w-10/12">
                 <PortfolioHeading/>
                 <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
                     {portfolioItems.map((portfolio, index) => (

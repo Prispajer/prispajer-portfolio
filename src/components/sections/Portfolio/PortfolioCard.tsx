@@ -27,14 +27,14 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
                     <CardTitle className="text-2xl font-black tracking-wider text-third group-hover:text-accent transition-colors">
                         {portfolio.name}
                     </CardTitle>
-                    <p className="mt-2 text-foreground/80 leading-relaxed cursor-default">
+                    <p className="mt-2 text-foreground/80 text-justify leading-relaxed cursor-default">
                         {portfolio.description}
                     </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
+                    <div className="flex flex-wrap mt-4 gap-2 overflow-x-auto">
                         {portfolio.technologies.map((technology, techIndex) => (
                             <span
                                 key={techIndex}
-                                className="px-3 py-1 text-xs font-bold bg-primary/20 text-primary border border-primary/30 rounded-full"
+                                className="flex items-center justify-center px-3 py-1 text-xs font-bold bg-primary/20 text-center text-primary border border-primary/30 rounded-full cursor-default"
                             >
                         {technology}
                       </span>
