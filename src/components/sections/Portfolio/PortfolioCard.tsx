@@ -24,7 +24,7 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                 </div>
                 <div className="flex flex-col flex-grow min-h-[240px] p-6">
-                    <CardTitle className="text-2xl font-black tracking-wider text-third group-hover:text-accent transition-colors">
+                    <CardTitle className="text-2xl font-black tracking-wider text-third group-hover:text-accent transition-colors cursor-default">
                         {portfolio.name}
                     </CardTitle>
                     <p className="mt-2 text-foreground/80 text-justify leading-relaxed cursor-default">
@@ -40,7 +40,7 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
                       </span>
                         ))}
                     </div>
-                    <PortfolioButtons />
+                    <PortfolioButtons code={portfolio.github} link={portfolio?.link} />
                 </div>
                 <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/60 rounded-tr-lg animate-expand-resolution pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/60 rounded-bl-lg animate-expand-resolution pointer-events-none" />

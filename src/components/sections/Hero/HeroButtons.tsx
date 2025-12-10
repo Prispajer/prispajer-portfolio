@@ -12,7 +12,7 @@ const HeroButtons = () => {
                              hover:shadow-glow-accent text-primary-foreground font-black
                              tracking-widest transition-all duration-300 hover:scale-105 cursor-pointer"
             >
-                <span className="relative z-10 font-buttons">VIEW MISSIONS</span>
+                <span className="relative z-10 font-buttons">VIEW PORTFOLIO</span>
                 <ArrowRight
                     className="ml-2 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform"
                 />
@@ -25,7 +25,7 @@ const HeroButtons = () => {
                              font-navbar cursor-pointer"
             >
                 <Download className="mr-2 h-5 w-5" />
-                DOWNLOAD CV
+                <span className="relative z-10 font-buttons">DOWNLOAD CV</span>
             </Button>
         </div>
     )
