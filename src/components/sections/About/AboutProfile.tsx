@@ -12,7 +12,7 @@ const AboutProfile = () => {
             >
                 <AboutOverlay/>
 
-                <img className="h-50 sm:h-100" src="./images/Prispajer.png" alt="Prispajer" />
+                <img className="h-50 sm:h-100" src="/public/images/Prispajer.png" alt="Prispajer" />
 
                 <div className="relative z-10 space-y-8 mt-10 font-gothic text-justify cursor-default">
                     <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
