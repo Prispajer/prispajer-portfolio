@@ -1,13 +1,16 @@
 {
-  "name": "vite-project",
+  "name": "prispajer-portfolio",
+  "homepage": "https://prispajer.github.io/prispajer-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
