@@ -17,7 +17,7 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
             <CardContent className="flex flex-col h-full p-0">
                 <div className="relative h-64 md:h-72 overflow-hidden">
                     <img
-                        src={portfolio.image}
+                        src={portfolio.image ?? ""}
                         alt={portfolio.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
