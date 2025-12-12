@@ -19,7 +19,6 @@ import Rigba from "../../public/images/Rigba.jpg";
 import HuffmanAlgorithm from "../../public/images/HuffmanAlgorithm.jpg";
 import QuarryByte from "../../public/images/QuarryByte.jpg";
 import Suggor from "../../public/images/Suggor.jpg";
-import Countries from "../../public/images/API Countries.jpg";
 import MemoryGame from "../../public/images/Memory Game.jpg";
 
 export const portfolioItems = [
@@ -27,73 +26,97 @@ export const portfolioItems = [
         name: "RIGBA",
         image: `${Rigba}`,
         technologies: [
-            "TypeScript",
-            "React",
-            "Next.js",
-            "NextAuth.js",
-            "InversifyJS",
-            "TailwindCSS",
-            "Prisma",
-            "Stripe",
-            "Redux Toolkit",
-            "Zod",
-            "REST API",
-            "PostgresSQL",
-            "Jest",
-            "React Hook Form",
-            "Custom React Hooks",
-            "Resend",
+            "TypeScript","React","Next.js","NextAuth.js","InversifyJS","TailwindCSS",
+            "Prisma","Stripe","Redux Toolkit","Zod","REST API","PostgresSQL","Jest",
+            "React Hook Form","Custom React Hooks","Resend"
         ],
         link: "https://www.youtube.com/watch?v=FaoslE0Mqc4",
         github: "https://github.com/Prispajer/rigba-game-store",
         description:
-            "RIGBA Data-Driven Store is a fullstack application built with TypeScript, React, and Next.js, based on a REST architecture and supporting Server-Side Rendering. It features live data from an API to display the latest games, integrates Stripe for payments, NextAuth.js for authentication, and uses Redux Toolkit for state management.",
+            "RIGBA is a fullstack game store built with TypeScript, React, and Next.js. It supports authentication, payments via Stripe, and live API data. The project uses Redux Toolkit and Prisma with PostgreSQL for state and database management."
     },
     {
         name: "Huffman Algorithm",
         image: `${HuffmanAlgorithm}`,
-        technologies: ["C#", "ASP.NET", "NPM", "DotNetGraph", "Viz.js", "Blazor"],
+        technologies: ["C#","ASP.NET","NPM","DotNetGraph","Viz.js","Blazor"],
         github: "https://github.com/Prispajer/huffman-algorithm",
         description:
-            "Huffman Algorithm is a data compression tool that implements the Huffman coding technique to reduce the size of input data (such as text files, binary files, or images). The project includes both encoding and decoding capabilities, allowing users to compress data efficiently while maintaining its integrity.",
+            "Huffman Algorithm is a data compression tool implementing Huffman coding. It provides both encoding and decoding features for text and binary files. The project includes visualization using Blazor, DotNetGraph, and Viz.js."
     },
     {
         name: "Quarry Byte",
         image: `${QuarryByte}`,
-        technologies: ["C#", "ASP.NET MVC", "Blazor", "SQL Server", "REST API"],
+        technologies: ["C#","ASP.NET MVC","Blazor","SQL Server","REST API"],
         github: "https://github.com/Prispajer/quarry-byte-store",
         description:
-            "QuarryByte is a student project developed in collaboration with a group of peers under our university index numbers. The application is a modern game store built with ASP.NET and follows the MVC architecture, with a SQL database for managing game and user data.",
+            "Quarry Byte is a student project game store built with ASP.NET MVC. It uses SQL Server to manage games and user data. The interface is developed with Blazor and communicates through a REST API."
     },
     {
         name: "Suggor",
         image: `${Suggor}`,
-        technologies: ["C#", "Unity Engine", "Unity Packages"],
+        technologies: ["C#","Unity Engine","Unity Packages"],
         link: "https://www.youtube.com/watch?v=n5Nbwd-BqBI",
         github: "https://github.com/Prispajer/suggor-game",
         description:
-            "Suggor is a 2D platformer game created as part of an engineering team project during studies. The game features a checkpoint system, health bars, and health regeneration, allowing players to navigate levels and fight opponents. The project was developed by a team, utilizing logical thinking and problem-solving skills.",
+            "Suggor is a 2D platformer game created in Unity. It features checkpoints, health bars, and regeneration mechanics. The project was developed collaboratively as part of an engineering team."
     },
     {
         name: "Memory Game",
         image: `${MemoryGame}`,
-        technologies: ["TypeScript", "React", "Vite", "Zustand"],
+        technologies: ["TypeScript","React","Vite","Zustand"],
         link: "https://memory-game-go-online.vercel.app/",
         github: "https://github.com/Prispajer/memory-game-go-online",
         description:
-            "A classic memory game built with React and TypeScript. The game challenges players to find all matching card pairs on a dynamically generated board, with smooth UI and responsive gameplay.",
+            "Memory Game is a classic card matching game built with React and TypeScript. The board is dynamically generated for each playthrough. State management is handled with Zustand for smooth and responsive gameplay."
     },
     {
-        name: "REST API Countries",
-        image: `${Countries}`,
-        technologies: ["React", "Sass", "JavaScript", "REST API"],
-        link: "https://prispajer-rest-api.netlify.app/",
-        github: "https://github.com/Prispajer/rest-api-countries",
+        name: "Taskly",
+        image: "",
+        technologies: [
+            ".NET 8","ASP.NET Core","Entity Framework Core","PostgreSQL","Docker",
+            "Docker Compose","Swagger","xUnit","FluentValidation","Makefile","CQRS","Clean Architecture"
+        ],
+        link: "",
+        github: "https://github.com/Prispajer/taskly",
         description:
-            "The application features seamless toggling between light and dark modes, country filtering and searching capabilities, and provides detailed information about each country.",
+            "Taskly is a modular task management system using CQRS and Clean Architecture. It is built with .NET 8, EF Core, and PostgreSQL. The project includes Docker setup, Swagger documentation, and unit tests with xUnit."
     },
+    {
+        name: "Messages Board",
+        image: "",
+        technologies: [
+            "JavaScript","TypeScript","React","RTK Query","ShadCN UI",
+            "Node.js","Sequelize","Docker","PostgreSQL","REST API"
+        ],
+        link: "",
+        github: "https://github.com/Prispajer/messages-board",
+        description:
+            "Messages Board is a fullstack CRUD app for managing messages. The frontend uses React, RTK Query, and ShadCN UI. The backend is built with Node.js, Sequelize, and PostgreSQL, with Docker Compose for setup."
+    },
+    {
+        name: "Order Matcher App",
+        image: "",
+        technologies: [
+            "Flutter","Dart","BLoC","Clean Architecture","Google Gemini AI","REST API","dummyjson.com"
+        ],
+        link: "",
+        github: "https://github.com/Prispajer/order-matcher-app",
+        description:
+            "Order Matcher App is a mobile application built with Flutter and Dart. It parses text orders using Google Gemini AI and matches products from dummyjson.com. The app calculates totals and presents results in a clear table."
+    },
+    {
+        name: "NewsPortalCMS",
+        image: "",
+        technologies: [
+            ".NET 8","ASP.NET Core","Entity Framework Core","PostgreSQL",
+            "Docker","Docker Compose","Swagger","xUnit","Makefile","Clean Architecture"
+        ],
+        link: "",
+        github: "https://github.com/Prispajer/newsportal-cms",
+        description:
+            "NewsPortalCMS is a CMS system for managing articles and categories. It is built with .NET 8, EF Core, and PostgreSQL. The project uses Docker Compose, Swagger documentation, and Clean Architecture for modular design."
+    }
 ];
-
 export const technologyItems = [
     {
         image: `${JavaScript}`,
