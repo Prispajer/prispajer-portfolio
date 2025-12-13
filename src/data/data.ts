@@ -25,94 +25,91 @@ export const portfolioItems = [
     {
         name: "RIGBA",
         image: `${Rigba}`,
-        technologies: [
+        stack: [
             "TypeScript","React","Next.js","NextAuth.js","InversifyJS","TailwindCSS",
             "Prisma","Stripe","Redux Toolkit","Zod","REST API","PostgresSQL","Jest",
             "React Hook Form","Custom React Hooks","Resend"
         ],
-        link: "https://www.youtube.com/watch?v=FaoslE0Mqc4",
-        github: "https://github.com/Prispajer/rigba-game-store",
+        liveApp: "https://rigba-game-store.vercel.app/",
+        sourceCode: "https://github.com/Prispajer/rigba-game-store",
+        videoDemo: "https://www.youtube.com/watch?v=FaoslE0Mqc4",
         description:
             "RIGBA is a fullstack game store built with TypeScript, React, and Next.js. It supports authentication, payments via Stripe, and live API data. The project uses Redux Toolkit and Prisma with PostgreSQL for state and database management."
     },
     {
         name: "Huffman Algorithm",
         image: `${HuffmanAlgorithm}`,
-        technologies: ["C#","ASP.NET","NPM","DotNetGraph","Viz.js","Blazor"],
-        github: "https://github.com/Prispajer/huffman-algorithm",
+        stack: ["C#","ASP.NET","NPM","DotNetGraph","Viz.js","Blazor"],
+        sourceCode: "https://github.com/Prispajer/huffman-algorithm",
         description:
             "Huffman Algorithm is a data compression tool implementing Huffman coding. It provides both encoding and decoding features for text and binary files. The project includes visualization using Blazor, DotNetGraph, and Viz.js."
     },
     {
         name: "Quarry Byte",
         image: `${QuarryByte}`,
-        technologies: ["C#","ASP.NET MVC","Blazor","SQL Server","REST API"],
-        github: "https://github.com/Prispajer/quarry-byte-store",
+        stack: ["C#","ASP.NET MVC","Blazor","SQL Server","REST API"],
+        sourceCode: "https://github.com/Prispajer/quarry-byte-store",
         description:
             "Quarry Byte is a student project game store built with ASP.NET MVC. It uses SQL Server to manage games and user data. The interface is developed with Blazor and communicates through a REST API."
     },
     {
         name: "Suggor",
         image: `${Suggor}`,
-        technologies: ["C#","Unity Engine","Unity Packages"],
-        link: "https://www.youtube.com/watch?v=n5Nbwd-BqBI",
-        github: "https://github.com/Prispajer/suggor-game",
+        stack: ["C#","Unity Engine","Unity Packages"],
+        sourceCode: "https://github.com/Prispajer/suggor-game",
+        videoDemo: "https://www.youtube.com/watch?v=n5Nbwd-BqBI",
         description:
             "Suggor is a 2D platformer game created in Unity. It features checkpoints, health bars, and regeneration mechanics. The project was developed collaboratively as part of an engineering team."
     },
     {
         name: "Memory Game",
         image: `${MemoryGame}`,
-        technologies: ["TypeScript","React","Vite","Zustand"],
-        link: "https://memory-game-go-online.vercel.app/",
-        github: "https://github.com/Prispajer/memory-game-go-online",
+        stack: ["TypeScript","React","Vite","Zustand"],
+        liveApp: "https://memory-game-go-online.vercel.app/",
+        sourceCode: "https://github.com/Prispajer/memory-game-go-online",
         description:
             "Memory Game is a classic card matching game built with React and TypeScript. The board is dynamically generated for each playthrough. State management is handled with Zustand for smooth and responsive gameplay."
     },
     {
         name: "Taskly",
         image: "",
-        technologies: [
+        stack: [
             ".NET 8","ASP.NET Core","Entity Framework Core","PostgreSQL","Docker",
             "Docker Compose","Swagger","xUnit","FluentValidation","Makefile","CQRS","Clean Architecture"
         ],
-        link: "",
-        github: "https://github.com/Prispajer/taskly",
+        sourceCode: "https://github.com/Prispajer/taskly",
         description:
             "Taskly is a modular task management system using CQRS and Clean Architecture. It is built with .NET 8, EF Core, and PostgreSQL. The project includes Docker setup, Swagger documentation, and unit tests with xUnit."
     },
     {
         name: "Messages Board",
         image: "",
-        technologies: [
+        stack: [
             "JavaScript","TypeScript","React","RTK Query","ShadCN UI",
             "Node.js","Sequelize","Docker","PostgreSQL","REST API"
         ],
-        link: "",
-        github: "https://github.com/Prispajer/messages-board",
+        sourceCode: "https://github.com/Prispajer/messages-board",
         description:
             "Messages Board is a fullstack CRUD app for managing messages. The frontend uses React, RTK Query, and ShadCN UI. The backend is built with Node.js, Sequelize, and PostgreSQL, with Docker Compose for setup."
     },
     {
         name: "Order Matcher App",
         image: "",
-        technologies: [
+        stack: [
             "Flutter","Dart","BLoC","Clean Architecture","Google Gemini AI","REST API","dummyjson.com"
         ],
-        link: "",
-        github: "https://github.com/Prispajer/order-matcher-app",
+        sourceCode: "https://github.com/Prispajer/order-matcher-app",
         description:
             "Order Matcher App is a mobile application built with Flutter and Dart. It parses text orders using Google Gemini AI and matches products from dummyjson.com. The app calculates totals and presents results in a clear table."
     },
     {
         name: "NewsPortalCMS",
         image: "",
-        technologies: [
+        stack: [
             ".NET 8","ASP.NET Core","Entity Framework Core","PostgreSQL",
             "Docker","Docker Compose","Swagger","xUnit","Makefile","Clean Architecture"
         ],
-        link: "",
-        github: "https://github.com/Prispajer/newsportal-cms",
+        sourceCode: "https://github.com/Prispajer/newsportal-cms",
         description:
             "NewsPortalCMS is a CMS system for managing articles and categories. It is built with .NET 8, EF Core, and PostgreSQL. The project uses Docker Compose, Swagger documentation, and Clean Architecture for modular design."
     }
