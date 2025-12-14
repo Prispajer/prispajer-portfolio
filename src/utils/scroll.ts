@@ -1,6 +1,4 @@
-﻿
-
-export const handleScroll = (id: string) => {
+﻿export const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     const distance = element && element.getBoundingClientRect().top + window.scrollY;
     element && smoothScrollTo(distance!, 1000);
@@ -10,8 +8,7 @@ export const smoothScrollTo = (targetY: number, duration: number = 1000) => {
     const startY = window.scrollY;
     const diffY = targetY - startY;
     if (diffY === 0) return;
-    const scrollStep = createScrollStep(startY, diffY, duration);
-    window.requestAnimationFrame(scrollStep);
+    window.requestAnimationFrame(createScrollStep(startY, diffY, duration));
 }
 
 const createScrollStep = (startY: number, diffY: number, duration: number) => {

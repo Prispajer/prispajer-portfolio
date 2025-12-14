@@ -4,9 +4,9 @@ import {technologyItems} from "@/data/data.ts";
 
 const AboutStack = () => {
     return (
-        <div className="pt-0 sm:pt-20">
-            <h3 className="relative text-center text-3xl md:text-4xl font-black mb-10 tracking-wider">
-            <span className="bg-heading-2  bg-clip-text font-headers text-transparent
+        <div className="pt-0 xl:pt-20">
+            <h3 className="relative pb-10 text-center text-3xl md:text-4xl font-black tracking-wider">
+            <span className="bg-heading-2 bg-clip-text font-headers text-transparent
                              drop-shadow-[0_0_30px_rgba(220,38,38,0.5)] cursor-default ">
               ARSENAL OF TECHNOLOGIES
             </span>

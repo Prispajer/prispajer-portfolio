@@ -1,6 +1,9 @@
-﻿const HeroHeading = () => {
+﻿import {motion} from "motion/react";
+import {fadeWhileLoading} from "@/data/animations.ts";
+
+const HeroHeading = () => {
     return (
-        <div className="relative grid place-items-center space-y-4">
+        <motion.div variants={fadeWhileLoading(-160, 0, 0)} className="relative grid place-items-center space-y-4">
             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-4 tracking-widest cursor-default">
                 I'M
             </h2>
@@ -35,7 +38,7 @@
             >
                 Web Developer
             </p>
-        </div>
+        </motion.div>
     )
 }
 
