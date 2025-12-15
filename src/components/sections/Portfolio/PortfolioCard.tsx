@@ -3,7 +3,7 @@ import {Card, CardContent, CardTitle} from "@/components/ui/card.tsx";
 import PortfolioButtons from "@/components/sections/Portfolio/PortfolioButtons.tsx";
 import {fadeCard} from "@/data/animations.ts";
 
-const MotionCard = motion(Card);
+const MotionCard = motion.create(Card);
 
 const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
         image?: string
@@ -18,7 +18,7 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
             initial="hidden"
             whileInView="show"
             variants={fadeCard(60)}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0 }}
             className="relative flex flex-col bg-gradient-card backdrop-blur-sm border-2 border-primary/30 hover:border-primary/50 transition-all duration-700 shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:shadow-[0_0_50px_rgba(220,38,38,0.4)] group overflow-hidden"
         >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

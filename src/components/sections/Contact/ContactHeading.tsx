@@ -3,7 +3,7 @@ import {fadeWhileLoading} from "@/data/animations.ts";
 
 const ContactHeading = () => {
     return (
-        <motion.div variants={fadeWhileLoading(-160, 0, 0)} className="pb-20 text-center space-y-6">
+        <motion.div variants={fadeWhileLoading(-160, 0, 0)} className="pb-10 sm:pb-0 text-center space-y-6">
             <h2 className="relative text-center text-5xl md:text-6xl font-headers tracking-wider overflow-hidden">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent font-headers drop-shadow-[0_0_30px_rgba(220,38,38,0.6)]">
               CONTACT

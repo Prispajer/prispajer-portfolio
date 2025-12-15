@@ -1,6 +1,6 @@
 ﻿const PortfolioHeading = () => {
     return (
-        <div className="text-center space-y-6">
+        <div className="text-center pb-5 sm:pb-0 space-y-6">
             <h2 className="relative text-center text-5xl md:text-6xl font-headers tracking-wider overflow-hidden">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(220,38,38,0.6)]">
               PORTFOLIO

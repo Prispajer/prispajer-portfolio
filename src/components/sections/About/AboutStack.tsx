@@ -9,7 +9,7 @@ const AboutStack = () => {
         <motion.div initial="hidden"
                     whileInView="show"
                     variants={fadeWhileLoading(0, 300)}
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0 }}
                     className="pt-0 xl:pt-20">
             <h3 className="relative pb-10 text-center text-3xl md:text-4xl font-black tracking-wider">
             <span className="bg-heading-2 bg-clip-text font-headers text-transparent
@@ -21,13 +21,13 @@ const AboutStack = () => {
 
             <div className="backdrop-blur-sm bg-gradient-to-br from-card/90 to-muted/60
                           p-8 shadow-[0_0_50px_rgba(220,38,38,0.3)] border-2 border-primary/30
-                          mb-16 group hover:shadow-glow-accent transition-all duration-500">
+                          sm:mb-16 group hover:shadow-glow-accent transition-all duration-500">
 
                 <AboutOverlay />
 
                 <div className="flex flex-wrap items-center justify-center gap-6 cursor-default">
                     {technologyItems.map((technology, index) => (
-                        <AboutTechnology technology={technology} index={index} />
+                        <AboutTechnology key={technology.name} technology={technology} index={index} />
                     ))}
                 </div>
             </div>

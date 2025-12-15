@@ -2,7 +2,7 @@
 import {Card, CardContent, CardTitle} from "@/components/ui/card.tsx";
 import {fadeCard} from "@/data/animations.ts";
 
-const MotionCard = motion(Card);
+const MotionCard = motion.create(Card);
 
 const AboutTechnology = ({technology, index} : {technology: {
         image: string
@@ -16,7 +16,7 @@ const AboutTechnology = ({technology, index} : {technology: {
             initial="hidden"
             whileInView="show"
             variants={fadeCard(60, 60)}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0 }}
             className="w-50 min-w-50 sm:min-w-45 sm:min-h-22 border-0 py-2 z-10"
             style={{
                 boxShadow: `

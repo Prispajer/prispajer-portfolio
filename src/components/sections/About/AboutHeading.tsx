@@ -1,6 +1,6 @@
 ﻿const AboutHeading = () => {
     return (
-        <h2 className="relative text-center text-5xl md:text-6xl font-headers tracking-wider overflow-hidden">
+        <h2 className="relative pb-5 sm:pb-0 text-center text-5xl md:text-6xl font-headers tracking-wider overflow-hidden">
                 <span className="bg-heading-1 bg-clip-text text-transparent drop-shadow-[10px_10px_30px_rgba(220,38,38,0.5)] cursor-default">
                     ABOUT
                 </span>

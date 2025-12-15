@@ -7,13 +7,13 @@ const AboutProfile = () => {
         <motion.div  initial="hidden"
                      whileInView="show"
                      variants={fadeWhileLoading(0, -300)}
-                     viewport={{ once: true, amount: 0.2 }}
-                     className="mx-auto pt-20">
+                     viewport={{ once: true, amount: 0 }}
+                     className="mx-auto pt-5 sm:pt-20">
             <div
                 className="flex flex-col items-center justify-center relative
                    backdrop-blur-sm bg-gradient-to-br from-card/90 to-muted/60
                    p-8 md:p-12 shadow-[0_0_50px_rgba(220,38,38,0.3)]
-                   border-2 border-primary/30 mb-16 group
+                   border-2 border-primary/30 sm:mb-16 group
                    hover:shadow-glow-accent transition-all duration-500"
             >
                 <AboutOverlay/>

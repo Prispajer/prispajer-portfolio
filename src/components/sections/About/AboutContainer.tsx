@@ -3,18 +3,18 @@ import AboutBackground from "@/components/sections/About/AboutBackground.tsx";
 import AboutStack from "@/components/sections/About/AboutStack.tsx";
 import AboutHeading from "@/components/sections/About/AboutHeading.tsx";
 import AboutProfile from "@/components/sections/About/AboutProfile.tsx";
-import {parentFade} from "@/data/animations.ts";
+import {fadeWhileLoading} from "@/data/animations.ts";
 
 const AboutContainer = () => {
     return (
-        <section id="about" className="relative grid grid-cols-1 pt-30 pb-30 overflow-hidden">
+        <section id="about" className="relative grid grid-cols-1 pt-15 sm:pt-30 pb-15 sm:pb-30 overflow-hidden">
             <AboutBackground/>
-            <AboutHeading/>
+                <AboutHeading/>
             <motion.div initial="hidden"
                         whileInView="show"
-                        variants={parentFade}
+                        variants={fadeWhileLoading(-160, 0, 0)}
                         viewport={{ once: true, amount: 0 }}
-                        className="grid grid-cols-1 xl:grid-cols-2 gap-10 sm:gap-20 max-w-11/12 sm:max-w-9/12 xl:max-w-10/12 mx-auto">
+                        className="container grid grid-cols-1 xl:grid-cols-2 max-w-11/12 sm:max-w-9/12 xl:max-w-10/12 mx-auto gap-10 sm:gap-20">
                 <AboutProfile/>
                 <AboutStack/>
             </motion.div>
