@@ -14,7 +14,7 @@ const HeroButtons = () => {
             >
                 <span className="relative z-10 font-buttons">VIEW PORTFOLIO</span>
                 <ArrowRight
-                    className="ml-2 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform"
+                    className="ml-1 h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform"
                 />
             </Button>
             <Button

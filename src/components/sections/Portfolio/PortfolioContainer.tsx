@@ -10,7 +10,7 @@ const PortfolioContainer = () => {
     return (
         <section
             id="portfolio"
-            className="relative flex items-center justify-center pt-30 sm:pt-40 overflow-hidden"
+            className="relative flex items-center justify-center pt-30 pb-30 overflow-hidden"
         >
             <PortfolioBackground/>
             <motion.div initial="hidden" whileInView="show" variants={fadeWhileLoading(-160, 0, 0)} viewport={{ once: true, amount: 0 }} className="container relative mx-auto max-w-11/12 sm:max-w-10/12">

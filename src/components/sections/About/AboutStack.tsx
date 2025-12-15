@@ -1,10 +1,16 @@
-﻿import AboutOverlay from "@/components/sections/About/AboutOverlay.tsx";
+﻿import {motion} from "motion/react";
+import AboutOverlay from "@/components/sections/About/AboutOverlay.tsx";
 import AboutTechnology from "@/components/sections/About/AboutTechnology.tsx";
 import {technologyItems} from "@/data/data.ts";
+import {fadeWhileLoading} from "@/data/animations.ts";
 
 const AboutStack = () => {
     return (
-        <div className="pt-0 xl:pt-20">
+        <motion.div initial="hidden"
+                    whileInView="show"
+                    variants={fadeWhileLoading(0, 300)}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="pt-0 xl:pt-20">
             <h3 className="relative pb-10 text-center text-3xl md:text-4xl font-black tracking-wider">
             <span className="bg-heading-2 bg-clip-text font-headers text-transparent
                              drop-shadow-[0_0_30px_rgba(220,38,38,0.5)] cursor-default ">
@@ -28,7 +34,7 @@ const AboutStack = () => {
 
             <div className="relative z-10 w-full h-1 mt-6 bg-gradient-to-r
                           from-transparent via-primary to-transparent mx-auto animate-pulse"></div>
-        </div>
+        </motion.div>
     )
 }
 

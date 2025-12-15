@@ -9,7 +9,7 @@ import {fadeWhileLoading} from "@/data/animations.ts";
 
 const ContactSection = () => {
     return (
-        <section id="contact" className="relative flex items-center justify-center pt-30 sm:pt-40 pb-105 overflow-hidden">
+        <section id="contact" className="relative flex items-center justify-center pt-30 pb-105 overflow-hidden">
             <ContactBackground/>
             <motion.div initial="hidden" whileInView="show" variants={fadeWhileLoading(-160, 0, 0)} viewport={{ once: true, amount: 0 }} className="container mx-auto max-w-11/12 sm:max-w-4xl sm:px-18 relative">
                 <ContactHeading/>

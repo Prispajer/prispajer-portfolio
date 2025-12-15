@@ -12,7 +12,7 @@ export const parentFade: Variants = {
 }
 
 export const fadeWhileLoading = (
-    vertical: number = 20,
+    vertical: number = 0,
     horizontal: number = 0,
     delay: number = 0
 ): Variants => {
@@ -37,15 +37,16 @@ export const fadeWhileLoading = (
     };
 };
 
-export const fadeCard = (vertical: number = 40, delay: number = 0): Variants => ({
-    hidden: { y: vertical, opacity: 0, scale: 0.95 },
+export const fadeCard = (vertical: number = 40, horizontal: number = 0, delay: number = 0): Variants => ({
+    hidden: { y: vertical, x: horizontal, scale: 0.95 },
     show: {
         y: 0,
+        x: 0,
         opacity: 1,
         scale: 1,
         transition: {
             ease: "easeOut",
-            duration: 0.6,
+            duration: 0.8,
             delay,
         },
     },

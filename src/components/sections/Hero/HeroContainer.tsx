@@ -17,7 +17,7 @@ const HeroContainer = () => {
                 whileInView="show"
                 variants={parentFade}
                 viewport={{ once: true, amount: 0 }}
-                className="container mx-auto relative"
+                className="container mx-auto py-20 relative"
             >
                 <div className="max-w-5xl mx-auto pt-24">
                     <div className="grid place-items-center">

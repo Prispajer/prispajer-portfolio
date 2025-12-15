@@ -1,9 +1,6 @@
-﻿import {motion} from "motion/react";
-import {fadeWhileLoading} from "@/data/animations.ts";
-
-const HeroHeading = () => {
+﻿const HeroHeading = () => {
     return (
-        <motion.div variants={fadeWhileLoading(-160, 0, 0)} className="relative grid place-items-center space-y-4">
+        <div className="relative grid place-items-center space-y-4">
             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-4 tracking-widest cursor-default">
                 I'M
             </h2>
@@ -29,7 +26,7 @@ const HeroHeading = () => {
 
             <div
                 className="absolute bottom-11 left-0 w-full h-2
-                   bg-gradient-to-r from-transparent via-primary to-transparent shadow-glow"
+                   bg-gradient-to-r from-transparent via-primary to-transparent shadow-glow animate-inferno-glow"
             />
 
             <p
@@ -38,7 +35,7 @@ const HeroHeading = () => {
             >
                 Web Developer
             </p>
-        </motion.div>
+        </div>
     )
 }
 

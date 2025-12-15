@@ -1,8 +1,14 @@
-﻿import AboutOverlay from "@/components/sections/About/AboutOverlay.tsx";
+﻿import {motion} from "motion/react";
+import AboutOverlay from "@/components/sections/About/AboutOverlay.tsx";
+import {fadeWhileLoading} from "@/data/animations.ts";
 
 const AboutProfile = () => {
     return (
-        <div className="mx-auto pt-20">
+        <motion.div  initial="hidden"
+                     whileInView="show"
+                     variants={fadeWhileLoading(0, -300)}
+                     viewport={{ once: true, amount: 0.2 }}
+                     className="mx-auto pt-20">
             <div
                 className="flex flex-col items-center justify-center relative
                    backdrop-blur-sm bg-gradient-to-br from-card/90 to-muted/60
@@ -48,7 +54,7 @@ const AboutProfile = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
