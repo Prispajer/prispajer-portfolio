@@ -13,7 +13,7 @@ const PortfolioContainer = () => {
             className="relative flex items-center justify-center pt-15 sm:pt-30 pb-15 sm:pb-30 overflow-hidden"
         >
             <PortfolioBackground/>
-            <motion.div initial="hidden" whileInView="show" variants={fadeWhileLoading(-160, 0, 0)} viewport={{ once: true, amount: 0 }} className="relative container grid grid-cols-1 max-w-11/12 sm:max-w-10/12  mx-auto">
+            <motion.div initial="hidden" whileInView="show" variants={fadeWhileLoading(-160, -200, 0)} viewport={{ once: true, amount: 0 }} className="relative container grid grid-cols-1 max-w-11/12 sm:max-w-10/12  mx-auto">
                 <PortfolioHeading/>
                 <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 pt-5 sm:pt-20 gap-8">
                     {portfolioItems.map((portfolio, index) => (

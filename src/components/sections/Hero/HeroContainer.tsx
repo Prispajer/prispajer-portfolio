@@ -22,13 +22,13 @@ const HeroContainer = () => {
                 <div className="max-w-5xl mx-auto pt-24">
                     <div className="grid place-items-center">
                         <div className="max-w-2xl space-y-8">
-                            <motion.div variants={fadeWhileLoading(-160, 0)}>
+                            <motion.div variants={fadeWhileLoading(-200, 0)}>
                                 <HeroHeading />
                             </motion.div>
                             <motion.div variants={fadeWhileLoading(-760, 0)}>
                                 <HeroButtons />
                             </motion.div>
-                            <motion.div variants={fadeWhileLoading(-160, 0)}>
+                            <motion.div variants={fadeWhileLoading(200, 0)}>
                                 <HeroSocials />
                             </motion.div>
                         </div>
