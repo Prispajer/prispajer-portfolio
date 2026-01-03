@@ -18,14 +18,16 @@ const HeroButtons = () => {
                 />
             </Button>
             <Button
+                asChild
                 size="xl"
                 className="border-2 bg-accent border-primary/50 text-foreground hover:bg-primary/20
                              hover:border-primary hover:shadow-glow backdrop-blur-sm font-display
                              font-black tracking-widest transition-all duration-300 hover:scale-105
                              font-navbar cursor-pointer"
             >
-                <Download className="mr-2 h-5 w-5" />
-                <span className="relative z-10 font-buttons">DOWNLOAD CV</span>
+                <a href="https://drive.google.com/file/d/1X0ZHAKeZrjJOBPtesE0XgApS58AYcxVu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="relative z-10 font-buttons">DOWNLOAD CV
+                    <Download className="mr-2 h-5 w-5" />
+                </a>
             </Button>
         </div>
     )
