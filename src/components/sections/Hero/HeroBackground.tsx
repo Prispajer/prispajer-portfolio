@@ -27,7 +27,7 @@ const HeroBackground = () => {
                 .map((_, i) => (
                     <div
                         key={i}
-                        className="absolute w-1 h-1 bg-primary rounded-full animate-ember shadow-ember"
+                        className="absolute w-1 h-1 bg-primary rounded-full animate-ember-rise shadow-ember"
                         style={{
                             left: `${Math.random() * 100}%`,
                             bottom: `${Math.random() * 20}%`,

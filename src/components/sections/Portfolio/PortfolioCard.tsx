@@ -56,8 +56,8 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
                     </div>
                     <PortfolioButtons sourceCode={portfolio.sourceCode} liveApp={portfolio?.liveApp} videoDemo={portfolio?.videoDemo} />
                 </div>
-                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/60 rounded-tr-lg animate-expand-resolution pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/60 rounded-bl-lg animate-expand-resolution pointer-events-none" />
+                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/60 rounded-tr-lg animate-line-expand pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/60 rounded-bl-lg animate-line-expand pointer-events-none" />
             </CardContent>
         </MotionCard>
     )
