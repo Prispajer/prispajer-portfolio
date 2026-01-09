@@ -22,8 +22,12 @@ import HuffmanAlgorithm from "../../public/images/HuffmanAlgorithm.jpg";
 import QuarryByte from "../../public/images/QuarryByte.jpg";
 import Suggor from "../../public/images/Suggor.jpg";
 import MemoryGame from "../../public/images/Memory Game.jpg";
+import type {NavigationItem} from "@/types/navigation.ts";
+import type {PortfolioItem} from "@/types/portfolio.ts";
+import type {SocialItem} from "@/types/social.ts";
+import type {TechnologyItem} from "@/types/technology.ts";
 
-export const portfolioItems = [
+export const portfolioItems: PortfolioItem[] = [
     {
         name: "RIGBA",
         image: `${Rigba}`,
@@ -117,7 +121,7 @@ export const portfolioItems = [
     },
 ];
 
-export const technologyItems = [
+export const technologyItems: TechnologyItem[] = [
     { image: `${JavaScript}`, name: "JavaScript", borderColor: "#FFD600", alt: "JS" },
     { image: `${TypeScript}`, name: "TypeScript", borderColor: "#1976D2", alt: "TypeScript" },
     { image: `${CSharp}`, name: "CSharp", borderColor: "#68217A", alt: "C#" },
@@ -138,14 +142,14 @@ export const technologyItems = [
     { image: `${Git}`, name: "Git", borderColor: "#EF473B", alt: "Git" },
 ];
 
-export const navigationItems = [
+export const navigationItems: NavigationItem[] = [
     { id: "hero", name: "Hero", icon: Home },
     { id: "about", name: "About", icon: User },
     { id: "portfolio", name: "Portfolio", icon: Briefcase },
     { id: "contact", name: "Contact", icon: Mail },
 ];
 
-export const socialItems = [
+export const socialItems: SocialItem[] = [
     { icon: Github, link: "https://github.com/prispajer" },
     { icon: Linkedin, link: "https://www.linkedin.com/in/adrian-kozie%C5%82/" },
     { icon: MessageCircle, link: "https://www.facebook.com/adikoxi/" },

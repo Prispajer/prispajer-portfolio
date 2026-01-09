@@ -1,17 +1,19 @@
 ﻿import {motion} from "motion/react";
 import {Card, CardContent, CardTitle} from "@/components/ui/card.tsx";
 import PortfolioButtons from "@/components/sections/Portfolio/PortfolioButtons.tsx";
+import PortfolioImage from "@/components/sections/Portfolio/PortfolioImage.tsx";
 import {fadeCard} from "@/data/animations.ts";
+import type {PortfolioItem} from "@/types/portfolio.ts";
+
 
 const MotionCard = motion.create(Card);
 
-const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
-        image?: string
-        stack: string[]
-        liveApp?: string
-        sourceCode: string
-        videoDemo?: string
-        description: string}, index: number}) => {
+type PortfolioCardProps = {
+    portfolio: PortfolioItem;
+    index: number;
+}
+
+const PortfolioCard = ({portfolio, index} : PortfolioCardProps) => {
     return (
         <MotionCard
             key={index}
@@ -23,22 +25,9 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
         >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             <CardContent className="flex flex-col h-full p-0">
-                <div className="relative h-64 md:h-72 overflow-hidden">
-                    {portfolio.image ? (
-                        <img
-                            src={portfolio.image}
-                            alt={portfolio.name}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                    ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br">
-                            No image
-                        </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-                </div>
+                <PortfolioImage name={portfolio.name} image={portfolio.image} />
                 <div className="flex flex-col flex-grow min-h-[240px] p-6">
-                    <CardTitle className="text-2xl font-black tracking-wider text-third group-hover:text-accent transition-colors cursor-default">
+                    <CardTitle className="text-2xl font-black tracking-wider text-third group-hover:text-accent transition-colors duration-900 cursor-default">
                         {portfolio.name}
                     </CardTitle>
                     <p className="mt-2 text-foreground/80 text-justify leading-relaxed cursor-default">
@@ -54,7 +43,8 @@ const PortfolioCard = ({portfolio, index} : {portfolio: {name: string
                       </span>
                         ))}
                     </div>
-                    <PortfolioButtons sourceCode={portfolio.sourceCode} liveApp={portfolio?.liveApp} videoDemo={portfolio?.videoDemo} />
+                    <PortfolioButtons liveApp={portfolio.liveApp} sourceCode={portfolio.sourceCode} videoDemo={portfolio.videoDemo}
+                    />
                 </div>
                 <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/60 rounded-tr-lg animate-line-expand pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/60 rounded-bl-lg animate-line-expand pointer-events-none" />

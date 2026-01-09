@@ -1,9 +1,9 @@
-﻿import { motion } from "motion/react";
+﻿import {motion} from "motion/react";
 import HeroButtons from "@/components/sections/Hero/HeroButtons";
 import HeroHeading from "@/components/sections/Hero/HeroHeading";
 import HeroBackground from "@/components/sections/Hero/HeroBackground";
 import HeroSocials from "@/components/sections/Hero/HeroSocials";
-import { parentFade, fadeWhileLoading } from "@/data/animations";
+import {parentFade, fadeWhileLoading} from "@/data/animations";
 
 const HeroContainer = () => {
     return (

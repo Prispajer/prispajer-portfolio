@@ -5,7 +5,6 @@ import PortfolioHeading from "@/components/sections/Portfolio/PortfolioHeading.t
 import {portfolioItems} from "@/data/data.ts";
 import {fadeWhileLoading} from "@/data/animations.ts";
 
-
 const PortfolioContainer = () => {
     return (
         <section

@@ -1,6 +1,9 @@
-﻿import {Button} from "@/components/ui/button.tsx";
+﻿import {Button} from "@/components/ui/button.tsx"
+import type {PortfolioItem} from "@/types/portfolio.ts";
 
-const PortfolioButtons = ({liveApp, sourceCode, videoDemo} : {liveApp?: string, sourceCode: string, videoDemo?: string}) => {
+type PortfolioButtonProps = Pick<PortfolioItem, "liveApp" | "sourceCode" | "videoDemo">;
+
+const PortfolioButtons = ({liveApp, sourceCode, videoDemo} : PortfolioButtonProps) => {
     return (
         <div className="mt-auto flex flex-col sm:flex-row gap-4 pt-6">
             {liveApp && <Button asChild className="flex-1 px-4 py-2 text-sm font-bold text-silver

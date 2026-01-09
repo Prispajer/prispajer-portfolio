@@ -1,6 +1,6 @@
 ﻿import {motion} from "motion/react";
 import AboutOverlay from "@/components/sections/About/AboutOverlay.tsx";
-import AboutTechnology from "@/components/sections/About/AboutTechnology.tsx";
+import AboutTechnologyCard from "@/components/sections/About/AboutTechnologyCard.tsx";
 import {technologyItems} from "@/data/data.ts";
 import {fadeWhileLoading} from "@/data/animations.ts";
 
@@ -27,7 +27,7 @@ const AboutStack = () => {
 
                 <div className="flex flex-wrap items-center justify-center gap-6 cursor-default">
                     {technologyItems.map((technology, index) => (
-                        <AboutTechnology key={technology.name} technology={technology} index={index} />
+                        <AboutTechnologyCard key={technology.name} technology={technology} index={index} />
                     ))}
                 </div>
             </div>
