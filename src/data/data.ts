@@ -53,7 +53,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     {
         name: "Huffman Algorithm",
-        image: "./images/HuffmanAlgorithm.jpg",
+        image: "./images/drafts/HuffmanAlgorithm-resized.jpg",
         stack: ["C#", ".NET", "Blazor", "NPM", "Viz.js", "DotNetGraph"],
         sourceCode: "https://github.com/Prispajer/huffman-algorithm",
         description:
@@ -61,7 +61,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     {
         name: "Quarry Byte",
-        image: "./images/QuarryByte.jpg",
+        image: "./images/drafts/QuarryByte-resized.jpg",
         stack: ["C#", "ASP.NET MVC", "Blazor", "SQL Server", "REST API"],
         sourceCode: "https://github.com/Prispajer/quarry-byte-store",
         description:
