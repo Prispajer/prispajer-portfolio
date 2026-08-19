@@ -27,7 +27,7 @@ import type {TechnologyItem} from "@/types/technology.ts";
 export const portfolioItems: PortfolioItem[] = [
     {
         name: "RIGBA",
-        image: "./images/drafts/Rigba-resized.jpg",
+        image: "./images/Rigba.jpg",
         stack: [
             "TypeScript", "React", "Next.js", "NextAuth.js", "InversifyJS", "TailwindCSS",
             "Prisma", "Stripe", "Redux Toolkit", "Zod", "REST API", "PostgreSQL", "Jest",
@@ -41,7 +41,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     {
         name: "ProMediak",
-        image: "./images/drafts/Promediak-resized.jpg",
+        image: "./images/Promediak.jpg",
         stack: [
             "TypeScript", "React", "Next.js", "TailwindCSS", "Radix UI", "Upstash Redis",
             "Nodemailer", "REST API",
@@ -53,7 +53,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     {
         name: "Huffman Algorithm",
-        image: "./images/drafts/HuffmanAlgorithm-resized.jpg",
+        image: "./images/HuffmanAlgorithm.jpg",
         stack: ["C#", ".NET", "Blazor", "NPM", "Viz.js", "DotNetGraph"],
         sourceCode: "https://github.com/Prispajer/huffman-algorithm",
         description:
@@ -61,7 +61,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     {
         name: "Quarry Byte",
-        image: "./images/drafts/QuarryByte-resized.jpg",
+        image: "./images/QuarryByte.jpg",
         stack: ["C#", "ASP.NET MVC", "Blazor", "SQL Server", "REST API"],
         sourceCode: "https://github.com/Prispajer/quarry-byte-store",
         description:
@@ -78,7 +78,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     {
         name: "Memory Game",
-        image: "./images/drafts/MemoryGame-resized.jpg",
+        image: "./images/MemoryGame.jpg",
         stack: ["TypeScript", "React", "Vite", "Zustand"],
         liveApp: "https://memory-game-go-online.vercel.app/",
         sourceCode: "https://github.com/Prispajer/memory-game-go-online",
