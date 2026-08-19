@@ -1,4 +1,4 @@
-﻿ export type PortfolioItem = {
+ export type PortfolioItem = {
     name: string;
     image?: string;
     stack: string[];

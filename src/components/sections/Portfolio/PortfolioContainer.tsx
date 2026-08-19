@@ -15,8 +15,8 @@ const PortfolioContainer = () => {
             <motion.div initial="hidden" whileInView="show" variants={fadeWhileLoading(-160, -200, 0)} viewport={{ once: true, amount: 0 }} className="relative container grid grid-cols-1 max-w-11/12 sm:max-w-10/12  mx-auto">
                 <PortfolioHeading/>
                 <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 pt-5 sm:pt-20 gap-8">
-                    {portfolioItems.map((portfolio, index) => (
-                        <PortfolioCard key={portfolio.name} portfolio={portfolio} index={index}/>
+                    {portfolioItems.map((portfolio) => (
+                        <PortfolioCard key={portfolio.name} portfolio={portfolio}/>
                     ))}
                 </div>
             </motion.div>

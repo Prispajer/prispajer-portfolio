@@ -10,13 +10,11 @@ const MotionCard = motion.create(Card);
 
 type PortfolioCardProps = {
     portfolio: PortfolioItem;
-    index: number;
 }
 
-const PortfolioCard = ({portfolio, index} : PortfolioCardProps) => {
+const PortfolioCard = ({portfolio} : PortfolioCardProps) => {
     return (
         <MotionCard
-            key={index}
             initial="hidden"
             whileInView="show"
             variants={fadeCard(60)}

@@ -17,11 +17,8 @@ import Blazor from "../../public/images/Blazor.svg";
 import Prisma from "../../public/images/Prisma.svg";
 import PostgresSQL from "../../public/images/PostgresSQL.svg";
 import Git from "../../public/images/Git.svg";
-import Rigba from "../../public/images/Rigba.jpg";
-import HuffmanAlgorithm from "../../public/images/HuffmanAlgorithm.jpg";
-import QuarryByte from "../../public/images/QuarryByte.jpg";
-import Suggor from "../../public/images/Suggor.jpg";
-import MemoryGame from "../../public/images/Memory Game.jpg";
+
+
 import type {NavigationItem} from "@/types/navigation.ts";
 import type {PortfolioItem} from "@/types/portfolio.ts";
 import type {SocialItem} from "@/types/social.ts";
@@ -30,94 +27,111 @@ import type {TechnologyItem} from "@/types/technology.ts";
 export const portfolioItems: PortfolioItem[] = [
     {
         name: "RIGBA",
-        image: `${Rigba}`,
+        image: "./images/drafts/Rigba-resized.jpg",
         stack: [
             "TypeScript", "React", "Next.js", "NextAuth.js", "InversifyJS", "TailwindCSS",
-            "Prisma", "Stripe", "Redux Toolkit", "Zod", "REST API", "PostgresSQL", "Jest",
+            "Prisma", "Stripe", "Redux Toolkit", "Zod", "REST API", "PostgreSQL", "Jest",
             "React Hook Form", "Custom React Hooks", "Resend",
         ],
         liveApp: "https://rigba-game-store.vercel.app/",
         sourceCode: "https://github.com/Prispajer/rigba-game-store",
         videoDemo: "https://www.youtube.com/watch?v=FaoslE0Mqc4",
         description:
-            "RIGBA is a fullstack game store built with TypeScript, React, and Next.js. It supports authentication, payments via Stripe, and live API data. The project uses Redux Toolkit and Prisma with PostgreSQL for state and database management.",
+            "Architected a scalable marketplace, integrating RAWG API for real-time synchronization. Integrated Stripe API for secure payments, implementing robust error handling and transactional integrity. Managed global application state with Redux Toolkit, while enforcing strict type-safety and complex form validation via Zod to eliminate runtime parsing errors.",
+    },
+    {
+        name: "ProMediak",
+        image: "./images/drafts/Promediak-resized.jpg",
+        stack: [
+            "TypeScript", "React", "Next.js", "TailwindCSS", "Radix UI", "Upstash Redis",
+            "Nodemailer", "REST API",
+        ],
+        liveApp: "https://promediak-portfolio.vercel.app/",
+        sourceCode: "https://github.com/Prispajer/promediak-portfolio",
+        description:
+            "Architected a high-performance media platform, prioritizing SEO, low latency, and stability during traffic spikes using Redis caching. Built responsive, accessible UI components with a focus on performance and seamless user experience.",
     },
     {
         name: "Huffman Algorithm",
-        image: `${HuffmanAlgorithm}`,
-        stack: ["C#", "ASP.NET", "NPM", "DotNetGraph", "Viz.js", "Blazor"],
+        image: "./images/HuffmanAlgorithm.jpg",
+        stack: ["C#", ".NET", "Blazor", "NPM", "Viz.js", "DotNetGraph"],
         sourceCode: "https://github.com/Prispajer/huffman-algorithm",
         description:
-            "Huffman Algorithm is a data compression tool implementing Huffman coding. It provides both encoding and decoding features for text and binary files. The project includes visualization using Blazor, DotNetGraph, and Viz.js.",
+            "Engineered a high-efficiency data compression engine implementing the Huffman algorithm, focused on optimal tree construction and data structure handling. Integrated Viz.js via JS Interop to enable real-time visualization of algorithmic logic, effectively bridging C# core processing with interactive frontend rendering.",
     },
     {
         name: "Quarry Byte",
-        image: `${QuarryByte}`,
+        image: "./images/QuarryByte.jpg",
         stack: ["C#", "ASP.NET MVC", "Blazor", "SQL Server", "REST API"],
         sourceCode: "https://github.com/Prispajer/quarry-byte-store",
         description:
-            "Quarry Byte is a student project game store built with ASP.NET MVC. It uses SQL Server to manage games and user data. The interface is developed with Blazor and communicates through a REST API.",
+            "Developed a game marketplace using ASP.NET MVC with server-side Blazor components. Implemented SQL Server data management for games and user accounts, with a RESTful API layer handling client-server communication.",
     },
     {
         name: "Suggor",
-        image: `${Suggor}`,
+        image: "./images/Suggor.jpg",
         stack: ["C#", "Unity Engine", "Unity Packages"],
         sourceCode: "https://github.com/Prispajer/suggor-game",
         videoDemo: "https://www.youtube.com/watch?v=n5Nbwd-BqBI",
         description:
-            "Suggor is a 2D platformer game created in Unity. It features checkpoints, health bars, and regeneration mechanics. The project was developed collaboratively as part of an engineering team.",
+            "Built a 2D platformer game in Unity featuring checkpoint systems, health bar mechanics, and player regeneration. Collaborated as part of an engineering team, implementing core gameplay loops and UI systems.",
     },
     {
         name: "Memory Game",
-        image: `${MemoryGame}`,
+        image: "./images/drafts/MemoryGame-resized.jpg",
         stack: ["TypeScript", "React", "Vite", "Zustand"],
         liveApp: "https://memory-game-go-online.vercel.app/",
         sourceCode: "https://github.com/Prispajer/memory-game-go-online",
         description:
-            "Memory Game is a classic card matching game built with React and TypeScript. The board is dynamically generated for each playthrough. State management is handled with Zustand for smooth and responsive gameplay.",
+            "Created a dynamic card matching game using React and TypeScript. Implemented randomized board generation for each playthrough, with Zustand managing application state for smooth, responsive gameplay.",
+    },
+    {
+        name: "Treasure Pick",
+        image: "./images/TreasurePick.jpg",
+        stack: ["TypeScript", "Vite", "PixiJS", "Clean Architecture", "SOLID"],
+        sourceCode: "https://github.com/Prispajer/treasure-pick",
+        description:
+            "Designed a modular browser game using TypeScript and PixiJS, following Clean Architecture and SOLID principles for isolated, scalable systems. Implemented dynamic chest mechanics with randomized outcomes and smooth UI transitions.",
     },
     {
         name: "Taskly",
-        image: "",
         stack: [
-            ".NET 8", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "Docker",
-            "Docker Compose", "Swagger", "xUnit", "FluentValidation", "Makefile", "CQRS", "Clean Architecture",
+            "C#", "ASP.NET Core", "MediatR", "EF Core", "Docker", "xUnit",
+            ".NET 8", "PostgreSQL", "Docker Compose", "Swagger", "FluentValidation",
+            "Makefile", "CQRS", "Clean Architecture", "Vertical Slice Architecture", "DDD",
         ],
         sourceCode: "https://github.com/Prispajer/taskly",
         description:
-            "Taskly is a modular task management system using CQRS and Clean Architecture. It is built with .NET 8, EF Core, and PostgreSQL. The project includes Docker setup, Swagger documentation, and unit tests with xUnit.",
+            "Designed using Vertical Slice Architecture and DDD to ensure strict domain logic encapsulation and high maintainability. Implemented a marker-interface driven dispatcher for command/query routing, using EF Core Interceptors and MediatR to ensure atomic consistency and decoupled domain event broadcasting.",
     },
     {
         name: "Messages Board",
-        image: "",
         stack: [
             "JavaScript", "TypeScript", "React", "RTK Query", "ShadCN UI",
             "Node.js", "Sequelize", "Docker", "PostgreSQL", "REST API",
         ],
         sourceCode: "https://github.com/Prispajer/messages-board",
         description:
-            "Messages Board is a fullstack CRUD app for managing messages. The frontend uses React, RTK Query, and ShadCN UI. The backend is built with Node.js, Sequelize, and PostgreSQL, with Docker Compose for setup.",
+            "Built a fullstack CRUD application for message management. Architected the frontend with React, RTK Query for data fetching, and ShadCN UI components. Developed the backend using Node.js, Sequelize ORM, and PostgreSQL with Docker Compose orchestration.",
     },
     {
         name: "Order Matcher App",
-        image: "",
         stack: [
             "Flutter", "Dart", "BLoC", "Clean Architecture", "Google Gemini AI", "REST API", "dummyjson.com",
         ],
         sourceCode: "https://github.com/Prispajer/order-matcher-app",
         description:
-            "Order Matcher App is a mobile application built with Flutter and Dart. It parses text orders using Google Gemini AI and matches products from dummyjson.com. The app calculates totals and presents results in a clear table.",
+            "Developed a mobile application using Flutter and Dart with BLoC architecture. Integrated Google Gemini AI for natural language order parsing, matched products via external API, and calculated totals with structured table presentation.",
     },
     {
         name: "NewsPortalCMS",
-        image: "",
         stack: [
             ".NET 8", "ASP.NET Core", "Entity Framework Core", "PostgreSQL",
             "Docker", "Docker Compose", "Swagger", "xUnit", "Makefile", "Clean Architecture",
         ],
         sourceCode: "https://github.com/Prispajer/newsportal-cms",
         description:
-            "NewsPortalCMS is a CMS system for managing articles and categories. It is built with .NET 8, EF Core, and PostgreSQL. The project uses Docker Compose, Swagger documentation, and Clean Architecture for modular design.",
+            "Engineered a content management system for articles and categories using .NET 8, Entity Framework Core, and PostgreSQL. Implemented Docker Compose deployment, Swagger API documentation, and Clean Architecture for maintainable, modular design.",
     },
 ];
 
