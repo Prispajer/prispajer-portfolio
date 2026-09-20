@@ -46,7 +46,7 @@ export const portfolioItems: PortfolioItem[] = [
             "TypeScript", "React", "Next.js", "TailwindCSS", "Radix UI", "Upstash Redis",
             "Nodemailer", "REST API",
         ],
-        liveApp: "https://promediak-portfolio.vercel.app/",
+        liveApp: "https://promediak.vercel.app/",
         sourceCode: "https://github.com/Prispajer/promediak-portfolio",
         description:
             "Architected a high-performance media platform, prioritizing SEO, low latency, and stability during traffic spikes using Redis caching. Built responsive, accessible UI components with a focus on performance and seamless user experience.",
