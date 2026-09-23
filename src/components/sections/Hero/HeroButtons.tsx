@@ -25,7 +25,7 @@ const HeroButtons = () => {
                              font-black tracking-widest transition-all duration-300 hover:scale-105
                              font-navbar cursor-pointer"
             >
-                <a href="https://drive.google.com/file/d/1X0ZHAKeZrjJOBPtesE0XgApS58AYcxVu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="relative z-10 font-buttons">DOWNLOAD CV
+                <a href="https://drive.google.com/file/d/1DMexy8HYU3UhnrcUckfNXajI9DViJo9a/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="relative z-10 font-buttons">DOWNLOAD CV
                     <Download className="mr-2 h-5 w-5" />
                 </a>
             </Button>
